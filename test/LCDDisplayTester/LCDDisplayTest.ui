@@ -1,0 +1,344 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>LCDDisplayTest</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>LCDDisplayTest</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>406</width>
+            <height>277</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Demo LCDDisplay test</string>
+    </property>
+    <widget class="LCDDisplay">
+        <property name="name">
+            <cstring>theLCDDisplayPtr</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>30</x>
+                <y>30</y>
+                <width>336</width>
+                <height>88</height>
+            </rect>
+        </property>
+    </widget>
+    <widget class="QSpinBox">
+        <property name="name">
+            <cstring>spinBox1</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>50</x>
+                <y>140</y>
+                <width>50</width>
+                <height>22</height>
+            </rect>
+        </property>
+    </widget>
+    <widget class="QComboBox">
+        <item>
+            <property name="text">
+                <string>Vodafone NL</string>
+            </property>
+        </item>
+        <item>
+            <property name="text">
+                <string>T-Mobile</string>
+            </property>
+        </item>
+        <item>
+            <property name="text">
+                <string>Orange NL</string>
+            </property>
+        </item>
+        <property name="name">
+            <cstring>comboBox1</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>300</x>
+                <y>140</y>
+                <width>85</width>
+                <height>22</height>
+            </rect>
+        </property>
+    </widget>
+    <widget class="QComboBox">
+        <item>
+            <property name="text">
+                <string>Profile A</string>
+            </property>
+        </item>
+        <item>
+            <property name="text">
+                <string>Profile Z</string>
+            </property>
+        </item>
+        <item>
+            <property name="text">
+                <string>&lt;&lt;empty&gt;&gt;</string>
+            </property>
+        </item>
+        <property name="name">
+            <cstring>comboBox_Profile</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>150</x>
+                <y>140</y>
+                <width>92</width>
+                <height>22</height>
+            </rect>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>textLabel1</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>20</x>
+                <y>190</y>
+                <width>50</width>
+                <height>20</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>upload:</string>
+        </property>
+    </widget>
+    <widget class="QComboBox">
+        <item>
+            <property name="text">
+                <string>Below threas</string>
+            </property>
+        </item>
+        <item>
+            <property name="text">
+                <string>Between Limits</string>
+            </property>
+        </item>
+        <item>
+            <property name="text">
+                <string>Over limit</string>
+            </property>
+        </item>
+        <item>
+            <property name="text">
+                <string>Limits disabled</string>
+            </property>
+        </item>
+        <property name="name">
+            <cstring>comboBox_limits</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>210</x>
+                <y>190</y>
+                <width>85</width>
+                <height>22</height>
+            </rect>
+        </property>
+    </widget>
+    <widget class="QCheckBox">
+        <property name="name">
+            <cstring>checkBox_Roaming</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>320</x>
+                <y>190</y>
+                <width>92</width>
+                <height>20</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>roaming</string>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>textLabel1_3</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>20</x>
+                <y>240</y>
+                <width>50</width>
+                <height>20</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>speed:</string>
+        </property>
+    </widget>
+    <widget class="QSpinBox">
+        <property name="name">
+            <cstring>spinBox_upload</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>70</x>
+                <y>190</y>
+                <width>130</width>
+                <height>22</height>
+            </rect>
+        </property>
+        <property name="maxValue">
+            <number>999999999</number>
+        </property>
+        <property name="value">
+            <number>200</number>
+        </property>
+    </widget>
+    <widget class="QSpinBox">
+        <property name="name">
+            <cstring>spinBox_TimeConnected</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>260</x>
+                <y>240</y>
+                <width>90</width>
+                <height>22</height>
+            </rect>
+        </property>
+        <property name="maxValue">
+            <number>99999999</number>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>textLabel1_2</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>220</x>
+                <y>240</y>
+                <width>40</width>
+                <height>20</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>time:</string>
+        </property>
+    </widget>
+    <widget class="QSpinBox">
+        <property name="name">
+            <cstring>spinBox_Speed</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>70</x>
+                <y>240</y>
+                <width>130</width>
+                <height>22</height>
+            </rect>
+        </property>
+        <property name="maxValue">
+            <number>999999999</number>
+        </property>
+        <property name="value">
+            <number>20</number>
+        </property>
+    </widget>
+</widget>
+<customwidgets>
+    <customwidget>
+        <class>LCDDisplay</class>
+        <header location="local">LCDDisplay.h</header>
+        <sizehint>
+            <width>336</width>
+            <height>88</height>
+        </sizehint>
+        <container>0</container>
+        <sizepolicy>
+            <hordata>1</hordata>
+            <verdata>1</verdata>
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+        </sizepolicy>
+        <pixmap>image0</pixmap>
+    </customwidget>
+</customwidgets>
+<images>
+    <image name="image0">
+        <data format="PNG" length="4151">89504e470d0a1a0a0000000d4948445200000150000000580806000000a3ccaf0000000ffe49444154789ceddde9731be77dc0f1ef2e4e02204112bc6f51a4494a22a9d396143bf6c49175c4cea86ea6b1d3a4edcb4eff8afe0beef44d1a4f673aadebc6f11137f1ed5872e348322d4b22a95ba2241ee225f104897b77fb02c692204851820580c7ef33c3d16277f13c0f48e887e78672ead4291ed6ebafbf6e3cf4cd6253501465c5c72b1d3faee765338d5ca69fe9bcd7eadf265779777676265f7800eb6a3748d0148badc50090cbf4339df75a0c30b9ce3bd3d77a7b7bcd98d7dedefec060fac000ba5cf02c2d73f2444b0145c50e0abc36dc6e2baaf2c03cc47a95e69f75e91b359b69284b0b9d463292f7f7c83bebef99c54170b9ebc60ac771e1904228a4109837181f53999f5393ae5fba74c9d8be7dfb8a8553966bc22f0d9c369bc2fe8365ecdee7a3b4d4b9525a4208b1aecdf9158606546edfb260e80bc1545114dadada5202694a005d1a3c77ee2ae6f0b16af20b6c992ab31042ac29a1105cbb6c637828de484fd4905b5b5b938268527d7571f0545578e9782d3f7ba54182a7106253713aa1737794ed1d512c16054589ff5cbf7e3da982b96c1fa8aac2affea189e69682ec94560840d77574ddc06ab5e4ba28420050d710c3e53638ff8d9325f54d587c6671edf3a5e375123c45d6854231a626e7735d0c219294946ab4ed8898b5d0bebebe85963a2407cf3dfb7cec7baa2417e514428835a9a62e4a754dd40ca2b76edd3260499dd466533974b82a3725144288356ceb1321acb685fe505812400f3e5386275f068c84106229bbc3a0b63e8ca228a86a3c745a0cc3309bef2fffac0e976bd5c5498f44d374545526da8bd545a31ad1480cb7db91eba208b12ca75367e4ae0b4551989999f967b3065a519987afe4d127c987c3513efab09bc07c78d9ebfffefa978c8c4ca79c0f06237cfc510fc160e491f31442885cc873e978f235b3196f06d0e627d21b75b7d92c1886c1bbef7cb362105d2a188cf0de3b67894662d8ed8fb7c62b84109954e48b98cd7833801616d9d34a4c55558e1ceda0d8e779a8209a089e050579fce4a59d582ca973ab841062ad723a7554554dae811678d31f3c7ad820ba38781e7bb1d3ec88154288f5c2e1d4539bf06ef7f76b4aabaacad1639df84af279f79db3294134113cbd5e099e4288f5cb66d3539bf029db61a54151148e1cedc057e28907d1407c80281c8a9ac1f3e84f24780a21d6b79426fce39208a225a5f9bcfbf6370402113efab05b82a7c8aac07c986854cb7531c4069468be2b8ab2fa8ef4e96670f8483b9f7cdccbef7efb357ff3ca53123c45560cf4dfe7cb9357b1dbad44a31a1e8f83432fb4e3f664676ee999d337696c2ca3ac5cf692d8c8965d89f4b833387ca49d834f37f3dc8fb649f01419373313e0e30f7b387ca4839fbfba9f5ffedd0fa8aa2ee2c30f2e98f784c351f3dee5e6200783112626e6d075dd3c178d6ae8ba4e2412637a3a00402ca63171df9fd4d7af693a63a333ccfa83844251126b540cc36072722e25bf4459fcfea0cc875e67127da0199d84a9280ac5c51e598924b2a2fbc2004fb45626d5fef63dd9486fcf202323d3545616f29b5f9fa0a9b902c330181b9de1a9fd5b69db560dc0c91357181d99c65be86272628e9f1edf4d7e7e1e9f7dd28ba22a0402112a2bbdb4b456f1f9a717292a76333d358fcf97cff387b6333438c9f8f82ce1b3b7b97a799803079bb0da2cfce1fd7314177b989a9aa7bea184a79f6901e037bf3e414b4b25a150941dedb558ad2ab76fdfe387cfb6e6e4f7271e8ec2c2524e99c52e368cc989399a9a2b92ce253ec4a726e7a9ac2c44d30cb66daba2aebe84b9b9106fbe719aa6e60a06072698990ef0ca2f0e0070f5ca30674edde4d0e176009c4e1b478f7502f11ae5cf5fdd6fe6f1d6ff9c6172728efa86122a2abc74eeaca3ae3ebea3d9c71ff5b07d470dbb7637108b69fce77f7c45737305e5155e34cda06d5b3535b5c500dc1b9fa5b0d095f1df93f89e948526bc0450b16158ad96a4a67782a6e958adf11a83a2406d9d0f008fc789cb65677626c0c8c8347e7f903ffeef7900c29118b145835089e7004422314e9eb8c2e4c43c76bb85999920b333418a8b3d29798f8fcdb0ff409359beda5a1ff7eef929aff0a2aa8a193c014acb0a282d93bed3f520a3834842e4425979014343937474d699e7c2e12813f7fd9494e6036018108be9d86cf15def354dc762b56051551ab694b2775fa3f9dcc55d4f96457df817ce0f909fefe4f0910e00de7fef5b8c455ff4b0f8d86ab52405e2684c3383b9746dad5f2913e98558ef3a77d6313a32434ff700b198462010e1b34f2eb2b5a93ca97678eedb3b00dcea1b475114bcde3c9a9acbb9717d94603082d369435160e6bb01a3a5344d231c8e6118062323d30c0d4d9ad7f2f2ec8c0c4f9b83488d8d659c3f7707c33098989863706022a9d6b9d8bdf1597aba071edf2f4464446200496aa0624371386cbcf2ea7efef2d5757a7b06b1d92c346e2d63cfde2de63d168b82cb65e7b76f9ec166b770ecc59d288a4249693e3f3eb483935f5c21188c60b75be9dc5547695901c5c51e9c790b4b9d3b3bebf9ecd35efefbbf4e515d53cc9ebd5bcceb7bf66de1cce99b7cf0c70b3cfb6c2b7b9fdcc2e9533779f38dd3381c568e1eebc4e389ef7a5655559454fe50286a8ef28bb54dfa40c586e4723bcc819f95b477d4d2de519b72beb6ce97d4d799b0ff6053d263b7c7c1f197f72e9b765191db1c6c4a78e6872dcbdefb577f9d9cc64af98bb547fa40c5a624dff829be3f99c62436a97ffca7e7735d04b1ce29328d490821d22701540821d2247da042089186a4a59c89aae863d80e54082136bec57da06600154208f150cc267ce220539e7caa9182fcbc8ca52f8410d96636e11307990aa29d3beb3392ae1042e4c2e24aa734e18510e21149001542883465ad0f5408213692a4694c99ee031542880d45a631092144fa9202a8045121847878661fa8d98497a5484208b1aac48ef4204b398510e291491fa81042a449a6310921441a149465fa4025880a21c4ea1496e903154208f150641a9310427c4f6a2280ca342621847834661fa8c44f21847834d2072a841069923e50218448934c631242883449135e0821d22401540821d26495694c4208911e99c6248410695237c3287c2412636a6a3ed7c510426c305909a07e7f907ffd974fb979730c8807b4b7dfea5af1fe4824c6577fbef6d8f29f9a9ce7dcd93b8f2d3d2184005055554555d58c07d1a22237df7c7d0bc330300c034dd3cd6be363b3f4740f303a3a0dc0d8e80c776edfe3fab511a6a703f4dfb90f40603ecc407ffcd8ef0f32313107c0c47d3fdd17fa191c9830d3ecbf739fe9e9003ddd0349e50806230be90522188691b9172dd60dbf3fc8ddbb5304e6c3cccf8581f8fb528807c95a13dee57250dfe0e3cae5e1a4f337ae8f72fefc1dbc5e175f9feea3ffce7dac360b8aa2e070d8b05a55babeee231ad5b87a7584cf3fbb8461185cec19627626c8bdf159fef4f9250a0bdd5cbe7cd70c987ffebfab5cbe344441419e99d7ec6c904f3eeac193ef04e09ddf75110c4432feda4576bcfe6f27f9fdbb6779f38dd39cfacbf5877edef8d82c1f7fd8c3c47d3fa3a3338c8dcd0070e28bcb992aaad820b2da07ba7bcf16ce9fbb83a62dd4fa7a7a06a9aa2a221c8e525eeea5efe61845456e9c7976ea1b4af0789c54d71471776892d19169dadaaa181f9be5eedd29aa6b8ab8766d845d7b1aa86f28e1d9e7dab87a251ea00d03f61f68a2614b290013137e4efce9322f1c6ec7e7f300f0abbf7f1a97db9195d72e32cf625138fef25e5efddb03dcb83ec6d4d43c2323d34c4f07b8d83b44603e4c2814e562ef1057af0ca3693a91488c8bbd83780b5d14177bf095c47f96ba7fcf4f4ff700c3c353e6b960505a309b9d9af882a46c4c63723a6db4b6552535abb598469ecb8ec361a3b2aa908eceba94e7d5d6fae8efbf8fae1b343496d2d73786a280dd6e45d70dac160b00168b6a0667555df8e227009bcd4a34aa118ec432fc2a45ae699a8eaeeba8aa424ff700674edf243fdf8961c0fbef7d8bcd66211c8ef2c11f2ea0280a16ab8acd66c166b3303438c9e0c064527ab7fac6e9eaeac3eb7571eeec1dfabeebcb7fef9db3f8fda15cbc44b146a866ff679606e23b77d671e3faa8f9b8a9b98291e1694a4af2f1e43b310c0387c34a603eccd8e80ca15094aaea22ae5d1da1bcc24b4585972b9787a9ae2906a0a1a184de9e416667839cedbac596ef6a9c4b1514e471e458075f7c7e8989fb7e00ce9cbe49381ccdfc8b1659118d68fcfeddb3bcfd56171d9d7578bd2e20fe9eab6f286166364051b19b96d64a3a77d61389c48846357cbe7c7c3e0fe515de65d3bdd83b447575bc9554565e600e86fee2970793ba88c4e69395954876bb95b66d55f10cad169e7dae95d9d9f827f7ee3d0d5cbb3a42d7d77d389c565adbaa501485e70f6d676060827a45a1acbc80833f78829ada621445e1c0c1662aab0a01a8ab2f2116d3f9f6ec6d7c3e0fed1db500e6bf001e8f932d8da5783c4e8e1eebe4e6cd317c25f9b85cf60d3f856b33b1d92d1c7f796fca79bb2dde42d13503ab65a15562b1a8e8ba9e72ff52314dc3e98cb792cacbbd34342cff212d369fac04508723de744fa8ab2f49baded25a494b6b65d2b9aaaa22aaaa8accc73bda6bcce36ddbab93ee6ddc5a46e3d6b2a4738bbb02dc1e078d9ef87597db615e5baebb406c5c65e5057c79f20af7c6670906234422313c1ee7aacf6b6a2a6778788a279fdc4a3812251ad100f8a6eb163bda6bc8cbb367bae8628d5a58ca293531b1ceeddc559f726e6b53b919e0ec762bc75edcc9c5de212c1685977eba0b80b2b2027330287e1c7feef61df10fed8ece3a6edc18a5abab0fbbdd4aeb771ff64ea74dfedf6c72ca6bafbd6600fce805155f89bc1944ee040211e6e742949615e4ba2842ac28162d607e661f20bb31092144da64477a21844893b91b53242c13828510623586be30686836e1834109a04208b11a5d5f58bd6806d0505005569f132784109b99ae2f4c7d33fb40ef8d1b4800154288078b457ce6b1b994d33fab323f97c3520921c41aa76979e85abef958ddb1638792d8506468d09ac3a20921c4da160d2dac989c9a9a5254c05c89d47fcb4a58369711428814ba6e271c4c5efead02e68ef4baae72e39aaceb154288a542f38d8025e99c0ad0dada6a36e38787ec0c0d48535e649fd369a5b0c89deb6208912212aa221a5ed8c4686a6a4a81ef0228404b4b8b9268ca5fbb9cc7c43dcb32c9089139aa1adfd85888b5241a292638d7623e4e044f5814408145bb32a9749f73333420cd7921c4e6150e561398ed6449a834259d6d6a6a5216bea153e5c65537977b5d84c3b2565e08b179e8ba9d807f1ba1f9561687c9c5b54f00e5d4a953294fbe7dfbb6b17883115535a8a90b535115c2e596c9f642888d498bb988862b09076b593a60b43478c20a0134a1bfbfdf0092766b72bb358a7c119c791a76878edd6e00f175f4495f4c9766a535dd9da17299f7e20cd34d62cdfceed2cc3f97790b911e0543b7a3eb0e74dd492ce243d752bf9175b9c099f0c0e1f6fafa7a657070d0dc65445114824195e050ea4edc0f7abcd271bad7d66adeeb21fd74f3ce749957cb5b885c7850f084550228406d6dad99c0ddbb779382e96ac7d9beb6ded34f37ef4c9739dbaf5b885c5a2d682ef6ff5a874633797bee090000000049454e44ae426082</data>
+    </image>
+</images>
+<connections>
+    <connection>
+        <sender>comboBox1</sender>
+        <signal>activated(const QString&amp;)</signal>
+        <receiver>LCDDisplayTest</receiver>
+        <slot>combo_activated(const QString&amp;)</slot>
+    </connection>
+    <connection>
+        <sender>comboBox_Profile</sender>
+        <signal>activated(const QString&amp;)</signal>
+        <receiver>LCDDisplayTest</receiver>
+        <slot>comboBox_Profile_activated(const QString&amp;)</slot>
+    </connection>
+    <connection>
+        <sender>spinBox1</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>LCDDisplayTest</receiver>
+        <slot>spin_changed(int)</slot>
+    </connection>
+    <connection>
+        <sender>spinBox_upload</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>LCDDisplayTest</receiver>
+        <slot>spinBox_upload_update()</slot>
+    </connection>
+    <connection>
+        <sender>spinBox_TimeConnected</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>LCDDisplayTest</receiver>
+        <slot>spinBox_ConnectedTime_update()</slot>
+    </connection>
+    <connection>
+        <sender>spinBox_Speed</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>LCDDisplayTest</receiver>
+        <slot>spinBox_upload_update()</slot>
+    </connection>
+    <connection>
+        <sender>comboBox_limits</sender>
+        <signal>activated(int)</signal>
+        <receiver>LCDDisplayTest</receiver>
+        <slot>spinBox_upload_update()</slot>
+    </connection>
+    <connection>
+        <sender>checkBox_Roaming</sender>
+        <signal>stateChanged(int)</signal>
+        <receiver>LCDDisplayTest</receiver>
+        <slot>checkBox_Roaming_update()</slot>
+    </connection>
+</connections>
+<includes>
+    <include location="local" impldecl="in declaration">LCDDisplay.h</include>
+    <include location="local" impldecl="in implementation">LCDDisplayTest.ui.h</include>
+</includes>
+<slots>
+    <slot>combo_activated( const QString &amp; aNewString )</slot>
+    <slot>spin_changed( int aNewValue )</slot>
+    <slot>comboBox_Profile_activated( const QString &amp; aNewString )</slot>
+    <slot>spinBox_upload_update()</slot>
+    <slot>checkBox_Roaming_update()</slot>
+    <slot>spinBox_ConnectedTime_update()</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+</functions>
+<layoutdefaults spacing="6" margin="11"/>
+<includehints>
+    <includehint>LCDDisplay.h</includehint>
+</includehints>
+</UI>

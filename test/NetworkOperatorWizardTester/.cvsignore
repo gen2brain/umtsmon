@@ -1,0 +1,7 @@
+NetworkOperatorWizardTester
+Makefile
+networkoperatorwizard.ui.h
+networkoperatorwizard.ui
+NetworkChanger.gcda
+*.gcno
+*.gcda

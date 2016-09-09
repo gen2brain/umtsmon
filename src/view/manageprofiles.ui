@@ -1,0 +1,246 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>ManageProfiles</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>ManageProfiles</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>254</width>
+            <height>223</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Manage Profiles</string>
+    </property>
+    <property name="sizeGripEnabled">
+        <bool>true</bool>
+    </property>
+    <grid>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QLayoutWidget" row="1" column="0" rowspan="1" colspan="2">
+            <property name="name">
+                <cstring>Layout1</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <property name="margin">
+                    <number>0</number>
+                </property>
+                <property name="spacing">
+                    <number>6</number>
+                </property>
+                <spacer>
+                    <property name="name">
+                        <cstring>Horizontal Spacing2</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>20</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>buttonOk</cstring>
+                    </property>
+                    <property name="text">
+                        <string>&amp;OK</string>
+                    </property>
+                    <property name="accel">
+                        <string></string>
+                    </property>
+                    <property name="autoDefault">
+                        <bool>true</bool>
+                    </property>
+                    <property name="default">
+                        <bool>true</bool>
+                    </property>
+                </widget>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>buttonCancel</cstring>
+                    </property>
+                    <property name="text">
+                        <string>&amp;Cancel</string>
+                    </property>
+                    <property name="accel">
+                        <string></string>
+                    </property>
+                    <property name="autoDefault">
+                        <bool>true</bool>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
+        <widget class="QListBox" row="0" column="0">
+            <property name="name">
+                <cstring>listBox_profiles</cstring>
+            </property>
+            <property name="toolTip" stdset="0">
+                <string>This area shows the profiles that you can use to connect with</string>
+            </property>
+        </widget>
+        <widget class="QLayoutWidget" row="0" column="1">
+            <property name="name">
+                <cstring>layout7</cstring>
+            </property>
+            <vbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>pushButton_add_profile</cstring>
+                    </property>
+                    <property name="text">
+                        <string>&amp;Add profile...</string>
+                    </property>
+                    <property name="accel">
+                        <string>Alt+A</string>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Create another profile</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>pushButton_edit_profile</cstring>
+                    </property>
+                    <property name="enabled">
+                        <bool>false</bool>
+                    </property>
+                    <property name="text">
+                        <string>&amp;Edit profile...</string>
+                    </property>
+                    <property name="accel">
+                        <string>Alt+E</string>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>change an existing profile</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>pushButton_set_active</cstring>
+                    </property>
+                    <property name="enabled">
+                        <bool>false</bool>
+                    </property>
+                    <property name="text">
+                        <string>&amp;Set as active</string>
+                    </property>
+                    <property name="accel">
+                        <string>Alt+S</string>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>make the selected profile active</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>pushButton_delete_profile</cstring>
+                    </property>
+                    <property name="enabled">
+                        <bool>false</bool>
+                    </property>
+                    <property name="text">
+                        <string>&amp;Delete profile</string>
+                    </property>
+                    <property name="accel">
+                        <string>Alt+D</string>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>delete the currently selected profile</string>
+                    </property>
+                </widget>
+                <spacer>
+                    <property name="name">
+                        <cstring>spacer11</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Vertical</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>20</width>
+                            <height>80</height>
+                        </size>
+                    </property>
+                </spacer>
+            </vbox>
+        </widget>
+    </grid>
+</widget>
+<connections>
+    <connection>
+        <sender>buttonOk</sender>
+        <signal>clicked()</signal>
+        <receiver>ManageProfiles</receiver>
+        <slot>accept()</slot>
+    </connection>
+    <connection>
+        <sender>buttonCancel</sender>
+        <signal>clicked()</signal>
+        <receiver>ManageProfiles</receiver>
+        <slot>reject()</slot>
+    </connection>
+    <connection>
+        <sender>pushButton_add_profile</sender>
+        <signal>clicked()</signal>
+        <receiver>ManageProfiles</receiver>
+        <slot>pushButton_add_profile_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>pushButton_edit_profile</sender>
+        <signal>clicked()</signal>
+        <receiver>ManageProfiles</receiver>
+        <slot>pushButton_edit_profile_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>pushButton_delete_profile</sender>
+        <signal>clicked()</signal>
+        <receiver>ManageProfiles</receiver>
+        <slot>pushButton_delete_profile_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>pushButton_set_active</sender>
+        <signal>clicked()</signal>
+        <receiver>ManageProfiles</receiver>
+        <slot>pushButton_set_default_profile()</slot>
+    </connection>
+</connections>
+<includes>
+    <include location="local" impldecl="in declaration">Profile.h</include>
+    <include location="local" impldecl="in implementation">newprofiledialog.h</include>
+    <include location="local" impldecl="in implementation">manageprofiles.ui.h</include>
+</includes>
+<slots>
+    <slot>init()</slot>
+    <slot>pushButton_add_profile_clicked()</slot>
+    <slot>pushButton_delete_profile_clicked()</slot>
+    <slot>pushButton_edit_profile_clicked()</slot>
+    <slot>pushButton_set_default_profile()</slot>
+</slots>
+<functions>
+    <function>enableButtons(bool isEnabled)</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

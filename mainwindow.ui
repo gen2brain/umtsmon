@@ -1,0 +1,744 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>mainwindow</class>
+<widget class="QMainWindow">
+    <property name="name">
+        <cstring>mainwindow</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>358</width>
+            <height>227</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>umtsmon mainwindow</string>
+    </property>
+    <property name="icon">
+        <pixmap>umtsmon-22x22.png</pixmap>
+    </property>
+    <grid>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <spacer row="0" column="0">
+            <property name="name">
+                <cstring>spacer11_2</cstring>
+            </property>
+            <property name="orientation">
+                <enum>Vertical</enum>
+            </property>
+            <property name="sizeType">
+                <enum>Fixed</enum>
+            </property>
+            <property name="sizeHint">
+                <size>
+                    <width>20</width>
+                    <height>2</height>
+                </size>
+            </property>
+        </spacer>
+        <spacer row="2" column="0">
+            <property name="name">
+                <cstring>spacer11_3</cstring>
+            </property>
+            <property name="orientation">
+                <enum>Vertical</enum>
+            </property>
+            <property name="sizeType">
+                <enum>Fixed</enum>
+            </property>
+            <property name="sizeHint">
+                <size>
+                    <width>20</width>
+                    <height>2</height>
+                </size>
+            </property>
+        </spacer>
+        <widget class="LCDDisplay" row="1" column="0">
+            <property name="name">
+                <cstring>theLCDDisplay</cstring>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>0</hsizetype>
+                    <vsizetype>0</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>336</width>
+                    <height>88</height>
+                </size>
+            </property>
+            <property name="maximumSize">
+                <size>
+                    <width>336</width>
+                    <height>88</height>
+                </size>
+            </property>
+        </widget>
+    </grid>
+</widget>
+<menubar>
+    <property name="name">
+        <cstring>MenuBar</cstring>
+    </property>
+    <property name="frameShape">
+        <enum>MenuBarPanel</enum>
+    </property>
+    <item text="&amp;Connection" name="Connection">
+        <action name="menu_connection_managerprofile"/>
+        <action name="menu_connection_radiopreferences"/>
+        <action name="menu_connection_select_nw_operator"/>
+        <separator/>
+        <action name="menu_connection_connect"/>
+        <action name="menu_connection_disconnect"/>
+        <separator/>
+        <action name="menu_connection_ejectcard"/>
+        <action name="menu_connection_resetcard"/>
+        <separator/>
+        <action name="menu_connection_exit"/>
+    </item>
+    <item text="&amp;SMS" name="SMS_Manager">
+        <action name="menu_sms_sendsms"/>
+    </item>
+    <item text="Se&amp;ttings" name="Settings">
+        <separator/>
+        <action name="menu_pin_settings"/>
+        <action name="menu_pin_change"/>
+        <action name="menu_pin_enable"/>
+        <action name="menu_pin_disable"/>
+        <separator/>
+        <action name="menu_settings_SetLanguage"/>
+        <separator/>
+        <action name="menu_settings_AutoConnect"/>
+    </item>
+    <item text="&amp;Help" name="helpMenu">
+        <separator/>
+        <action name="menu_help_help"/>
+        <action name="menu_help_about"/>
+        <separator/>
+        <action name="menu_help_systeminfo"/>
+        <action name="menu_help_autodetectionlog"/>
+    </item>
+</menubar>
+<toolbars>
+    <toolbar dock="2">
+        <property name="name">
+            <cstring>Toolbar</cstring>
+        </property>
+        <property name="horizontallyStretchable">
+            <bool>false</bool>
+        </property>
+        <property name="label">
+            <string>Toolbar</string>
+        </property>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>toolbar_button_profiles</cstring>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+            <property name="pixmap">
+                <pixmap>address-book-new-22x22.png</pixmap>
+            </property>
+            <property name="toolTip" stdset="0">
+                <string>manage profiles</string>
+            </property>
+        </widget>
+        <separator/>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>toolbar_button_connect</cstring>
+            </property>
+            <property name="enabled">
+                <bool>false</bool>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+            <property name="pixmap">
+                <pixmap>network-transmit-receive-22x22.png</pixmap>
+            </property>
+            <property name="toolTip" stdset="0">
+                <string>Connect with default Profile</string>
+            </property>
+        </widget>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>toolbar_button_disconnect</cstring>
+            </property>
+            <property name="enabled">
+                <bool>false</bool>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+            <property name="iconSet">
+                <iconset>network-offline-22x22.png</iconset>
+            </property>
+            <property name="toolTip" stdset="0">
+                <string>disconnect</string>
+            </property>
+        </widget>
+        <separator/>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>toolbar_button_sms</cstring>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+            <property name="pixmap">
+                <pixmap>mail-message-new-22x22.png</pixmap>
+            </property>
+            <property name="toolTip" stdset="0">
+                <string>create a new sms</string>
+            </property>
+        </widget>
+        <separator/>
+        <widget class="QPushButton">
+            <property name="name">
+                <cstring>toolbar_button_sysInfo</cstring>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+            <property name="pixmap">
+                <pixmap>applications-system-22x22.png</pixmap>
+            </property>
+            <property name="toolTip" stdset="0">
+                <string>pops up a dialog with system information.</string>
+            </property>
+        </widget>
+    </toolbar>
+</toolbars>
+<customwidgets>
+    <customwidget>
+        <class>LCDDisplay</class>
+        <header location="local">LCDDisplay.h</header>
+        <sizehint>
+            <width>336</width>
+            <height>88</height>
+        </sizehint>
+        <container>0</container>
+        <sizepolicy>
+            <hordata>1</hordata>
+            <verdata>1</verdata>
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+        </sizepolicy>
+        <pixmap>image0</pixmap>
+    </customwidget>
+</customwidgets>
+<actions>
+    <action>
+        <property name="name">
+            <cstring>menu_connection_connect</cstring>
+        </property>
+        <property name="toggleAction">
+            <bool>true</bool>
+        </property>
+        <property name="enabled">
+            <bool>false</bool>
+        </property>
+        <property name="iconSet">
+            <iconset></iconset>
+        </property>
+        <property name="text">
+            <string>Connect</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Connect</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+C</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>menu_connection_disconnect</cstring>
+        </property>
+        <property name="toggleAction">
+            <bool>true</bool>
+        </property>
+        <property name="on">
+            <bool>true</bool>
+        </property>
+        <property name="enabled">
+            <bool>false</bool>
+        </property>
+        <property name="iconSet">
+            <iconset></iconset>
+        </property>
+        <property name="text">
+            <string>Disconnect</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Disconnect</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+D</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>menu_connection_ejectcard</cstring>
+        </property>
+        <property name="enabled">
+            <bool>false</bool>
+        </property>
+        <property name="text">
+            <string>Power down card</string>
+        </property>
+        <property name="menuText">
+            <string>P&amp;ower down card</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>menu_connection_resetcard</cstring>
+        </property>
+        <property name="enabled">
+            <bool>false</bool>
+        </property>
+        <property name="text">
+            <string>Reset card</string>
+        </property>
+        <property name="menuText">
+            <string>R&amp;eset card</string>
+        </property>
+        <property name="accel">
+            <string></string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>menu_sms_sendsms</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>mail-message-new-16x16.png</iconset>
+        </property>
+        <property name="text">
+            <string>New SMS</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;New SMS...</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+S</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>menu_pin_settings</cstring>
+        </property>
+        <property name="toggleAction">
+            <bool>false</bool>
+        </property>
+        <property name="on">
+            <bool>false</bool>
+        </property>
+        <property name="enabled">
+            <bool>false</bool>
+        </property>
+        <property name="text">
+            <string>PIN Settings</string>
+        </property>
+        <property name="menuText">
+            <string>PIN Settings</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>menu_pin_enable</cstring>
+        </property>
+        <property name="toggleAction">
+            <bool>true</bool>
+        </property>
+        <property name="enabled">
+            <bool>false</bool>
+        </property>
+        <property name="text">
+            <string>Enable PIN</string>
+        </property>
+        <property name="menuText">
+            <string>  &amp;Enable PIN...</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>menu_pin_disable</cstring>
+        </property>
+        <property name="toggleAction">
+            <bool>true</bool>
+        </property>
+        <property name="enabled">
+            <bool>false</bool>
+        </property>
+        <property name="text">
+            <string>Disable PIN</string>
+        </property>
+        <property name="menuText">
+            <string>  &amp;Disable PIN...</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>menu_pin_change</cstring>
+        </property>
+        <property name="toggleAction">
+            <bool>false</bool>
+        </property>
+        <property name="on">
+            <bool>false</bool>
+        </property>
+        <property name="enabled">
+            <bool>false</bool>
+        </property>
+        <property name="text">
+            <string>Change PIN</string>
+        </property>
+        <property name="menuText">
+            <string>  &amp;Change PIN...</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>menu_help_systeminfo</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>applications-system-16x16.png</iconset>
+        </property>
+        <property name="text">
+            <string>System Info</string>
+        </property>
+        <property name="menuText">
+            <string>System &amp;Info</string>
+        </property>
+        <property name="accel">
+            <string>F2</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>menu_help_autodetectionlog</cstring>
+        </property>
+        <property name="enabled">
+            <bool>false</bool>
+        </property>
+        <property name="text">
+            <string>Autodetection log</string>
+        </property>
+        <property name="menuText">
+            <string>Autodetection &amp;log</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>menu_help_about</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>dialog-information-16x16.png</iconset>
+        </property>
+        <property name="text">
+            <string>About</string>
+        </property>
+        <property name="menuText">
+            <string></string>
+        </property>
+        <property name="accel">
+            <string>F3</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>menu_help_help</cstring>
+        </property>
+        <property name="enabled">
+            <bool>true</bool>
+        </property>
+        <property name="iconSet">
+            <iconset>help-browser-16x16.png</iconset>
+        </property>
+        <property name="text">
+            <string>Help</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Help</string>
+        </property>
+        <property name="accel">
+            <string>F1</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>menu_connection_managerprofile</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>address-book-new-16x16.png</iconset>
+        </property>
+        <property name="text">
+            <string>Manage Profiles</string>
+        </property>
+        <property name="menuText">
+            <string>Manage &amp;Profiles...</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+P</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>menu_connection_exit</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>system-log-out-16x16.png</iconset>
+        </property>
+        <property name="text">
+            <string>Quit</string>
+        </property>
+        <property name="menuText">
+            <string></string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+Q</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>menu_connection_select_nw_operator</cstring>
+        </property>
+        <property name="text">
+            <string>Select network operator</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Select network operator...</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>menu_connection_radiopreferences</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>network-wireless-16x16.png</iconset>
+        </property>
+        <property name="text">
+            <string>Radio Preferences</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Radio Preferences...</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>menu_settings_SetLanguage</cstring>
+        </property>
+        <property name="text">
+            <string>Set the language</string>
+        </property>
+        <property name="menuText">
+            <string>Set Language...</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>menu_settings_AutoConnect</cstring>
+        </property>
+        <property name="text">
+            <string>Automatically connect when network is found</string>
+        </property>
+        <property name="menuText">
+            <string>Autoconnect</string>
+        </property>
+    </action>
+</actions>
+<connections>
+    <connection>
+        <sender>menu_help_about</sender>
+        <signal>activated()</signal>
+        <receiver>mainwindow</receiver>
+        <slot>showAboutDialog()</slot>
+    </connection>
+    <connection>
+        <sender>menu_connection_exit</sender>
+        <signal>activated()</signal>
+        <receiver>mainwindow</receiver>
+        <slot>close()</slot>
+    </connection>
+    <connection>
+        <sender>menu_help_systeminfo</sender>
+        <signal>activated()</signal>
+        <receiver>mainwindow</receiver>
+        <slot>showInfoDialog()</slot>
+    </connection>
+    <connection>
+        <sender>menu_pin_change</sender>
+        <signal>activated()</signal>
+        <receiver>mainwindow</receiver>
+        <slot>ChangePIN()</slot>
+    </connection>
+    <connection>
+        <sender>menu_pin_disable</sender>
+        <signal>activated()</signal>
+        <receiver>mainwindow</receiver>
+        <slot>DisablePINProtection()</slot>
+    </connection>
+    <connection>
+        <sender>menu_pin_enable</sender>
+        <signal>activated()</signal>
+        <receiver>mainwindow</receiver>
+        <slot>EnablePINProtection()</slot>
+    </connection>
+    <connection>
+        <sender>menu_sms_sendsms</sender>
+        <signal>activated()</signal>
+        <receiver>mainwindow</receiver>
+        <slot>PushButtonCreateSMS_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>menu_connection_connect</sender>
+        <signal>activated()</signal>
+        <receiver>mainwindow</receiver>
+        <slot>ConnectPPP()</slot>
+    </connection>
+    <connection>
+        <sender>menu_connection_disconnect</sender>
+        <signal>activated()</signal>
+        <receiver>mainwindow</receiver>
+        <slot>DisconnectPPP()</slot>
+    </connection>
+    <connection>
+        <sender>menu_connection_managerprofile</sender>
+        <signal>activated()</signal>
+        <receiver>mainwindow</receiver>
+        <slot>showProfileDialog()</slot>
+    </connection>
+    <connection>
+        <sender>menu_connection_select_nw_operator</sender>
+        <signal>activated()</signal>
+        <receiver>mainwindow</receiver>
+        <slot>showNetworkOperatorDialog()</slot>
+    </connection>
+    <connection>
+        <sender>toolbar_button_profiles</sender>
+        <signal>clicked()</signal>
+        <receiver>mainwindow</receiver>
+        <slot>showProfileDialog()</slot>
+    </connection>
+    <connection>
+        <sender>toolbar_button_connect</sender>
+        <signal>clicked()</signal>
+        <receiver>mainwindow</receiver>
+        <slot>ConnectPPP()</slot>
+    </connection>
+    <connection>
+        <sender>toolbar_button_disconnect</sender>
+        <signal>clicked()</signal>
+        <receiver>mainwindow</receiver>
+        <slot>DisconnectPPP()</slot>
+    </connection>
+    <connection>
+        <sender>toolbar_button_sms</sender>
+        <signal>clicked()</signal>
+        <receiver>mainwindow</receiver>
+        <slot>PushButtonCreateSMS_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>toolbar_button_sysInfo</sender>
+        <signal>clicked()</signal>
+        <receiver>mainwindow</receiver>
+        <slot>showInfoDialog()</slot>
+    </connection>
+    <connection>
+        <sender>menu_connection_radiopreferences</sender>
+        <signal>activated()</signal>
+        <receiver>mainwindow</receiver>
+        <slot>showRadioPreferences()</slot>
+    </connection>
+    <connection>
+        <sender>menu_settings_SetLanguage</sender>
+        <signal>activated()</signal>
+        <receiver>mainwindow</receiver>
+        <slot>menu_settings_SetLanguage_activated()</slot>
+    </connection>
+    <connection>
+        <sender>menu_settings_AutoConnect</sender>
+        <signal>activated()</signal>
+        <receiver>mainwindow</receiver>
+        <slot>menu_settings_AutoConnect_activated()</slot>
+    </connection>
+</connections>
+<includes>
+    <include location="local" impldecl="in implementation">Query.h</include>
+    <include location="global" impldecl="in implementation">qtimer.h</include>
+    <include location="global" impldecl="in implementation">ProgressDialog.h</include>
+    <include location="local" impldecl="in declaration">infodialog.h</include>
+    <include location="local" impldecl="in declaration">aboutdialog.h</include>
+    <include location="local" impldecl="in declaration">enterpindialog.h</include>
+    <include location="local" impldecl="in declaration">enterpukdialog.h</include>
+    <include location="local" impldecl="in implementation">Internationalisation.h</include>
+    <include location="local" impldecl="in declaration">smsdialog.h</include>
+    <include location="local" impldecl="in declaration">Profile.h</include>
+    <include location="local" impldecl="in declaration">MonthlyTraffic.h</include>
+    <include location="local" impldecl="in declaration">manageprofiles.h</include>
+    <include location="local" impldecl="in declaration">networkoperatorwizard.h</include>
+    <include location="local" impldecl="in declaration">PPPConnection.h</include>
+    <include location="local" impldecl="in implementation">PPPErrorLogsDialog.h</include>
+    <include location="local" impldecl="in implementation">radiopreferences.h</include>
+    <include location="local" impldecl="in declaration">SetLanguageDialog.h</include>
+    <include location="local" impldecl="in implementation">mainwindow.ui.h</include>
+</includes>
+<forwards>
+    <forward>class QTimer;</forward>
+    <forward>class Device;</forward>
+    <forward>class UIState;</forward>
+    <forward>class Internationalisation;</forward>
+</forwards>
+<variables>
+    <variable>int receivedBytes;</variable>
+    <variable>int sendBytes;</variable>
+    <variable access="private">ConnectionBaseClass* theConnectionPtr;</variable>
+    <variable access="private">Internationalisation* myI18n;</variable>
+    <variable access="private">UIState* theUIStatePtr;</variable>
+    <variable access="private">friend class UIState;</variable>
+    <variable>enum PINState {ALL_ENTRIES_OFF, PIN_ENABLED, PIN_DISABLED};</variable>
+</variables>
+<slots>
+    <slot>showAboutDialog()</slot>
+    <slot>showInfoDialog()</slot>
+    <slot>DisablePINProtection()</slot>
+    <slot>EnablePINProtection()</slot>
+    <slot>ChangePIN()</slot>
+    <slot>PushButtonCreateSMS_clicked()</slot>
+    <slot access="private">showPPPErrorLogsDialog()</slot>
+    <slot returnType="bool">DisconnectPPP()</slot>
+    <slot returnType="bool">ConnectPPP()</slot>
+    <slot>showProfileDialog()</slot>
+    <slot>showNetworkOperatorDialog()</slot>
+    <slot>showRadioPreferences()</slot>
+    <slot>menu_settings_SetLanguage_activated()</slot>
+    <slot>menu_settings_AutoConnect_activated()</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">updateNetworkData()</function>
+    <function access="private" specifier="non virtual">init()</function>
+    <function access="private" specifier="non virtual" returnType="bool">checkRegistered(bool isShowPopups=true)</function>
+    <function access="private" specifier="non virtual" returnType="bool">ifATPortAvailableRunExec( QDialog * aDialogToExecPtr )</function>
+    <function access="private" specifier="non virtual" returnType="bool">ifPPPInactiveRunExec( QDialog * aDialogToExecPtr )</function>
+    <function>setI18nRef( Internationalisation&amp; anI18nRef )</function>
+    <function access="private" specifier="non virtual">setPINmenu(PINState myPINState)</function>
+    <function access="private" specifier="non virtual">setConnectButtons(void)</function>
+    <function access="public" specifier="non virtual">setNewConnectionBasePtr(void)</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+<includehints>
+    <includehint>src/view/LCDDisplay.h</includehint>
+</includehints>
+</UI>

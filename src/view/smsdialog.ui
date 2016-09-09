@@ -1,0 +1,353 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>smsdialog</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>smsdialog</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>423</width>
+            <height>284</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Send SMS</string>
+    </property>
+    <property name="icon">
+        <pixmap>mail-message-new-16x16.png</pixmap>
+    </property>
+    <grid>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QLayoutWidget" row="0" column="0" rowspan="1" colspan="2">
+            <property name="name">
+                <cstring>layout61</cstring>
+            </property>
+            <vbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>textLabel1</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Send SMS to number:</string>
+                    </property>
+                </widget>
+                <widget class="QLineEdit">
+                    <property name="name">
+                        <cstring>smsToNumber</cstring>
+                    </property>
+                    <property name="minimumSize">
+                        <size>
+                            <width>116</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>enter the number to SMS to here</string>
+                    </property>
+                </widget>
+            </vbox>
+        </widget>
+        <widget class="QLayoutWidget" row="0" column="4" rowspan="1" colspan="3">
+            <property name="name">
+                <cstring>layout65</cstring>
+            </property>
+            <grid>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QLayoutWidget" row="1" column="0">
+                    <property name="name">
+                        <cstring>layout63</cstring>
+                    </property>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QLineEdit">
+                            <property name="name">
+                                <cstring>smsCharInMessages</cstring>
+                            </property>
+                            <property name="sizePolicy">
+                                <sizepolicy>
+                                    <hsizetype>0</hsizetype>
+                                    <vsizetype>0</vsizetype>
+                                    <horstretch>0</horstretch>
+                                    <verstretch>0</verstretch>
+                                </sizepolicy>
+                            </property>
+                            <property name="minimumSize">
+                                <size>
+                                    <width>30</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                            <property name="focusPolicy">
+                                <enum>NoFocus</enum>
+                            </property>
+                            <property name="acceptDrops">
+                                <bool>false</bool>
+                            </property>
+                            <property name="frameShape">
+                                <enum>LineEditPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                                <enum>Sunken</enum>
+                            </property>
+                            <property name="text">
+                                <string>0</string>
+                            </property>
+                            <property name="dragEnabled">
+                                <bool>false</bool>
+                            </property>
+                            <property name="readOnly">
+                                <bool>true</bool>
+                            </property>
+                            <property name="toolTip" stdset="0">
+                                <string>The number of characters in your message</string>
+                            </property>
+                        </widget>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>textLabel3</cstring>
+                            </property>
+                            <property name="text">
+                                <string>/</string>
+                            </property>
+                        </widget>
+                        <widget class="QLineEdit">
+                            <property name="name">
+                                <cstring>smsCharLeft</cstring>
+                            </property>
+                            <property name="sizePolicy">
+                                <sizepolicy>
+                                    <hsizetype>0</hsizetype>
+                                    <vsizetype>0</vsizetype>
+                                    <horstretch>0</horstretch>
+                                    <verstretch>0</verstretch>
+                                </sizepolicy>
+                            </property>
+                            <property name="minimumSize">
+                                <size>
+                                    <width>30</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                            <property name="focusPolicy">
+                                <enum>NoFocus</enum>
+                            </property>
+                            <property name="acceptDrops">
+                                <bool>false</bool>
+                            </property>
+                            <property name="text">
+                                <string>162</string>
+                            </property>
+                            <property name="dragEnabled">
+                                <bool>false</bool>
+                            </property>
+                            <property name="readOnly">
+                                <bool>true</bool>
+                            </property>
+                            <property name="toolTip" stdset="0">
+                                <string>The number of characters left to send in this message</string>
+                            </property>
+                        </widget>
+                    </hbox>
+                </widget>
+                <widget class="QLabel" row="0" column="0">
+                    <property name="name">
+                        <cstring>textLabel2_2</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Characters typed / left:</string>
+                    </property>
+                </widget>
+            </grid>
+        </widget>
+        <spacer row="0" column="2" rowspan="1" colspan="2">
+            <property name="name">
+                <cstring>spacer32</cstring>
+            </property>
+            <property name="orientation">
+                <enum>Horizontal</enum>
+            </property>
+            <property name="sizeType">
+                <enum>Expanding</enum>
+            </property>
+            <property name="sizeHint">
+                <size>
+                    <width>110</width>
+                    <height>21</height>
+                </size>
+            </property>
+        </spacer>
+        <widget class="QLabel" row="1" column="0">
+            <property name="name">
+                <cstring>textLabel2</cstring>
+            </property>
+            <property name="text">
+                <string>Message:</string>
+            </property>
+        </widget>
+        <spacer row="1" column="1" rowspan="1" colspan="6">
+            <property name="name">
+                <cstring>spacer82</cstring>
+            </property>
+            <property name="orientation">
+                <enum>Horizontal</enum>
+            </property>
+            <property name="sizeType">
+                <enum>Expanding</enum>
+            </property>
+            <property name="sizeHint">
+                <size>
+                    <width>321</width>
+                    <height>20</height>
+                </size>
+            </property>
+        </spacer>
+        <widget class="QTextEdit" row="2" column="0" rowspan="1" colspan="7">
+            <property name="name">
+                <cstring>smsMessage</cstring>
+            </property>
+            <property name="enabled">
+                <bool>true</bool>
+            </property>
+            <property name="acceptDrops">
+                <bool>true</bool>
+            </property>
+            <property name="hScrollBarMode">
+                <enum>AlwaysOff</enum>
+            </property>
+            <property name="textFormat">
+                <enum>PlainText</enum>
+            </property>
+            <property name="wordWrap">
+                <enum>WidgetWidth</enum>
+            </property>
+            <property name="toolTip" stdset="0">
+                <string>enter your SMS message here, max 162 characters</string>
+            </property>
+        </widget>
+        <widget class="QPushButton" row="3" column="5">
+            <property name="name">
+                <cstring>pushButtonClear</cstring>
+            </property>
+            <property name="text">
+                <string>Clea&amp;r</string>
+            </property>
+            <property name="iconSet">
+                <iconset>user-trash-full-16x16.png</iconset>
+            </property>
+        </widget>
+        <widget class="QPushButton" row="3" column="3" rowspan="1" colspan="2">
+            <property name="name">
+                <cstring>pushButtonSendSMS</cstring>
+            </property>
+            <property name="enabled">
+                <bool>false</bool>
+            </property>
+            <property name="text">
+                <string>&amp;Send</string>
+            </property>
+            <property name="iconSet">
+                <iconset>mail-message-new-16x16.png</iconset>
+            </property>
+        </widget>
+        <spacer row="3" column="0" rowspan="1" colspan="3">
+            <property name="name">
+                <cstring>spacer31</cstring>
+            </property>
+            <property name="orientation">
+                <enum>Horizontal</enum>
+            </property>
+            <property name="sizeType">
+                <enum>Expanding</enum>
+            </property>
+            <property name="sizeHint">
+                <size>
+                    <width>150</width>
+                    <height>21</height>
+                </size>
+            </property>
+        </spacer>
+        <widget class="QPushButton" row="3" column="6">
+            <property name="name">
+                <cstring>pushButtonExit</cstring>
+            </property>
+            <property name="text">
+                <string>&amp;Cancel</string>
+            </property>
+            <property name="iconSet">
+                <iconset>process-stop-16x16.png</iconset>
+            </property>
+        </widget>
+    </grid>
+</widget>
+<connections>
+    <connection>
+        <sender>pushButtonClear</sender>
+        <signal>clicked()</signal>
+        <receiver>smsMessage</receiver>
+        <slot>clear()</slot>
+    </connection>
+    <connection>
+        <sender>smsMessage</sender>
+        <signal>textChanged()</signal>
+        <receiver>smsdialog</receiver>
+        <slot>smsTextChanged()</slot>
+    </connection>
+    <connection>
+        <sender>pushButtonSendSMS</sender>
+        <signal>clicked()</signal>
+        <receiver>smsdialog</receiver>
+        <slot>pushButton_sendSMS()</slot>
+    </connection>
+    <connection>
+        <sender>pushButtonExit</sender>
+        <signal>clicked()</signal>
+        <receiver>smsdialog</receiver>
+        <slot>close()</slot>
+    </connection>
+    <connection>
+        <sender>pushButtonClear</sender>
+        <signal>clicked()</signal>
+        <receiver>smsToNumber</receiver>
+        <slot>clear()</slot>
+    </connection>
+    <connection>
+        <sender>smsMessage</sender>
+        <signal>modificationChanged(bool)</signal>
+        <receiver>pushButtonSendSMS</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+</connections>
+<tabstops>
+    <tabstop>smsToNumber</tabstop>
+    <tabstop>smsMessage</tabstop>
+    <tabstop>pushButtonSendSMS</tabstop>
+    <tabstop>pushButtonClear</tabstop>
+    <tabstop>pushButtonExit</tabstop>
+</tabstops>
+<includes>
+    <include location="local" impldecl="in implementation">smsdialog.ui.h</include>
+</includes>
+<slots>
+    <slot>smsTextChanged()</slot>
+    <slot>pushButton_sendSMS()</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

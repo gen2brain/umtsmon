@@ -1,0 +1,31 @@
+UMTSMON
+=======
+
+Welcome!
+Thanks for giving umtsmon a try. umtsmon is a tool to handle UMTS (3G) devices in Linux.
+
+At this moment, umtsmon is still a work in progress.
+
+umtsmon 0.10 is a huge improvement over previous releases:
+  * UI starts immediately and starts worrying about devices later
+  * add support for HSO devices
+  * autoconnect
+  * and many smaller improvements, like improved logging, more info in system info dialog,
+    updated translations, add support for Ericsson F3507g, etc.
+
+Known major bugs:
+  * umtsmon cannot perform autodetection correctly on some 2.6.20 Linux kernels.
+  * umtsmon doesn't work at all with bluetooth right now.
+  * the UI feels sluggish sometimes
+
+Anyway, we hope you find this program useful.
+
+NOTE for people using ZeroCD devices (usually on USB ports),
+as supplied by Huawei or Option, umtsmon now should 
+find usb_modeswitch if it is in your path and use it.
+If you don't have usb_modeswitch, please find it here:
+  http://www.draisberghof.de/usb_modeswitch/  
+
+
+Klaas van Gend and the umtsmon team
+

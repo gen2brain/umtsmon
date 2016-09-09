@@ -1,0 +1,138 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>AboutDialogUmtsmon</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>AboutDialogUmtsmon</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>503</width>
+            <height>476</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>About</string>
+    </property>
+    <property name="icon">
+        <pixmap>dialog-information-16x16.png</pixmap>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QTabWidget">
+            <property name="name">
+                <cstring>tabWidget3</cstring>
+            </property>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>tab</cstring>
+                </property>
+                <attribute name="title">
+                    <string>About</string>
+                </attribute>
+                <vbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <widget class="QLabel">
+                        <property name="name">
+                            <cstring>textLabel1_2</cstring>
+                        </property>
+                        <property name="text">
+                            <string>&lt;b&gt;&lt;font size="+2"&gt;UMTSmon&lt;/font&gt; - Monitoring your UMTS PCMCIA card&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+(C) 2006,2007,2008 by Klaas van Gend and others.&lt;br&gt;&lt;br&gt;
+
+&lt;b&gt;This application is licensed by the GPL v2 license.&lt;/b&gt;&lt;br&gt;
+The COPYING tab explains the rights and constraints that are granted to you due to this software license.
+&lt;br&gt;
+Refer to the AUTHORS tab to find out what parts of this application were derived/taken from other sources.</string>
+                        </property>
+                    </widget>
+                    <spacer>
+                        <property name="name">
+                            <cstring>spacer23</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>31</width>
+                                <height>261</height>
+                            </size>
+                        </property>
+                    </spacer>
+                    <widget class="QLabel">
+                        <property name="name">
+                            <cstring>versionlabel</cstring>
+                        </property>
+                        <property name="text">
+                            <string>version updated at runtime</string>
+                        </property>
+                    </widget>
+                </vbox>
+            </widget>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>tab</cstring>
+                </property>
+                <attribute name="title">
+                    <string>COPYING</string>
+                </attribute>
+                <vbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <widget class="QTextEdit">
+                        <property name="name">
+                            <cstring>textEdit2</cstring>
+                        </property>
+                        <property name="text">
+                            <string>
+@COPYING@
+                            </string>
+                        </property>
+                        <property name="wordWrap">
+                            <enum>WidgetWidth</enum>
+                        </property>
+                    </widget>
+                </vbox>
+            </widget>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>AUTHORS</cstring>
+                </property>
+                <attribute name="title">
+                    <string>AUTHORS</string>
+                </attribute>
+                <vbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <widget class="QTextEdit">
+                        <property name="name">
+                            <cstring>textEdit3</cstring>
+                        </property>
+                        <property name="text">
+                            <string>
+@AUTHORS@
+                            </string>
+                        </property>
+                        <property name="wordWrap">
+                            <enum>WidgetWidth</enum>
+                        </property>
+                    </widget>
+                </vbox>
+            </widget>
+        </widget>
+    </vbox>
+</widget>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

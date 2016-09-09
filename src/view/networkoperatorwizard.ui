@@ -1,0 +1,620 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>NetworkOperatorWizard</class>
+<widget class="QWizard">
+    <property name="name">
+        <cstring>NetworkOperatorWizard</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>577</width>
+            <height>409</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Network Operator Wizard</string>
+    </property>
+    <widget class="QWidget">
+        <property name="name">
+            <cstring>WizardPage1</cstring>
+        </property>
+        <attribute name="title">
+            <string>Page 1: Welcome</string>
+        </attribute>
+        <grid>
+            <property name="name">
+                <cstring>unnamed</cstring>
+            </property>
+            <widget class="QLabel" row="0" column="0">
+                <property name="name">
+                    <cstring>pixmapLabel1</cstring>
+                </property>
+                <property name="sizePolicy">
+                    <sizepolicy>
+                        <hsizetype>0</hsizetype>
+                        <vsizetype>0</vsizetype>
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                    </sizepolicy>
+                </property>
+                <property name="pixmap">
+                    <pixmap>NetworkOperatorWizard.png</pixmap>
+                </property>
+                <property name="scaledContents">
+                    <bool>true</bool>
+                </property>
+            </widget>
+            <widget class="QLabel" row="0" column="1">
+                <property name="name">
+                    <cstring>textLabel1</cstring>
+                </property>
+                <property name="text">
+                    <string>&lt;b&gt;&lt;p align="center"&gt;Welcome to the&lt;br&gt; 
+Network Operator Wizard&lt;/p&gt;&lt;/b&gt;
+&lt;p&gt;This wizard will help you choose an operator.&lt;/p&gt;
+&lt;p&gt;Please note: when abroad, usually all operators will accept
+ your connection and charge you "roaming fees" - 
+much more expensive.&lt;/P&gt;</string>
+                </property>
+                <property name="alignment">
+                    <set>WordBreak|AlignTop</set>
+                </property>
+            </widget>
+        </grid>
+    </widget>
+    <widget class="QWidget">
+        <property name="name">
+            <cstring>WizardPage</cstring>
+        </property>
+        <attribute name="title">
+            <string>Page 2: Who picks the operator?</string>
+        </attribute>
+        <grid>
+            <property name="name">
+                <cstring>unnamed</cstring>
+            </property>
+            <widget class="QButtonGroup" row="1" column="1">
+                <property name="name">
+                    <cstring>buttonGroup3</cstring>
+                </property>
+                <property name="title">
+                    <string>who picks?</string>
+                </property>
+                <vbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <widget class="QRadioButton">
+                        <property name="name">
+                            <cstring>radioButton_card</cstring>
+                        </property>
+                        <property name="text">
+                            <string>have the card decide</string>
+                        </property>
+                    </widget>
+                    <widget class="QRadioButton">
+                        <property name="name">
+                            <cstring>radioButton_user</cstring>
+                        </property>
+                        <property name="text">
+                            <string>let me select an operator</string>
+                        </property>
+                        <property name="checked">
+                            <bool>true</bool>
+                        </property>
+                    </widget>
+                </vbox>
+            </widget>
+            <widget class="QLabel" row="0" column="0" rowspan="2" colspan="1">
+                <property name="name">
+                    <cstring>pixmapLabel1_2</cstring>
+                </property>
+                <property name="pixmap">
+                    <pixmap>NetworkOperatorWizard.png</pixmap>
+                </property>
+                <property name="scaledContents">
+                    <bool>true</bool>
+                </property>
+            </widget>
+            <widget class="QLabel" row="0" column="1">
+                <property name="name">
+                    <cstring>textLabel1_2</cstring>
+                </property>
+                <property name="text">
+                    <string>&lt;p&gt;Your  SIM card contains
+ a "preferred" set of abroad operators.
+The device can select these automatically. 
+("Preferred" doesn't necessarily mean lowest cost)&lt;/p&gt;
+
+&lt;p&gt;Please note: if that "preferred" operator 
+has bad coverage, you won't have 
+a connection unless you manually switch.&lt;/p&gt;
+
+&lt;p&gt;However, on manual selection, the device won't 
+switch unless you tell it to - moving to another country 
+requires running this wizard again.  &lt;/p&gt;</string>
+                </property>
+                <property name="alignment">
+                    <set>WordBreak|AlignTop</set>
+                </property>
+            </widget>
+        </grid>
+    </widget>
+    <widget class="QWidget">
+        <property name="name">
+            <cstring>WizardPage</cstring>
+        </property>
+        <attribute name="title">
+            <string>Page 3: Get network strengths?</string>
+        </attribute>
+        <grid>
+            <property name="name">
+                <cstring>unnamed</cstring>
+            </property>
+            <spacer row="1" column="1">
+                <property name="name">
+                    <cstring>spacer1_2</cstring>
+                </property>
+                <property name="orientation">
+                    <enum>Vertical</enum>
+                </property>
+                <property name="sizeType">
+                    <enum>Expanding</enum>
+                </property>
+                <property name="sizeHint">
+                    <size>
+                        <width>20</width>
+                        <height>16</height>
+                    </size>
+                </property>
+            </spacer>
+            <widget class="QLabel" row="0" column="1">
+                <property name="name">
+                    <cstring>textLabel1_2_2</cstring>
+                </property>
+                <property name="text">
+                    <string>&lt;p&gt;After searching for operators, we will start getting signal strengths.&lt;/p&gt;
+
+&lt;p&gt;This will however significantly increase the search time!
+&lt;/p&gt;</string>
+                </property>
+            </widget>
+            <widget class="QLabel" row="0" column="0" rowspan="5" colspan="1">
+                <property name="name">
+                    <cstring>pixmapLabel1_3</cstring>
+                </property>
+                <property name="pixmap">
+                    <pixmap>NetworkOperatorWizard.png</pixmap>
+                </property>
+                <property name="scaledContents">
+                    <bool>true</bool>
+                </property>
+            </widget>
+            <widget class="QCheckBox" row="2" column="1">
+                <property name="name">
+                    <cstring>checkBox_no_signal_strengths</cstring>
+                </property>
+                <property name="enabled">
+                    <bool>false</bool>
+                </property>
+                <property name="text">
+                    <string>Don't get signal strengths</string>
+                </property>
+                <property name="checked">
+                    <bool>true</bool>
+                </property>
+            </widget>
+            <spacer row="4" column="1">
+                <property name="name">
+                    <cstring>spacer2_2</cstring>
+                </property>
+                <property name="orientation">
+                    <enum>Vertical</enum>
+                </property>
+                <property name="sizeType">
+                    <enum>Expanding</enum>
+                </property>
+                <property name="sizeHint">
+                    <size>
+                        <width>20</width>
+                        <height>20</height>
+                    </size>
+                </property>
+            </spacer>
+            <widget class="QLabel" row="3" column="1">
+                <property name="name">
+                    <cstring>textLabel1_4</cstring>
+                </property>
+                <property name="paletteForegroundColor">
+                    <color>
+                        <red>255</red>
+                        <green>0</green>
+                        <blue>0</blue>
+                    </color>
+                </property>
+                <property name="text">
+                    <string>&lt;p align="center"&gt;retrieving signal strengths not implemented yet&lt;/p&gt;</string>
+                </property>
+            </widget>
+        </grid>
+    </widget>
+    <widget class="QWidget">
+        <property name="name">
+            <cstring>WizardPage</cstring>
+        </property>
+        <attribute name="title">
+            <string>Page 4: Searching for networks...</string>
+        </attribute>
+        <grid>
+            <property name="name">
+                <cstring>unnamed</cstring>
+            </property>
+            <widget class="QProgressBar" row="2" column="1">
+                <property name="name">
+                    <cstring>progressBar_searching</cstring>
+                </property>
+                <property name="progress">
+                    <number>15</number>
+                </property>
+            </widget>
+            <spacer row="1" column="1">
+                <property name="name">
+                    <cstring>spacer32</cstring>
+                </property>
+                <property name="orientation">
+                    <enum>Vertical</enum>
+                </property>
+                <property name="sizeType">
+                    <enum>Expanding</enum>
+                </property>
+                <property name="sizeHint">
+                    <size>
+                        <width>21</width>
+                        <height>31</height>
+                    </size>
+                </property>
+            </spacer>
+            <spacer row="3" column="1">
+                <property name="name">
+                    <cstring>spacer27</cstring>
+                </property>
+                <property name="orientation">
+                    <enum>Vertical</enum>
+                </property>
+                <property name="sizeType">
+                    <enum>Expanding</enum>
+                </property>
+                <property name="sizeHint">
+                    <size>
+                        <width>41</width>
+                        <height>90</height>
+                    </size>
+                </property>
+            </spacer>
+            <widget class="QLabel" row="0" column="0" rowspan="4" colspan="1">
+                <property name="name">
+                    <cstring>pixmapLabel1_4</cstring>
+                </property>
+                <property name="pixmap">
+                    <pixmap>NetworkOperatorWizard.png</pixmap>
+                </property>
+                <property name="scaledContents">
+                    <bool>true</bool>
+                </property>
+            </widget>
+            <widget class="QLabel" row="0" column="1">
+                <property name="name">
+                    <cstring>textLabel2</cstring>
+                </property>
+                <property name="text">
+                    <string>&lt;p align="center"&gt;Searching for networks...&lt;/p&gt;
+
+&lt;p align="center"&gt;Please wait...&lt;/p&gt;</string>
+                </property>
+            </widget>
+        </grid>
+    </widget>
+    <widget class="QWidget">
+        <property name="name">
+            <cstring>WizardPage</cstring>
+        </property>
+        <attribute name="title">
+            <string>Page 5: Select a Network Operator</string>
+        </attribute>
+        <grid>
+            <property name="name">
+                <cstring>unnamed</cstring>
+            </property>
+            <widget class="QLabel" row="0" column="1">
+                <property name="name">
+                    <cstring>textLabel3</cstring>
+                </property>
+                <property name="text">
+                    <string>Please select your network:</string>
+                </property>
+            </widget>
+            <widget class="QLayoutWidget" row="2" column="1">
+                <property name="name">
+                    <cstring>layout2</cstring>
+                </property>
+                <grid>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <widget class="QLabel" row="1" column="0" rowspan="1" colspan="2">
+                        <property name="name">
+                            <cstring>textLabel_signals</cstring>
+                        </property>
+                        <property name="enabled">
+                            <bool>false</bool>
+                        </property>
+                        <property name="text">
+                            <string>Still getting network strengths...</string>
+                        </property>
+                    </widget>
+                    <widget class="QProgressBar" row="0" column="0">
+                        <property name="name">
+                            <cstring>progressBar_signals</cstring>
+                        </property>
+                        <property name="enabled">
+                            <bool>false</bool>
+                        </property>
+                        <property name="progress">
+                            <number>5</number>
+                        </property>
+                    </widget>
+                    <widget class="QPushButton" row="0" column="1">
+                        <property name="name">
+                            <cstring>pushButton_stop_signals</cstring>
+                        </property>
+                        <property name="enabled">
+                            <bool>false</bool>
+                        </property>
+                        <property name="maximumSize">
+                            <size>
+                                <width>30</width>
+                                <height>32767</height>
+                            </size>
+                        </property>
+                        <property name="text">
+                            <string></string>
+                        </property>
+                        <property name="pixmap">
+                            <pixmap>process-stop-16x16.png</pixmap>
+                        </property>
+                    </widget>
+                </grid>
+            </widget>
+            <widget class="QLabel" row="0" column="0" rowspan="3" colspan="1">
+                <property name="name">
+                    <cstring>pixmapLabel1_5</cstring>
+                </property>
+                <property name="pixmap">
+                    <pixmap>NetworkOperatorWizard.png</pixmap>
+                </property>
+                <property name="scaledContents">
+                    <bool>true</bool>
+                </property>
+            </widget>
+            <widget class="QTable" row="1" column="1">
+                <column>
+                    <property name="text">
+                        <string>Operator</string>
+                    </property>
+                </column>
+                <column>
+                    <property name="text">
+                        <string>Type</string>
+                    </property>
+                </column>
+                <column>
+                    <property name="text">
+                        <string>Signal</string>
+                    </property>
+                </column>
+                <column>
+                    <property name="text">
+                        <string>ID</string>
+                    </property>
+                </column>
+                <property name="name">
+                    <cstring>table_operators</cstring>
+                </property>
+                <property name="numRows">
+                    <number>0</number>
+                </property>
+                <property name="numCols">
+                    <number>4</number>
+                </property>
+                <property name="readOnly">
+                    <bool>true</bool>
+                </property>
+                <property name="sorting">
+                    <bool>true</bool>
+                </property>
+                <property name="selectionMode">
+                    <enum>SingleRow</enum>
+                </property>
+                <property name="whatsThis" stdset="0">
+                    <string>This table lists the operators to choose from.</string>
+                </property>
+            </widget>
+        </grid>
+    </widget>
+    <widget class="QWidget">
+        <property name="name">
+            <cstring>WizardPage</cstring>
+        </property>
+        <attribute name="title">
+            <string>Page 6: Connecting to operator...</string>
+        </attribute>
+        <grid>
+            <property name="name">
+                <cstring>unnamed</cstring>
+            </property>
+            <widget class="QLabel" row="0" column="1">
+                <property name="name">
+                    <cstring>textLabel2_2</cstring>
+                </property>
+                <property name="text">
+                    <string>&lt;p align="center"&gt;Connecting to your network...&lt;/p&gt;
+
+&lt;p align="center"&gt;Please wait...&lt;/p&gt;</string>
+                </property>
+            </widget>
+            <spacer row="3" column="1">
+                <property name="name">
+                    <cstring>spacer28</cstring>
+                </property>
+                <property name="orientation">
+                    <enum>Vertical</enum>
+                </property>
+                <property name="sizeType">
+                    <enum>Expanding</enum>
+                </property>
+                <property name="sizeHint">
+                    <size>
+                        <width>51</width>
+                        <height>81</height>
+                    </size>
+                </property>
+            </spacer>
+            <spacer row="1" column="1">
+                <property name="name">
+                    <cstring>spacer31</cstring>
+                </property>
+                <property name="orientation">
+                    <enum>Vertical</enum>
+                </property>
+                <property name="sizeType">
+                    <enum>Expanding</enum>
+                </property>
+                <property name="sizeHint">
+                    <size>
+                        <width>20</width>
+                        <height>41</height>
+                    </size>
+                </property>
+            </spacer>
+            <widget class="QProgressBar" row="2" column="1">
+                <property name="name">
+                    <cstring>progressBar_connecting</cstring>
+                </property>
+                <property name="totalSteps">
+                    <number>10</number>
+                </property>
+                <property name="progress">
+                    <number>-1</number>
+                </property>
+            </widget>
+            <widget class="QLabel" row="0" column="0" rowspan="4" colspan="1">
+                <property name="name">
+                    <cstring>pixmapLabel1_6</cstring>
+                </property>
+                <property name="pixmap">
+                    <pixmap>NetworkOperatorWizard.png</pixmap>
+                </property>
+                <property name="scaledContents">
+                    <bool>true</bool>
+                </property>
+            </widget>
+        </grid>
+    </widget>
+    <widget class="QWidget">
+        <property name="name">
+            <cstring>WizardPage</cstring>
+        </property>
+        <attribute name="title">
+            <string>The End</string>
+        </attribute>
+        <grid>
+            <property name="name">
+                <cstring>unnamed</cstring>
+            </property>
+            <widget class="QLabel" row="0" column="1">
+                <property name="name">
+                    <cstring>textLabel1_3</cstring>
+                </property>
+                <property name="text">
+                    <string>&lt;b&gt;&lt;p align="center"&gt;Network Operator
+Wizard&lt;br&gt;completed&lt;/p&gt;&lt;/b&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;p&gt;Have fun on the internet!&lt;/P&gt;</string>
+                </property>
+            </widget>
+            <spacer row="1" column="1">
+                <property name="name">
+                    <cstring>spacer29</cstring>
+                </property>
+                <property name="orientation">
+                    <enum>Vertical</enum>
+                </property>
+                <property name="sizeType">
+                    <enum>Expanding</enum>
+                </property>
+                <property name="sizeHint">
+                    <size>
+                        <width>21</width>
+                        <height>110</height>
+                    </size>
+                </property>
+            </spacer>
+            <widget class="QLabel" row="0" column="0" rowspan="2" colspan="1">
+                <property name="name">
+                    <cstring>pixmapLabel1_7</cstring>
+                </property>
+                <property name="pixmap">
+                    <pixmap>NetworkOperatorWizard.png</pixmap>
+                </property>
+                <property name="scaledContents">
+                    <bool>true</bool>
+                </property>
+            </widget>
+        </grid>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>table_operators</sender>
+        <signal>clicked(int,int,int,const QPoint&amp;)</signal>
+        <receiver>NetworkOperatorWizard</receiver>
+        <slot>operatorSelected()</slot>
+    </connection>
+</connections>
+<includes>
+    <include location="global" impldecl="in implementation">qtimer.h</include>
+    <include location="local" impldecl="in declaration">NetworkChanger.h</include>
+    <include location="local" impldecl="in declaration">Popup.h</include>
+    <include location="local" impldecl="in implementation">OperatorList.h</include>
+    <include location="local" impldecl="in implementation">networkoperatorwizard.ui.h</include>
+</includes>
+<forwards>
+    <forward>class QTimer;</forward>
+</forwards>
+<variables>
+    <variable access="private">int myConnectCount;</variable>
+    <variable access="private">QTimer* myConnectTimer;</variable>
+    <variable access="private">int mySearchCount;</variable>
+    <variable access="private">QTimer* mySearchTimer;</variable>
+    <variable access="private">NetworkChanger myNetworkChanger</variable>
+</variables>
+<slots>
+    <slot access="protected">back()</slot>
+    <slot access="protected">next()</slot>
+    <slot access="protected">operatorSelected()</slot>
+    <slot access="protected">startConnect()</slot>
+    <slot access="protected">progressConnect()</slot>
+    <slot access="protected">startSearch()</slot>
+    <slot access="protected">progressSearch()</slot>
+    <slot access="protected">updateTable()</slot>
+    <slot access="protected">sort_table_operators(int aSection)</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+    <function>gotoPage( int aPageNumber )</function>
+    <function>stopTimer( QTimer ** aTimerPtrPtr )</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

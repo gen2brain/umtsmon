@@ -1,0 +1,334 @@
+TODO
+
+This file contains a list of things to be done and a list of what's done
+already.
+Any entry starting with an X is completed.
+Any entry starting with an / is "half" completed
+
+
+--------------------------------------------------------------------------
+For the 0.10 release:
+ X suspend logging during setting PIN/PUK.
+ X add checks whether user is part of 'dialout' and 'uucp' groups
+ X BUG TO BE REPORTED:
+   - even if *time* limit is hit, still data limit mentioned in warning dialog.
+   - that dialog is not i18n aware
+ X BUG:
+   X  ###P1 t=935: ERROR: APN contains illegal character
+      this error should be visible to the GUI user, too.
+   X  it also means that the checks in the profile dialog need to improve
+ X Create a new popup class that saves whether the customer wants to see the dialog again
+   X add a "welcome" at umtsmon start
+   X add a "please create a profile" at gui start 
+ X Sierra Wireless Aircard 875 returns a number (I saw 23201 once) as operator - that should be masked...
+   - Novatel devices do this, too
+   - Huawei also sometimes
+   * (observed on Novatel cards only): if subsequent calls to AT+COPS do not return
+     the operator namei (but an empty string), make sure you cached the previous instance.
+     NOTE: first research why - this might be due to CREG/CGREG or so...
+   X implement number-to-operator cache
+   X use cache
+ X on single port cards (maybe also on multi-port cards)
+   not having autoupdate radio prefs on, will hang umtsmon after
+   shutting down the network connection
+ X I18n changes:
+   X make setting for non-en_US language persistent
+   X get list of all possible languages
+   X add menu option to set language from GUI
+   * Indonesian, thanks to Andika Triwidada
+   * Russian, thanks to Soussine Viktor
+ X auto connect option
+   X only allow auto connect when previously a connection was successful for that profile
+   X ensure device switching can be automated, too
+ X hardware enablement:
+   X finish Option HSO device support
+   X Solomon SCMi 250u   
+   X Ericsson F3507g
+ X add Device class name and port info to System info dialog
+ X remember if roaming last time, so can show right stats at startup
+ * ConnectionInfo(ACM) - if a device doesn't work well on CGREG, we should make
+   the registration be part of the signal quality. i.e. always ask for signal quality
+   and make the registration depend on that. This requires changing the isDeviceRegistered()
+   and other members.
+ * ConnectionInfoACM seems to work as fine as ConnectionInfo does. Why have two?
+   - of course not entirely true: roaming info is missing
+ * BUG:
+   *  Huawei modems no longer understand roaming vs home network
+ X various bugs fixed and optimizations around profiles:
+   - better handling of empty APN
+   - ability to set a profile from the command line
+   - immediately edit a profile after you create a new one
+ X CID is now configurable from the config file 
+ X umtsmon no longer requires device to be fully operational at start
+   the device can now even be inserted after umtsmon has started
+ * The UI is sluggish
+   - move autodetection to a separate background thread
+   - fix the UIState to become a proper state machine
+ X allow for extra options in ppp through the /etc/ppp/peers file
+ 
+--------------------------------------------------------------------------
+For "FUTURE RELEASES":
+ * really make Aircard 875 (860/881U) work
+ * umtsmon crashes when a system comes out of suspend
+ * network operator wizard should also retrieve signal info for all operators
+ * check if the output of usb_modeswitch was good - or do we need to run again?
+ * auto update of stats should be always enabled until registered.
+ * check if UMTS card is forced to a specific network because if that
+   network is not available, you won't get a connection automatically
+ * Fix network selection of Novatel XU870
+ * move testersettings stuff from the various *_main.cpp files  to TestFrame.cpp
+ * TO BE REPORTED BUG: when a usb serial plug is inserted *AND* a usb2serial-based card like the
+   Option, the new autodetection code will decide ttyUSB0 and ttyUSB3 first.
+   the test for AT will fail - the card will only use ttyUSB3. Not good.
+ / Fix flickering of LCDDisplay
+ * add a dialog that shows the progress of AutoDetect
+ * on single port cards, a malfunctioning PPP might leave the port in undefined state
+ * fix operation on 2.6.20 kernels (Bug #1662877)
+ * check if HSDPA is used and show in display
+ * if multiple Profiles exist, make the "Connect" button a drop-down or add a dialog.
+   * show the currently selected Profile on the mainwindow
+ * add a "STOP" feature that kills all network connections and
+   performs a "cardctl eject" command - only if pcmcia kernel module is loaded
+   note: "cardctl eject" on Suse 9.3, "pccardctl eject" on Suse 10.1
+   note: on Suse, this command is suid root, but we can run things as root anyway now
+   -> this feature should only exist for PCMCIA, as it makes no sense on USB
+   -> this feature is dangerous on nozomi cards as it might freeze the whole system
+ * fix compilation for QT4 (Bug # 1527835)
+   -> only go to QT4 if it doesn't impact the amount of required libraries
+ * remove all assert(false) from the code
+ * Wizards for PPP configuration
+ * SMS handling:
+   * do code page translation as the character sets don't match
+   * add receiving SMS
+ * Make single serial port cards co-exist with PPP
+   (not by mutual exclusion as it is now, but by interrupting data streams)
+   See note in SerialPort.cpp: This code can be derived from modem.cpp in kppp.
+   Reportedly, also OpenMoko's gsmd can do this for us.
+ * more graphics
+   - animated connect and search network graphics?
+   - adjust font sizes for DPI settings in LCDDisplay
+ * diagnose more configuration errors
+ * installers
+ * (See Bug 1856802) for some device/operator, the MTU changes between GPRS and
+   UMTS operation.    The only workaround is currently to set a fixed MTU in 
+   the file /etc/ppp/options, which then is used for both radio modes.
+ * add location identification, like shown in this application:
+   http://www.ullihome.de/index.php/Hauptseite#Net_Monitor
+
+ 
+--------------------------------------------------------------------------
+History of releases:
+ 
+What was in the  0.1 release:
+ X enter pin code during startup to unlock the card
+ X switching of network operators
+ X SMS sending
+ X some detection of Option GT cards
+
+
+What was new in the 0.2 release:
+ X PCMCIA card autodetection
+    X Option GT            autodetection + use
+    X Option Fusion(+)     autodetection + use
+    / SonyEricsson GC79    (autodetection only)
+ X command line override of autodetection
+ X create basic website
+ X if umtsmon is started immediately after card was inserted, the SIM
+   interface might not have been initialised yet. That's currently handled 
+   incorrectly: we *should* allow some time and poll for the interface to 
+   become available.
+
+
+What was in the 0.3 release:
+ X card autodetection
+    X SonyEricsson GC79       autodetection (done)
+    X Option GT EDGE (Combo)  autodetection (done)
+	X serial_cs-based cards   autodetection (done)
+	  X Sierra Wireless Aircard 775 EDGE
+      X Novatel Merlin UMTS Modem U630 
+ X logging verbosity should be configurable
+    X create DEBUG macro's
+    X convert all existing printf's and cout's to DEBUG statements
+    X create a method to handle critical errors
+ X Add a technology selector - 3G only, 3G preferred, 2G only etc. 
+   This is important for fringe network coverage. 
+ X Make signal strength visible in title bar when minimized
+ X add checkbox to enable/disable the update of network stats
+
+
+
+What was in the 0.4 release:
+ X Enhance PCMCIA detection to handle multiple PCMCIA slots.
+   (implemented by Stefan Seyfried)
+ X card autodetection
+    X Huawei Technologies Mobile E612 
+    X Detect 'Holtzman' Nozomi drivers (which have different /dev interface names)
+      (implemented by Stefan Seyfried)
+ x add feature to issue commands as "root" user
+ 	X apply the trick from kppp to do this
+ 	X must clean up code for handling of error conditions first
+ X implement start/stop PPP connection from within umtsmon
+ X various interactions:
+   - not possible to switch radio type when connected - should be disabled
+   - not possible to connect when searching - connect should be disabled
+   - when connected - disable connect button or reuse as "disconnect" button
+ X implement configuration file for persistent settings
+ X add window to enter required PPP (APN, username, passwd) settings
+ X enter PUK code dialog
+ X improved PIN code dialog
+
+What was in the 0.5 release:
+ X Fix security issues with respect to PPP by separating out the configuration
+   into a separate program that can modify system settings after asking for
+   a root password - the main UI doesn't need root privileges anymore.
+ X card autodetection
+    X Option 'ICON' USB box
+    X 4G Systems 'Web n Walk' USB box
+    X Original Option Vodafone 3G card
+ X implement changing of PIN code settings
+   X refactor PIN code enter thingie to separate widget that can be re-used
+   X make sure that the PIN dialogs use '*' instead of number for
+     increased security
+   X new dialog: change pin code
+   X new dialog: disable/enable use of pin code
+ X re-layout the UI
+   X separate out SMS code
+   X separate out network switching code
+   X separate out profile dialog 
+   X create a menu and move functionality there
+ X add dialog check for suid of pppd
+  
+For the 0.6 release:
+ X back out patch to DetectCard to sudo /dev/noz*
+ X add dialog to check for correct suid of all helper binaries and serial devices
+ X Add detection of Kyocera device (won't work, though)
+ X Add detection of Novatel XU870 (operation not complete - delayed to 0.7)
+ X Make Sony Ericsson GC79 work (Bug #1499130)
+ X fix SMS sending
+ X fix about dialog (c) message and AUTHORS tab 
+ X more graphical network strength view
+ X make PPPConnection more robust
+ X add 'noauth' to Profile
+   
+For the 0.6.9 release - will be in OpenSuse 10.3:
+ X rewrite autodetection
+   / switch to use libusb 
+     * and use current code as backup for non libusb systems
+   X usb detection first, pcmcia later
+   X add option to specify ppp port on command line
+   X attempt several baud rates if needed (Bug #1690898)
+ X test all ports to use (AT/PPP) before actually continuing - if there are 
+   three ports but only one is usable - switch to single port!
+ / finish getting the SonyEricsson GC79 to work (Bugs #1499130 and #1746965)
+   X make sure *all* AT commands are suppressed whilst PPP active
+ X show error log in case PPP fails
+ X move setRadioPreferences to its own dialog (Bug #1631291)
+ X Profile dialog: check for unsaved items if OK is pressed
+ / add support for:
+   X Dell Wireless 5510 (bug #1785692)
+   / Sony Ericsson GC86
+ 
+Additional for the 'real' 0.7 release:
+ X a few bug fixes by Gerald and Seife.
+ X document-new.png and document-save.png in newprofiledialog.ui are missing
+ X make a real application icon
+ 
+
+For the 0.7.91 release (i.e. 0.7-beta1):
+ X Sierra Wireless Aircard 875 support
+ X Huawei 220 doesn't like if you use the third port
+ / fix GC86 port operation (bug #1792667)
+ * add umtsmon to Debian
+   X .deb package for umtsmon-0.6 Ubuntu already exists
+ * internationalization
+   / dutch (nl) - Klaas
+   * brazilian portugese (pt-br) - Alvaro
+   / german (de) - Lubomir
+   * french/polish/russian/spanish/korean/other languages only if volunteers 
+   X fix the LCDDisplay to show "operator" "profile" and such i18n as well
+   X language selection from command line
+   X language selection through "LANG" environment variable
+ / icons
+   X get more icons from the Tango series
+   / move help/no/ok/services icons to the 22 and 16 directories
+   X add .desktop file
+ X improve Gentoo ebuild (needed for i18n and .desktop anyway)
+ X if usbserial card detected, but module not loaded, suggest to load module
+ X emit a message (other than just crashing :-() in the case nothing was detected
+ X added /etc/*-release to the info dialog, Bug# 1722979
+ X added the pppd version number to the info dialog, Bug# 1617912
+ X introduce manage profile dialog and fixup Profiles dialog
+ X FIX: on single port cards, a malfunctioning PPP might leave the port in undefined state
+ X maintain statistics and an alarm if you hit a percentage of bandwith per month
+   X add settings to Profile Dialog
+   X store traffic data in config file
+   X show sum & status in display
+   X throw warning if threshold hit
+ X solve the CGREG/CREG issue for ACM devices that don't answer that query well
+   (bug 1865927)
+ X add new advanced ppp option: No Compression Control Protocol negotiation
+
+For the 0.8 (final) release:
+ X improve i18n - bring all languages up-to-date
+   X dutch is at 98%
+   X german is high too
+ X fixup MonthlyTraffic creation
+   - starting at GUI Start (logically - is part of mainwindow class)
+   - twice before creating connection
+   - before sending SMS
+ X merge Gerald's ctrl-c in ui (connect) patch
+ X merge Seife's ctrl-c on cmdline (sigint) patch 
+ X sending SMS fails on Novatel U740 
+   - card returns "CME Error 305" when over limit of max characters
+   - that's not a known error ?!?
+   X but the error was not even detected!
+ X allow to suppress PPP verbosity (Seife)
+ X Fix flickering of LCDDisplay - mostly done
+ X if single port device - don't show network strength when connected
+
+ For the 0.9 release:
+ X create a umtsmon-i18n mailing list
+ X work on commit list
+ X get all USB IDs from 2.6.24^H^H25 into the USB AutoDetector
+   X TODO: real Option (option.c)
+   X TODO: Sierra Wireless (sierra.c) - patches by Phil
+   X TODO: Huawei (only a few IDs in use)
+   X TODO: others
+ X make Huawei E220 work acceptably
+   X add ignores for unsollicited updates 
+   X fix all oddities, including immediate return on network operator change
+ X make Sierra Wireless 8775 work acceptably
+   X create separate Sierra Wireless Device type - patch by Phil
+   X make TempSerial port class
+   X set CHAT stuff on same port as PPP connection
+   X switch AT and PPP ports if card says so (APP1 answer to ATI query) - patch by Danny
+ / make Option HSO devices work acceptably
+   X new Device class
+   / modify Autodetect_USB to also scan for HSO devices
+ X remove the 'nocompression' option from the Profile and
+   always make sure that "no header compression" is used. This fixes at least
+   50% of the recent bug reports and forum posts.
+ X Do not just look for icon_switch, but also for:
+   - HuaweiAktbo http://linux.frankenberger.at/Huawei_E220.html
+   - usb_modeswitch http://www.draisberghof.de/usb_modeswitch/
+ X use the above tools if needed   
+ X Time limits (like we already have data limits)
+   X add to profile class & UI
+   X add to MonthlyTraffic
+   X add to LCDDisplay
+   X add alerts
+ / new display
+   X display connected time
+   * show new icons for roaming/home
+   X show triangle for roaming
+ X i18n: spanish + norwegian bokmal + italian + polish
+ X optimize "select operators dialog"
+    X make it a wizard?
+    X separate model-view-controller to improve code.
+    * wizard also retrieves signal info for all operators
+ X card switching for ICON (ZeroCD device)
+ X the Huawei 220 is a ZeroCD device, that can be easily switched 
+   X add autodetection for the usb_storage thingie
+ / fixup bluetooth
+ X allow '/bin' and '/sbin' as part of a path for *su apps
+ 

@@ -1,0 +1,22 @@
+[Desktop Entry]
+Comment=control your 3G mobile devices
+Comment[en_US]=control your 3G mobile devices
+Comment[de]=Verwalte dein UMTS/GPRS-PCMCIA-Modem
+Comment[nl]=Bestuur je mobiele netwerk apparaat
+Encoding=UTF-8
+Exec=umtsmon
+GenericName=umtsmon - control your 3G mobile devices
+GenericName[en_US]=umtsmon - control your 3G mobile devices
+Icon=umtsmon-128x128.png
+MimeType=
+Name=umtsmon
+Name[en_US]=umtsmon
+Name[de]=umtsmon
+Path=
+StartupNotify=true
+Terminal=false
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-StartupNotify=true
+Categories=Qt;KDE;Network;Dialup;
+

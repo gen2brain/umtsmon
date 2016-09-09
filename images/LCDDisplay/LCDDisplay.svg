@@ -1,0 +1,999 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.43"
+   sodipodi:docbase="/home/klaas/DevRocketWorkspaces/Klaas51/umtsmon-cvs/images/LCDDisplay"
+   sodipodi:docname="LCDDisplay.svg"
+   inkscape:export-filename="/home/klaas//LCDDisplay4.png"
+   inkscape:export-xdpi="120.25"
+   inkscape:export-ydpi="120.25">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient2502">
+      <stop
+         style="stop-color:#8e8e64;stop-opacity:0;"
+         offset="0"
+         id="stop2504" />
+      <stop
+         style="stop-color:#8e8e64;stop-opacity:0.14432989;"
+         offset="1"
+         id="stop2506" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient2480">
+      <stop
+         id="stop2482"
+         offset="0"
+         style="stop-color:#8e8e64;stop-opacity:0.40206185;" />
+      <stop
+         id="stop2484"
+         offset="1"
+         style="stop-color:#ffffff;stop-opacity:0;" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient2447">
+      <stop
+         style="stop-color:#ffffc8;stop-opacity:0.50588238;"
+         offset="0"
+         id="stop2449" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="1"
+         id="stop2451" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient2204">
+      <stop
+         style="stop-color:#ff2727;stop-opacity:1;"
+         offset="0"
+         id="stop2206" />
+      <stop
+         id="stop2212"
+         offset="0.27283096"
+         style="stop-color:#ffe544;stop-opacity:1;" />
+      <stop
+         style="stop-color:#ffff19;stop-opacity:1;"
+         offset="0.35394287"
+         id="stop2249" />
+      <stop
+         style="stop-color:#b8ff00;stop-opacity:1;"
+         offset="0.54589844"
+         id="stop2214" />
+      <stop
+         style="stop-color:#1ddb1d;stop-opacity:1;"
+         offset="1"
+         id="stop2208" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient2196">
+      <stop
+         style="stop-color:#ff6262;stop-opacity:1;"
+         offset="0"
+         id="stop2198" />
+      <stop
+         style="stop-color:#626262;stop-opacity:0;"
+         offset="1"
+         id="stop2200" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient2185">
+      <stop
+         style="stop-color:#626262;stop-opacity:1;"
+         offset="0"
+         id="stop2187" />
+      <stop
+         style="stop-color:#d8d8d8;stop-opacity:1;"
+         offset="1"
+         id="stop2189" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2185"
+       id="linearGradient2191"
+       x1="330.54587"
+       y1="172.88142"
+       x2="353.25989"
+       y2="272.12656"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2204"
+       id="linearGradient2210"
+       x1="224.12621"
+       y1="195.36161"
+       x2="341.2953"
+       y2="195.36161"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-1.463555,-117.516)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2185"
+       id="linearGradient2325"
+       gradientUnits="userSpaceOnUse"
+       x1="330.54587"
+       y1="172.88142"
+       x2="353.25989"
+       y2="272.12656"
+       gradientTransform="translate(1.619802,227.732)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2204"
+       id="linearGradient2327"
+       gradientUnits="userSpaceOnUse"
+       x1="224.12621"
+       y1="195.36161"
+       x2="341.2953"
+       y2="195.36161"
+       gradientTransform="translate(1.619802,227.732)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2204"
+       id="linearGradient2331"
+       gradientUnits="userSpaceOnUse"
+       x1="224.12621"
+       y1="195.36161"
+       x2="341.2953"
+       y2="195.36161"
+       gradientTransform="translate(-0.304544,24.91138)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2204"
+       id="linearGradient2417"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-0.304544,20.91138)"
+       x1="224.12621"
+       y1="195.36161"
+       x2="341.2953"
+       y2="195.36161" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2204"
+       id="linearGradient2448"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-0.304544,24.91138)"
+       x1="224.12621"
+       y1="195.36161"
+       x2="341.2953"
+       y2="195.36161" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2204"
+       id="linearGradient2451"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-0.304544,4.91138)"
+       x1="224.12621"
+       y1="195.36161"
+       x2="341.2953"
+       y2="195.36161" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2204"
+       id="linearGradient2457"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-2.294762,-83.34651)"
+       x1="224.12621"
+       y1="195.36161"
+       x2="341.2953"
+       y2="195.36161" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2204"
+       id="linearGradient1412"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0.937888,214.9539)"
+       x1="224.12621"
+       y1="195.36161"
+       x2="341.2953"
+       y2="195.36161" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2447"
+       id="radialGradient2453"
+       cx="233.54359"
+       cy="207.02036"
+       fx="233.54359"
+       fy="207.02036"
+       r="48.873814"
+       gradientTransform="matrix(1,-1.151694e-16,3.183949e-17,0.429967,1.076132e-14,118.0084)"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2480"
+       id="radialGradient2478"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.05783,-0.153262,7.192799e-2,0.478065,-30.48594,143.8229)"
+       cx="240.71082"
+       cy="230.30884"
+       fx="240.71082"
+       fy="230.30884"
+       r="48.873814" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2502"
+       id="linearGradient2510"
+       x1="515.43231"
+       y1="231.00233"
+       x2="529.56763"
+       y2="269.87433"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2502"
+       id="linearGradient2514"
+       gradientUnits="userSpaceOnUse"
+       x1="497.76324"
+       y1="209.29462"
+       x2="547.74146"
+       y2="230.49751"
+       gradientTransform="translate(9.384766e-6,-2.260742e-6)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.9808614"
+     inkscape:cx="369.78137"
+     inkscape:cy="850.11204"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:window-width="1280"
+     inkscape:window-height="961"
+     inkscape:window-x="0"
+     inkscape:window-y="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:none"
+     sodipodi:insensitive="true">
+    <rect
+       style="opacity:1;fill:#bab9bc;fill-opacity:1;stroke:#626262;stroke-width:0.25383553;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2271"
+       width="598.47559"
+       height="291.80283"
+       x="70.543579"
+       y="56.348728" />
+    <rect
+       style="opacity:1;fill:#bab9bc;fill-opacity:1;stroke:none;stroke-width:0.1610509;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1307"
+       width="426.54916"
+       height="164.8118"
+       x="150.58717"
+       y="138.10469"
+       inkscape:export-filename="/home/klaas/text2265.png"
+       inkscape:export-xdpi="79.967331"
+       inkscape:export-ydpi="79.967331" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="76.836647"
+       y="339.61081"
+       id="text1414"><tspan
+         sodipodi:role="line"
+         id="tspan1416"
+         x="76.836647"
+         y="339.61081">make sure you export at 80.00 dpi!!!</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="base"
+     style="display:inline">
+    <rect
+       style="opacity:1;fill:#e6eb94;fill-opacity:1;stroke:url(#linearGradient2191);stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1310"
+       width="375.11786"
+       height="96.745125"
+       x="174.16035"
+       y="174.13142"
+       ry="17.199133"
+       inkscape:export-filename="/home/klaas/DevRocketWorkspaces/Klaas51/umtsmon-cvs/images/LCDDisplay/LCDBackground.png"
+       inkscape:export-xdpi="80.080002"
+       inkscape:export-ydpi="80.080002" />
+    <path
+       sodipodi:type="arc"
+       style="opacity:1;fill:url(#radialGradient2453);fill-opacity:1;stroke:none;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.47843137"
+       id="path1572"
+       sodipodi:cx="233.54359"
+       sodipodi:cy="207.02036"
+       sodipodi:rx="48.873814"
+       sodipodi:ry="21.014147"
+       d="M 282.41741 207.02036 A 48.873814 21.014147 0 1 1  184.66978,207.02036 A 48.873814 21.014147 0 1 1  282.41741 207.02036 z"
+       transform="matrix(1.875405,-0.585753,0.81176,1.353264,-336.4109,72.07636)"
+       inkscape:export-filename="/home/klaas/DevRocketWorkspaces/Klaas51/umtsmon-cvs/images/LCDDisplay/LCDBackground.png"
+       inkscape:export-xdpi="80.080002"
+       inkscape:export-ydpi="80.080002" />
+    <rect
+       style="opacity:1;fill:url(#linearGradient2510);fill-opacity:1;stroke:none;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.47843137"
+       id="rect2486"
+       width="186.28259"
+       height="94.908203"
+       x="361.45889"
+       y="174.96611"
+       ry="13.665317"
+       rx="17.199133"
+       inkscape:export-filename="/home/klaas/DevRocketWorkspaces/Klaas51/umtsmon-cvs/images/LCDDisplay/LCDBackground.png"
+       inkscape:export-xdpi="80.080002"
+       inkscape:export-ydpi="80.080002" />
+    <rect
+       style="opacity:1;fill:url(#linearGradient2514);fill-opacity:1;stroke:none;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.47843137;display:inline"
+       id="rect2512"
+       width="186.28259"
+       height="94.908203"
+       x="361.45889"
+       y="174.96611"
+       ry="13.665317"
+       rx="17.199133"
+       inkscape:export-filename="/home/klaas/DevRocketWorkspaces/Klaas51/umtsmon-cvs/images/LCDDisplay/LCDBackground.png"
+       inkscape:export-xdpi="80.080002"
+       inkscape:export-ydpi="80.080002" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="top"
+     style="display:inline">
+    <g
+       id="g2236"
+       transform="matrix(1.397052,0,0,1.152482,-73.66561,-25.05499)"
+       style="stroke:#000000;stroke-opacity:0.47843137"
+       inkscape:export-filename="/home/klaas/DevRocketWorkspaces/Klaas51/umtsmon-cvs/images/LCDDisplay/LCDBackground.png"
+       inkscape:export-xdpi="80.080002"
+       inkscape:export-ydpi="80.080002">
+      <path
+         id="path2230"
+         d="M 196.26871,183.47474 L 196.26871,206.47025"
+         style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.47843137" />
+      <path
+         id="path2232"
+         d="M 196.26871,191.34163 L 190.21726,183.97903 L 190.21726,183.97903"
+         style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.47843137" />
+      <path
+         id="path2234"
+         d="M 196.067,191.34163 L 202.11845,183.97903 L 202.11845,183.97903"
+         style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.47843137" />
+    </g>
+    <path
+       style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.14367813"
+       d="M 357.4195,180.58111 L 357.4195,263.35194"
+       id="path2259"
+       inkscape:export-filename="/home/klaas/DevRocketWorkspaces/Klaas51/umtsmon-cvs/images/LCDDisplay/LCDBackground.png"
+       inkscape:export-xdpi="80.080002"
+       inkscape:export-ydpi="80.080002" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.26900005;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.47843137;display:inline"
+       d="M 200.38508,225.69472 L 196.51323,228.83985 L 192.65337,231.9751 L 196.48926,231.9751 L 196.48926,238.09723 C 196.54241,238.10636 198.25962,238.10712 200.38508,238.10712 C 202.47681,238.10712 204.17691,238.10616 204.28091,238.09723 L 204.28091,231.9751 L 208.12878,231.9751 L 204.25693,228.83985 L 200.38508,225.69472 z "
+       id="rect1608"
+       inkscape:export-filename="/home/klaas/DevRocketWorkspaces/Klaas51/umtsmon-cvs/images/LCDDisplay/LCDBackground.png"
+       inkscape:export-xdpi="80.080002"
+       inkscape:export-ydpi="80.080002" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.26900005;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.47843137;display:inline"
+       d="M 200.39707,259.26874 L 204.26892,256.12361 L 208.12878,252.98836 L 204.29289,252.98836 L 204.29289,246.86623 C 204.23974,246.8571 202.52253,246.85634 200.39707,246.85634 C 198.30534,246.85634 196.60524,246.8573 196.50124,246.86623 L 196.50124,252.98836 L 192.65337,252.98836 L 196.52522,256.12361 L 200.39707,259.26874 z "
+       id="path4238"
+       inkscape:export-filename="/home/klaas/DevRocketWorkspaces/Klaas51/umtsmon-cvs/images/LCDDisplay/LCDBackground.png"
+       inkscape:export-xdpi="80.080002"
+       inkscape:export-ydpi="80.080002" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:0.47843137;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:Bitstream Vera Sans"
+       x="277.84296"
+       y="256.24368"
+       id="text1575"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/klaas/DevRocketWorkspaces/Klaas51/umtsmon-cvs/images/LCDDisplay/LCDBackground.png"
+       inkscape:export-xdpi="80.080002"
+       inkscape:export-ydpi="80.080002"><tspan
+         sodipodi:role="line"
+         id="tspan1577"
+         x="277.84296"
+         y="256.24368">/</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:0.47843137;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:Bitstream Vera Sans"
+       x="277.5451"
+       y="235.08208"
+       id="text1579"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/klaas/DevRocketWorkspaces/Klaas51/umtsmon-cvs/images/LCDDisplay/LCDBackground.png"
+       inkscape:export-xdpi="80.080002"
+       inkscape:export-ydpi="80.080002"><tspan
+         sodipodi:role="line"
+         id="tspan1581"
+         x="277.5451"
+         y="235.08208">/</tspan></text>
+    <path
+       style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.14367813;display:inline"
+       d="M 542.79268,238.91403 L 363.11356,238.91403"
+       id="path4351"
+       inkscape:export-filename="/home/klaas/DevRocketWorkspaces/Klaas51/umtsmon-cvs/images/LCDDisplay/LCDBackground.png"
+       inkscape:export-xdpi="80.080002"
+       inkscape:export-ydpi="80.080002" />
+    <path
+       style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1.04197061;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.47843137;display:inline"
+       d="M 374.34514,247.65999 L 366.43596,247.65999 L 370.4282,253.55597 L 366.51128,259.61802 L 374.19449,259.61802"
+       id="path4311"
+       inkscape:export-filename="/home/klaas/DevRocketWorkspaces/Klaas51/umtsmon-cvs/images/LCDDisplay/LCDBackground.png"
+       inkscape:export-xdpi="80.080002"
+       inkscape:export-ydpi="80.080002" />
+    <rect
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.75937557;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.05098039;display:inline"
+       id="rect2605"
+       width="31.92832"
+       height="21.176598"
+       x="504.89227"
+       y="185.17754"
+       rx="65.727791"
+       ry="0.053212948"
+       inkscape:export-filename="/home/klaas/DevRocketWorkspaces/Klaas51/umtsmon-cvs/images/LCDDisplay/LCDBackground.png"
+       inkscape:export-xdpi="80.080002"
+       inkscape:export-ydpi="80.080002" />
+    <path
+       style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:0.86785781px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.05098039;display:inline"
+       d="M 505.54385,186.49649 C 505.54385,186.49649 517.94232,197.59772 520.67542,197.56109 C 523.40851,197.52445 536.16898,186.64305 536.16898,186.64305"
+       id="path2609"
+       sodipodi:nodetypes="czc"
+       inkscape:export-filename="/home/klaas/DevRocketWorkspaces/Klaas51/umtsmon-cvs/images/LCDDisplay/LCDBackground.png"
+       inkscape:export-xdpi="80.080002"
+       inkscape:export-ydpi="80.080002" />
+    <path
+       style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:0.86785781px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.05098039;display:inline"
+       d="M 524.29541,196.82834 L 536.02418,205.47483"
+       id="path2613"
+       inkscape:export-filename="/home/klaas/DevRocketWorkspaces/Klaas51/umtsmon-cvs/images/LCDDisplay/LCDBackground.png"
+       inkscape:export-xdpi="80.080002"
+       inkscape:export-ydpi="80.080002" />
+    <path
+       style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:0.86785781px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.05098039;display:inline"
+       d="M 517.48982,196.82834 L 505.76105,205.47483"
+       id="path2615"
+       inkscape:export-filename="/home/klaas/DevRocketWorkspaces/Klaas51/umtsmon-cvs/images/LCDDisplay/LCDBackground.png"
+       inkscape:export-xdpi="80.080002"
+       inkscape:export-ydpi="80.080002" />
+    <g
+       style="display:inline"
+       id="g2459"
+       inkscape:export-filename="/home/klaas/DevRocketWorkspaces/Klaas51/umtsmon-cvs/images/LCDDisplay/LCDBackground.png"
+       inkscape:export-xdpi="80.080002"
+       inkscape:export-ydpi="80.080002">
+      <path
+         id="rect5233"
+         d="M 516.7885,223.81657 L 516.7885,230.94422 L 503.97404,230.94422 L 503.97404,223.81657"
+         style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.93842661;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.05882353;display:inline" />
+      <path
+         id="path6131"
+         d="M 501.34362,225.20523 L 510.39412,218.86002 L 519.41892,225.20523"
+         style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:0.93842661;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.05882353;display:inline" />
+      <path
+         id="path6146"
+         d="M 505.63747,221.69881 L 505.63747,219.4939 C 505.63747,219.48416 506.07897,219.47632 506.62737,219.47632 L 506.62736,219.47632 C 507.17578,219.47632 507.61726,219.48416 507.61726,219.49389 L 507.61726,220.31449"
+         style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.93842661;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.05882353;display:inline" />
+      <path
+         transform="matrix(0.123502,4.792431e-2,-4.782368e-2,0.123762,482.8701,191.714)"
+         d="M 473.02652 102.7753 A 45.93961 45.93961 0 1 1  381.1473,102.7753 A 45.93961 45.93961 0 1 1  473.02652 102.7753 z"
+         sodipodi:ry="45.93961"
+         sodipodi:rx="45.93961"
+         sodipodi:cy="102.7753"
+         sodipodi:cx="427.08691"
+         id="path1595"
+         style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:6.24312925;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.05882353"
+         sodipodi:type="arc" />
+      <path
+         transform="matrix(8.77706e-2,3.405885e-2,-4.782368e-2,0.123762,498.1305,197.6358)"
+         d="M 473.02652 102.7753 A 45.93961 45.93961 0 1 1  381.1473,102.7753 A 45.93961 45.93961 0 1 1  473.02652 102.7753 z"
+         sodipodi:ry="45.93961"
+         sodipodi:rx="45.93961"
+         sodipodi:cy="102.7753"
+         sodipodi:cx="427.08691"
+         id="path1597"
+         style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:7.40567732;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.05882353;display:inline"
+         sodipodi:type="arc" />
+      <path
+         transform="matrix(4.400164e-2,1.707469e-2,-4.782368e-2,0.123762,516.8236,204.8895)"
+         d="M 473.02652 102.7753 A 45.93961 45.93961 0 1 1  381.1473,102.7753 A 45.93961 45.93961 0 1 1  473.02652 102.7753 z"
+         sodipodi:ry="45.93961"
+         sodipodi:rx="45.93961"
+         sodipodi:cy="102.7753"
+         sodipodi:cx="427.08691"
+         id="path1599"
+         style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:10.45934963;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.05882353;display:inline"
+         sodipodi:type="arc" />
+      <path
+         id="path1603"
+         d="M 536.39333,222.85746 C 534.85025,223.12629 533.08414,222.96056 531.35229,222.28852 C 529.84378,221.70315 528.57421,220.81627 527.63743,219.7777"
+         style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.82769686;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.05882353" />
+      <path
+         id="path1610"
+         d="M 533.55937,230.37405 C 532.41911,229.60044 530.89425,228.8104 529.1624,228.13837 C 527.65389,227.553 526.20128,227.13979 524.95108,226.9123"
+         style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.82769686;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.05882353;display:inline" />
+      <path
+         id="path1612"
+         d="M 536.57802,226.39402 C 534.82755,226.62361 532.61487,226.33006 530.37707,225.46169 C 528.23175,224.62922 526.45856,223.42183 525.31153,222.13305"
+         style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.82769686;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.05882353" />
+    </g>
+    <g
+       style="display:inline"
+       id="g4300"
+       transform="matrix(1.001463,0,0,1.001456,-15.79491,27.49496)"
+       inkscape:export-filename="/home/klaas/DevRocketWorkspaces/Klaas51/umtsmon-cvs/images/LCDDisplay/LCDBackground.png"
+       inkscape:export-xdpi="80.080002"
+       inkscape:export-ydpi="80.080002">
+      <path
+         transform="matrix(0.345511,0,0,0.345511,324.895,151.8508)"
+         d="M 495.7759 214.0417 A 17.338099 17.338099 0 1 1  461.09971,214.0417 A 17.338099 17.338099 0 1 1  495.7759 214.0417 z"
+         sodipodi:ry="17.338099"
+         sodipodi:rx="17.338099"
+         sodipodi:cy="214.0417"
+         sodipodi:cx="478.43781"
+         id="path4286"
+         style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2.89426374;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.47843137"
+         sodipodi:type="arc" />
+      <path
+         id="path4288"
+         d="M 490.25777,225.92226 L 490.14328,220.427"
+         style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.47843137" />
+      <path
+         id="path4290"
+         d="M 490.76883,227.0671 L 492.37161,229.01334"
+         style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.47843137" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="changing content"
+     style="display:inline">
+    <g
+       id="g4244"
+       transform="translate(141.5207,36.20695)"
+       inkscape:export-filename="/home/klaas/DevRocketWorkspaces/Klaas51/umtsmon-cvs/images/LCDDisplay/LCDBackground.png"
+       inkscape:export-xdpi="80.080002"
+       inkscape:export-ydpi="80.080002">
+      <text
+         inkscape:export-ydpi="79.120003"
+         inkscape:export-xdpi="79.120003"
+         inkscape:export-filename="/home/klaas/text2265.png"
+         sodipodi:linespacing="125%"
+         id="text2224"
+         y="193.56868"
+         x="223.11839"
+         style="font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="193.56868"
+           x="223.11839"
+           id="tspan2226"
+           sodipodi:role="line">HSDPA</tspan></text>
+      <text
+         inkscape:export-ydpi="79.120003"
+         inkscape:export-xdpi="79.120003"
+         inkscape:export-filename="/home/klaas/text2265.png"
+         sodipodi:linespacing="125%"
+         id="text2261"
+         y="194.55565"
+         x="224.39421"
+         style="font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:0.33333333;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="194.55565"
+           x="224.39421"
+           id="tspan2263"
+           sodipodi:role="line">HSDPA</tspan></text>
+    </g>
+    <g
+       style="display:inline"
+       id="g1519"
+       transform="translate(-16.25462,-24.58114)"
+       inkscape:export-filename="/home/klaas/DevRocketWorkspaces/Klaas51/umtsmon-cvs/images/LCDDisplay/LCDBackground.png"
+       inkscape:export-xdpi="80.080002"
+       inkscape:export-ydpi="80.080002">
+      <text
+         inkscape:export-ydpi="79.120003"
+         inkscape:export-xdpi="79.120003"
+         inkscape:export-filename="/home/klaas/text2265.png"
+         sodipodi:linespacing="125%"
+         id="text2255"
+         y="254.45259"
+         x="444.77972"
+         style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="254.45259"
+           x="444.77972"
+           id="tspan2257"
+           sodipodi:role="line">Default</tspan></text>
+      <text
+         inkscape:export-ydpi="79.120003"
+         inkscape:export-xdpi="79.120003"
+         sodipodi:linespacing="125%"
+         id="text2265"
+         y="255.37206"
+         x="446.3425"
+         style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:0.3372549;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="255.37206"
+           x="446.3425"
+           id="tspan2267"
+           sodipodi:role="line">Default</tspan></text>
+    </g>
+    <path
+       style="fill:#000000;fill-opacity:0.33333333;stroke:none;stroke-width:2.5;stroke-miterlimit:4;stroke-opacity:0.47843137;display:inline"
+       d="M 341.90625,191.25 L 337.40625,191.78125 L 337.40625,212.5625 L 341.90625,212.5625 L 341.90625,191.25 z M 335.96875,191.9375 L 331.46875,192.46875 L 331.46875,212.5625 L 335.96875,212.5625 L 335.96875,191.9375 z M 330.03125,192.625 L 325.53125,193.15625 L 325.53125,212.5625 L 330.03125,212.5625 L 330.03125,192.625 z M 324.09375,193.3125 L 319.59375,193.8125 L 319.59375,212.5625 L 324.09375,212.5625 L 324.09375,193.3125 z M 318.1875,194 L 313.6875,194.5 L 313.6875,212.5625 L 318.1875,212.5625 L 318.1875,194 z M 312.25,194.6875 L 307.75,195.1875 L 307.75,212.5625 L 312.25,212.5625 L 312.25,194.6875 z M 306.3125,195.34375 L 301.8125,195.875 L 301.8125,212.5625 L 306.3125,212.5625 L 306.3125,195.34375 z M 300.375,196.03125 L 295.875,196.5625 L 295.875,212.5625 L 300.375,212.5625 L 300.375,196.03125 z M 294.46875,196.71875 L 289.96875,197.25 L 289.96875,212.5625 L 294.46875,212.5625 L 294.46875,196.71875 z M 288.53125,197.40625 L 284.03125,197.9375 L 284.03125,212.5625 L 288.53125,212.5625 L 288.53125,197.40625 z M 282.59375,198.09375 L 278.09375,198.625 L 278.09375,212.5625 L 282.59375,212.5625 L 282.59375,198.09375 z M 276.65625,198.78125 L 272.15625,199.3125 L 272.15625,212.5625 L 276.65625,212.5625 L 276.65625,198.78125 z M 270.71875,199.46875 L 266.21875,199.96875 L 266.21875,212.5625 L 270.71875,212.5625 L 270.71875,199.46875 z M 264.8125,200.15625 L 260.3125,200.65625 L 260.3125,212.5625 L 264.8125,212.5625 L 264.8125,200.15625 z M 258.875,200.84375 L 254.375,201.34375 L 254.375,212.5625 L 258.875,212.5625 L 258.875,200.84375 z M 252.9375,201.5 L 248.4375,202.03125 L 248.4375,212.5625 L 252.9375,212.5625 L 252.9375,201.5 z M 247,202.1875 L 242.5,202.71875 L 242.5,212.5625 L 247,212.5625 L 247,202.1875 z M 241.09375,202.875 L 236.59375,203.40625 L 236.59375,212.5625 L 241.09375,212.5625 L 241.09375,202.875 z M 235.15625,203.5625 L 230.65625,204.09375 L 230.65625,212.5625 L 235.15625,212.5625 L 235.15625,203.5625 z M 229.21875,204.25 L 224.71875,204.78125 L 224.71875,212.5625 L 229.21875,212.5625 L 229.21875,204.25 z "
+       id="path2443"
+       inkscape:export-filename="/home/klaas/DevRocketWorkspaces/Klaas51/umtsmon-cvs/images/LCDDisplay/LCDBackground.png"
+       inkscape:export-xdpi="80.080002"
+       inkscape:export-ydpi="80.080002" />
+    <path
+       style="opacity:1;fill:url(#linearGradient2451);fill-opacity:1;stroke:none;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;display:inline"
+       d="M 341,191 L 336.5,191.53125 L 336.5,211.28125 L 341,211.28125 L 341,191 z M 335.0625,191.6875 L 330.5625,192.21875 L 330.5625,211.28125 L 335.0625,211.28125 L 335.0625,191.6875 z M 329.125,192.375 L 324.625,192.90625 L 324.625,211.28125 L 329.125,211.28125 L 329.125,192.375 z M 323.1875,193.0625 L 318.6875,193.59375 L 318.6875,211.28125 L 323.1875,211.28125 L 323.1875,193.0625 z M 317.28125,193.75 L 312.78125,194.28125 L 312.78125,211.28125 L 317.28125,211.28125 L 317.28125,193.75 z M 311.34375,194.4375 L 306.84375,194.9375 L 306.84375,211.28125 L 311.34375,211.28125 L 311.34375,194.4375 z M 305.40625,195.125 L 300.90625,195.625 L 300.90625,211.28125 L 305.40625,211.28125 L 305.40625,195.125 z M 299.46875,195.8125 L 294.96875,196.3125 L 294.96875,211.28125 L 299.46875,211.28125 L 299.46875,195.8125 z M 293.5625,196.46875 L 289.0625,197 L 289.0625,211.28125 L 293.5625,211.28125 L 293.5625,196.46875 z M 287.625,197.15625 L 283.125,197.6875 L 283.125,211.28125 L 287.625,211.28125 L 287.625,197.15625 z M 281.6875,197.84375 L 277.1875,198.375 L 277.1875,211.28125 L 281.6875,211.28125 L 281.6875,197.84375 z M 275.75,198.53125 L 271.25,199.0625 L 271.25,211.28125 L 275.75,211.28125 L 275.75,198.53125 z M 269.84375,199.21875 L 265.34375,199.75 L 265.34375,211.28125 L 269.84375,211.28125 L 269.84375,199.21875 z M 263.90625,199.90625 L 259.40625,200.40625 L 259.40625,211.28125 L 263.90625,211.28125 L 263.90625,199.90625 z M 257.96875,200.59375 L 253.46875,201.09375 L 253.46875,211.28125 L 257.96875,211.28125 L 257.96875,200.59375 z M 252.03125,201.28125 L 247.53125,201.78125 L 247.53125,211.28125 L 252.03125,211.28125 L 252.03125,201.28125 z M 246.125,201.9375 L 241.625,202.46875 L 241.625,211.28125 L 246.125,211.28125 L 246.125,201.9375 z M 240.1875,202.625 L 235.6875,203.15625 L 235.6875,211.28125 L 240.1875,211.28125 L 240.1875,202.625 z M 234.25,203.3125 L 229.75,203.84375 L 229.75,211.28125 L 234.25,211.28125 L 234.25,203.3125 z M 228.3125,204 L 223.8125,204.53125 L 223.8125,211.28125 L 228.3125,211.28125 L 228.3125,204 z "
+       id="rect2329"
+       inkscape:export-filename="/home/klaas/DevRocketWorkspaces/Klaas51/umtsmon-cvs/images/LCDDisplay/LCDBackground.png"
+       inkscape:export-xdpi="80.080002"
+       inkscape:export-ydpi="80.080002" />
+    <g
+       style="display:inline"
+       id="g1513"
+       transform="translate(-19.20344,-0.525199)"
+       inkscape:export-filename="/home/klaas/DevRocketWorkspaces/Klaas51/umtsmon-cvs/images/LCDDisplay/LCDBackground.png"
+       inkscape:export-xdpi="80.080002"
+       inkscape:export-ydpi="80.080002">
+      <text
+         inkscape:export-ydpi="79.120003"
+         inkscape:export-xdpi="79.120003"
+         inkscape:export-filename="/home/klaas/text2265.png"
+         sodipodi:linespacing="125%"
+         id="text1483"
+         y="236.06721"
+         x="243.14836"
+         style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="236.06721"
+           x="243.14836"
+           id="tspan1485"
+           sodipodi:role="line">5.23 MiB</tspan></text>
+      <text
+         inkscape:export-ydpi="79.120003"
+         inkscape:export-xdpi="79.120003"
+         sodipodi:linespacing="125%"
+         id="text1487"
+         y="236.98668"
+         x="244.71114"
+         style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:0.3372549;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="236.98668"
+           x="244.71114"
+           id="tspan1489"
+           sodipodi:role="line">5.23 MiB</tspan></text>
+    </g>
+    <g
+       style="display:inline"
+       id="g1507"
+       transform="translate(-23.39259,1.70507)"
+       inkscape:export-filename="/home/klaas/DevRocketWorkspaces/Klaas51/umtsmon-cvs/images/LCDDisplay/LCDBackground.png"
+       inkscape:export-xdpi="80.080002"
+       inkscape:export-ydpi="80.080002">
+      <text
+         inkscape:export-ydpi="79.120003"
+         inkscape:export-xdpi="79.120003"
+         inkscape:export-filename="/home/klaas/text2265.png"
+         sodipodi:linespacing="125%"
+         id="text1499"
+         y="254.99857"
+         x="247.33751"
+         style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="254.99857"
+           x="247.33751"
+           id="tspan1501"
+           sodipodi:role="line">5.23 MiB</tspan></text>
+      <text
+         inkscape:export-ydpi="79.120003"
+         inkscape:export-xdpi="79.120003"
+         sodipodi:linespacing="125%"
+         id="text1503"
+         y="255.91803"
+         x="248.90028"
+         style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:0.3372549;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="255.91803"
+           x="248.90028"
+           id="tspan1505"
+           sodipodi:role="line">5.23 MiB</tspan></text>
+    </g>
+    <g
+       id="g4280"
+       transform="translate(6,2)"
+       inkscape:export-filename="/home/klaas/DevRocketWorkspaces/Klaas51/umtsmon-cvs/images/LCDDisplay/LCDBackground.png"
+       inkscape:export-xdpi="80.080002"
+       inkscape:export-ydpi="80.080002">
+      <text
+         inkscape:export-ydpi="79.967331"
+         inkscape:export-xdpi="79.967331"
+         inkscape:export-filename="/home/klaas/text2265.png"
+         sodipodi:linespacing="125%"
+         id="text2220"
+         y="201.506"
+         x="373.29575"
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:0.33333333;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="201.506"
+           x="373.29575"
+           id="tspan2222"
+           sodipodi:role="line">T-Mobile</tspan></text>
+      <text
+         inkscape:export-ydpi="79.967331"
+         inkscape:export-xdpi="79.967331"
+         inkscape:export-filename="/home/klaas/text2265.png"
+         sodipodi:linespacing="125%"
+         id="text2216"
+         y="200.91589"
+         x="371.92639"
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="200.91589"
+           x="371.92639"
+           id="tspan2218"
+           sodipodi:role="line">T-Mobile</tspan></text>
+    </g>
+    <g
+       id="g1423"
+       transform="translate(85.28446,4.743845)"
+       inkscape:export-filename="/home/klaas/DevRocketWorkspaces/Klaas51/umtsmon-cvs/images/LCDDisplay/LCDBackground.png"
+       inkscape:export-xdpi="80.080002"
+       inkscape:export-ydpi="80.080002">
+      <text
+         inkscape:export-ydpi="79.120003"
+         inkscape:export-xdpi="79.120003"
+         sodipodi:linespacing="125%"
+         id="text1433"
+         y="254.45566"
+         x="296.56879"
+         style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:0.3372549;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="254.45566"
+           x="296.56879"
+           id="tspan1435"
+           sodipodi:role="line">684 MiB</tspan></text>
+      <text
+         inkscape:export-ydpi="79.120003"
+         inkscape:export-xdpi="79.120003"
+         inkscape:export-filename="/home/klaas/text2265.png"
+         sodipodi:linespacing="125%"
+         id="text1429"
+         y="253.53619"
+         x="295.00601"
+         style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#a70000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="253.53619"
+           x="295.00601"
+           id="tspan1431"
+           sodipodi:role="line">684 MiB</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:0.3372549;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="489.8541"
+       y="258.88687"
+       id="text1543"
+       sodipodi:linespacing="125%"
+       inkscape:export-xdpi="80.080002"
+       inkscape:export-ydpi="80.080002"
+       inkscape:export-filename="/home/klaas/DevRocketWorkspaces/Klaas51/umtsmon-cvs/images/LCDDisplay/LCDBackground.png"><tspan
+         sodipodi:role="line"
+         id="tspan1545"
+         x="489.8541"
+         y="258.88687">32m 15s</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="488.29132"
+       y="257.96741"
+       id="text1547"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/klaas/DevRocketWorkspaces/Klaas51/umtsmon-cvs/images/LCDDisplay/LCDBackground.png"
+       inkscape:export-xdpi="80.080002"
+       inkscape:export-ydpi="80.080002"><tspan
+         sodipodi:role="line"
+         id="tspan1549"
+         x="488.29132"
+         y="257.96741">32m 15s</tspan></text>
+    <g
+       id="g1587"
+       transform="translate(-4,-2.113121)"
+       inkscape:export-filename="/home/klaas/DevRocketWorkspaces/Klaas51/umtsmon-cvs/images/LCDDisplay/LCDBackground.png"
+       inkscape:export-xdpi="80.080002"
+       inkscape:export-ydpi="80.080002">
+      <text
+         inkscape:export-ydpi="79.120003"
+         inkscape:export-xdpi="79.120003"
+         sodipodi:linespacing="125%"
+         id="text1561"
+         y="238.14223"
+         x="292.44498"
+         style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:0.3372549;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="238.14223"
+           x="292.44498"
+           id="tspan1563"
+           sodipodi:role="line">24.6 kiB/s</tspan></text>
+      <text
+         inkscape:export-ydpi="79.120003"
+         inkscape:export-xdpi="79.120003"
+         inkscape:export-filename="/home/klaas/text2265.png"
+         sodipodi:linespacing="125%"
+         id="text1557"
+         y="237.22276"
+         x="290.8822"
+         style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="237.22276"
+           x="290.8822"
+           id="tspan1559"
+           sodipodi:role="line">24.6 kiB/s</tspan></text>
+    </g>
+    <g
+       style="display:inline"
+       id="g1598"
+       transform="translate(-3.793473,19.0485)"
+       inkscape:export-filename="/home/klaas/DevRocketWorkspaces/Klaas51/umtsmon-cvs/images/LCDDisplay/LCDBackground.png"
+       inkscape:export-xdpi="80.080002"
+       inkscape:export-ydpi="80.080002">
+      <text
+         inkscape:export-ydpi="79.120003"
+         inkscape:export-xdpi="79.120003"
+         sodipodi:linespacing="125%"
+         id="text1600"
+         y="238.14223"
+         x="292.44498"
+         style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:0.3372549;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="238.14223"
+           x="292.44498"
+           id="tspan1602"
+           sodipodi:role="line">24.6 kiB/s</tspan></text>
+      <text
+         inkscape:export-ydpi="79.120003"
+         inkscape:export-xdpi="79.120003"
+         inkscape:export-filename="/home/klaas/text2265.png"
+         sodipodi:linespacing="125%"
+         id="text1604"
+         y="237.22276"
+         x="290.8822"
+         style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="237.22276"
+           x="290.8822"
+           id="tspan1606"
+           sodipodi:role="line">24.6 kiB/s</tspan></text>
+    </g>
+    <g
+       id="g1552"
+       inkscape:export-filename="/home/klaas/DevRocketWorkspaces/Klaas51/umtsmon-cvs/images/LCDDisplay/LCDBackground.png"
+       inkscape:export-xdpi="80.080002"
+       inkscape:export-ydpi="80.080002">
+      <path
+         id="path6226"
+         d="M 516.0365,222.76531 L 516.0365,229.89296 L 503.22204,229.89296 L 503.22204,222.76531"
+         style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.93842661;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         id="path6228"
+         d="M 500.59162,224.15397 L 509.64212,217.80876 L 518.66692,224.15397"
+         style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:0.93842661;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         id="path6230"
+         d="M 504.88547,220.64755 L 504.88547,218.44264 C 504.88547,218.4329 505.32697,218.42506 505.87537,218.42506 L 505.87536,218.42506 C 506.42378,218.42506 506.86526,218.4329 506.86526,218.44263 L 506.86526,219.26323"
+         style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.93842661;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <g
+       id="g2590"
+       transform="translate(15.45324,21.79293)"
+       inkscape:export-filename="/home/klaas/DevRocketWorkspaces/Klaas51/umtsmon-cvs/images/LCDDisplay/LCDBackground.png"
+       inkscape:export-xdpi="80.080002"
+       inkscape:export-ydpi="80.080002">
+      <path
+         transform="matrix(0.123502,4.792431e-2,-4.782368e-2,0.123762,466.5917,169.0395)"
+         d="M 473.02652 102.7753 A 45.93961 45.93961 0 1 1  381.1473,102.7753 A 45.93961 45.93961 0 1 1  473.02652 102.7753 z"
+         sodipodi:ry="45.93961"
+         sodipodi:rx="45.93961"
+         sodipodi:cy="102.7753"
+         sodipodi:cx="427.08691"
+         id="path2572"
+         style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:6.24312925;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         sodipodi:type="arc" />
+      <path
+         transform="matrix(8.77706e-2,3.405885e-2,-4.782368e-2,0.123762,481.8521,174.9613)"
+         d="M 473.02652 102.7753 A 45.93961 45.93961 0 1 1  381.1473,102.7753 A 45.93961 45.93961 0 1 1  473.02652 102.7753 z"
+         sodipodi:ry="45.93961"
+         sodipodi:rx="45.93961"
+         sodipodi:cy="102.7753"
+         sodipodi:cx="427.08691"
+         id="path2574"
+         style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:7.40567732;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;display:inline"
+         sodipodi:type="arc" />
+      <path
+         transform="matrix(4.400164e-2,1.707469e-2,-4.782368e-2,0.123762,500.5452,182.215)"
+         d="M 473.02652 102.7753 A 45.93961 45.93961 0 1 1  381.1473,102.7753 A 45.93961 45.93961 0 1 1  473.02652 102.7753 z"
+         sodipodi:ry="45.93961"
+         sodipodi:rx="45.93961"
+         sodipodi:cy="102.7753"
+         sodipodi:cx="427.08691"
+         id="path2576"
+         style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:10.45934963;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;display:inline"
+         sodipodi:type="arc" />
+      <path
+         id="path2578"
+         d="M 520.11495,200.18299 C 518.57188,200.45182 516.80576,200.28609 515.07391,199.61405 C 513.5654,199.02868 512.29583,198.1418 511.35905,197.10323"
+         style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.82769686;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         id="path2580"
+         d="M 517.28099,207.69958 C 516.14073,206.92597 514.61587,206.13593 512.88402,205.4639 C 511.37551,204.87852 509.92291,204.46532 508.6727,204.23783"
+         style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.82769686;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;display:inline" />
+      <path
+         id="path2582"
+         d="M 520.29964,203.71955 C 518.54917,203.94914 516.33649,203.65559 514.09869,202.78722 C 511.95338,201.95475 510.18018,200.74736 509.03315,199.45857"
+         style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.82769686;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <g
+       id="g3195"
+       inkscape:export-filename="/home/klaas/DevRocketWorkspaces/Klaas51/umtsmon-cvs/images/LCDDisplay/LCDBackground.png"
+       inkscape:export-xdpi="80.080002"
+       inkscape:export-ydpi="80.080002">
+      <path
+         transform="matrix(5.277036e-2,0,0,0.131627,355.3176,184.7067)"
+         d="M 334.03328,132.29519 L 277.65698,132.29519 L 221.28069,132.29518 L 249.46883,83.471881 L 277.65698,34.648575 L 305.84513,83.471879 L 334.03328,132.29519 z "
+         inkscape:randomized="0"
+         inkscape:rounded="0"
+         inkscape:flatsided="false"
+         sodipodi:arg2="1.5707963"
+         sodipodi:arg1="0.52359878"
+         sodipodi:r2="32.54887"
+         sodipodi:r1="65.09774"
+         sodipodi:cy="99.746315"
+         sodipodi:cx="277.65698"
+         sodipodi:sides="3"
+         id="path1445"
+         style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.60000002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.05098039"
+         sodipodi:type="star" />
+      <path
+         transform="matrix(5.277036e-2,0,0,0.131627,356.2219,186.0123)"
+         d="M 334.03328,132.29519 L 277.65698,132.29519 L 221.28069,132.29518 L 249.46883,83.471881 L 277.65698,34.648575 L 305.84513,83.471879 L 334.03328,132.29519 z "
+         inkscape:randomized="0"
+         inkscape:rounded="0"
+         inkscape:flatsided="false"
+         sodipodi:arg2="1.5707963"
+         sodipodi:arg1="0.52359878"
+         sodipodi:r2="32.54887"
+         sodipodi:r1="65.09774"
+         sodipodi:cy="99.746315"
+         sodipodi:cx="277.65698"
+         sodipodi:sides="3"
+         id="path2320"
+         style="opacity:1;fill:#000000;fill-opacity:0.46927377;fill-rule:evenodd;stroke:none;stroke-width:0.60000002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.05098039;display:inline"
+         sodipodi:type="star" />
+    </g>
+  </g>
+</svg>

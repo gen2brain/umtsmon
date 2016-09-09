@@ -1,0 +1,121 @@
+AUTHORS OF UMTSMON
+==================
+
+Over 90% of umtsmon was written by Klaas van Gend in 2006, 2007, 2008 and 2009.
+It is licensed under the GPLv2 License, see the file COPYING
+
+However, Klaas is not the only copyright holder as some parts were derived
+from or based on other sources. Also: several people gave advise on some 
+implementation topics or did supply patches or translations. 
+This file tries to list those contributions:
+
+0)
+Christofer Wesseling contributed to several parts of umtsmon as part 
+of his internship work at T-Mobile.
+
+1)
+the SerialPort class was based on COMGT 0.3 by Paul Hardwick
+COMGT itself was based a package called dcon by Daniel Chouinard
+See http://www.pharscape.org/content/view/46/70/
+COMGT v0.3 was licensed under the GPLv2 or later.
+
+Paul Hardwick also contributed to the DetectCard and Device classes.
+
+
+2)
+Debugging some issues in the SerialPort class was done with suggestions made by:
+* Roel van den Broeck
+* Martijn Wijms
+* Tom Geelen
+* Wouter Moors
+
+3)
+The image ok.png is taken from the kdelibs3 RPM from SuSE9.3
+It is from the CrystalSVG icon set. According to the RPM, all files are 
+licensed through the GPL or LGPL.
+
+4)
+The UMTSmon logo as used on the website was drawn by 'Tazz_tux'.
+
+5)
+Autodetection for the Nozomi 2.2+ drivers and multiple pcmcia socket enumeration
+was contributed by Stefan Seyfried [seife@suse.de]
+Stefan also worked on several other issues related to card detection.
+
+6)
+The 'Runner' code to run other programs from umtsmon, specifically the piece to communicate
+through pipes with the program run, was inspired by code from the following web page:
+http://www.cryptnet.net/fdp/gtk/exec.html
+the code on that page is GPL and copyrighted by V. Alex Brennen [vab@metanet.org] .
+
+7)
+Icons in the images/{16|22|SVG} directories come from the Tango icon
+set, available at: http://tango.freedesktop.org/Tango_Icon_Library
+These icons are licensed under the "Creative Commons Attribution Share-Alike license"
+We think that we comply with the requirements of the license, even though we ship
+the icons inside the umtsmon binary.
+
+8)
+Several compile-related and user interface issues were fixed by Gerald Pfeifer.
+
+9)
+fixup old/original Vodafone 3G detection, patch by dj9pz (Arnd Gronenberg)
+
+10)
+Huawei E220 fixes by Norbert Preining (norbusan)
+
+11)
+Lubomir Schmidt started translation into German and did lots of testing.
+
+12)
+additional German translations by Philipp Kießler, Dietmar Maurer and Thorsten Hesemeyer.
+
+13)
+translation work into Portugese (pt_PT) by Pedro Algarvio.
+
+14)
+some fixes by Carsten Clasohm.
+
+15)
+several UI improvements by Danny Kukawka. 
+
+16)
+Translation into Norwegian Bokmaal by Klaus Ade Johnstad.
+
+17)
+comprehensive Sierra Wireless device support added by Phil Gorsuch
+
+18)
+Translation into Spanish by Emilio Arrufat, enhancements by Manuel Tornos
+
+19)
+Translation into Italian by Alessandro Briosi
+
+20)
+Translation into Polish by Tomasz Dominikowski
+
+21)
+Translation into Indonesian by Andika Triwidada
+
+22)
+The CID is now configurable from the config file thanks to Tobias Stober
+
+23)
+Michael Gisbers helped getting the HSO devices to work
+
+24)
+Till Busch provided tricks to add a "make install" target to umtsmon.
+
+25)
+Robert Verspuy fixed an issue with the Samsung Innov8 or i8510 mobile phone
+
+26)
+Martin Dummer provided the manpage and several fixes to umtsmon to allow
+adding umtsmon to Debian. He also made gksu work with umtsmon.
+
+27)
+Dietmar Hillbrich implemented support for the Ericsson F3507g device.
+
+
+If you have found any ommissions, please contact the author through the Sourceforge website:
+http://www.sourceforge.net/projects/umtsmon

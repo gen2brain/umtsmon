@@ -1,0 +1,96 @@
+.\"                                      Hey, EMACS: -*- nroff -*-
+.\" First parameter, NAME, should be all caps
+.\" Second parameter, SECTION, should be 1-8, maybe w/ subsection
+.\" other parameters are allowed: see man(7), man(1)
+.TH UMTSMON 1 "March 20, 2009"
+.\" Please adjust this date whenever revising the manpage.
+.\"
+.\" Some roff macros, for reference:
+.\" .nh        disable hyphenation
+.\" .hy        enable hyphenation
+.\" .ad l      left justify
+.\" .ad b      justify to both left and right margins
+.\" .nf        disable filling
+.\" .fi        enable filling
+.\" .br        insert line break
+.\" .sp <n>    insert n+1 empty lines
+.\" for manpage-specific macros, see man(7)
+.SH NAME
+umtsmon \- a tool to handle UMTS (3G) devices in Linux
+.SH SYNOPSIS
+.B umtsmon
+.RI [ options ]
+.br
+.SH DESCRIPTION
+.PP
+.\" TeX users may be more comfortable with the \fB<whatever>\fP and
+.\" \fI<whatever>\fP escape sequences to invode bold face and italics, 
+.\" respectively.
+\fBumtsmon\fP is a program that handles your UMTS (3G) devices for you. You can configure PPP settings, and \fBumtsmon\fP connects you to the internet with your umts card/usb-stick. Sending and receiving SMS is also possible.
+.TP
+Most of the recent UMTS devices (especially the USB stick look-alikes) need an extra application to switch off the virtual CDROM-device before the modem devices show up. There are at least two candiates for this job: usb_modeswitch and ozerocdoff. \fBumtsmon\fP tries to find and execute usb_modeswitch when it thinks it is necessary for the current device.
+.TP
+\fBumtsmon\fP can use two types of UMTS devices: those who offer one or more serial interfaces (internally) and the newer UMTS cards made by Option (a belgian hardware manufacturer) driven by the "hso" driver.
+.TP
+For the serial type devices the internet connection is made by the ppp daemon "pppd". \fBumtsmon\fP calls "pppd" with all necessary parameters. It's not necessary to edit any extra configuration files for ppp outside \fBumtsmon\fP.
+.TP
+The hso devices bring along their own network interface, so "pppd" is not used here. The ppp options described below are silently ignored if a hso device is used.
+.SH OPTIONS
+The program follows the usual GNU command line syntax, with long
+options starting with two dashes ('-').
+.TP
+.B \-h, \-\-help
+Show summary of options.
+.TP
+.B \-\-force-autodetect
+force autodetection of the modem devices, don't use info from config file.
+.TP
+.B \-\-autoconnect
+set autoconnect to true (persistent!).
+.TP
+.B \-\-no-autoconnect
+set autoconnect to false (persistent!).
+.TP
+.B \-\-language <locale>
+set the language, e.g. nl or pt_BR
+.TP
+.B \-s <at>[,ppp], \-\-serial <at>[,ppp]
+will prevent autodetection of devices and use serial port <at>[,<ppp>], where <at> is the device name to be used sending AT commands to the modem  and (if necessary) a device name <ppp> for use with the ppp daemon.
+.TP
+.B \-v <lvl>[,ppplvl], \-\-verbosity <lvl>[,ppplvl]
+set verbosity level, 1=little (default), 6=all, separate verbosity level can be set for ppp daemon.
+.TP
+.B \-\-default-profile <profilename>
+sets the default profile to connect with (persistent!)
+.SH FILES
+.TP
+.I ~/.umtsmon/umtsmonrc
+The settings of \fBumtsmon\fP are stored in a configuration file, usually under the user's home directory.
+It contains the defined profiles, the device configuration and the traffic statistics.
+If you encounter problems with your modem device, after replacing it or doing a firmware upgrade, try starting \fBumtsmon\fP with the option \-\-force-autodetect to ignore the saved device settings and do the autodetection.
+.I ~/.umtsmon/.umtsmonrc.lock
+is used as a lock file during some critical internal tasks. It has a length of zero bytes.
+
+.SH UMTSMON AS ROOT
+Please do not run \fBumtsmon\fP as root. Even though it can operate as root, 
+it is designed not to do so. If you cannot use \fBumtsmon\fP as normal user, 
+you probably need to add yourself to the \fBdialout\fP and/or \fBuucp\fP groups. 
+
+.SH BUGS
+There are of course a lot, as \fBumtsmon\fP is still under heavy development. 
+If you think you suffer from a bug you can contact the developer mailing list 
+<umtsmon-develop@lists.sourceforge.net>, describe your problem and attach a
+copy of the debug output you receive from \fBumtsmon -v 5\fP.
+.TP
+Known major bugs:
+  * umtsmon cannot perform autodetection correctly on some 2.6.20 Linux kernels.
+  * umtsmon doesn't work at all with bluetooth right now.
+.SH SEE ALSO
+.BR usb_modeswitch (8),
+.BR ozerocdoff (8)
+.br
+.SH AUTHOR
+umtsmon was written by Klaas van Gend and others in 2006, 2007, 2008 and 2009.
+.PP
+This manual page was written by Martin Dummer <martin.dummer@gmx.net>,
+for the Debian project (but may be used by others).
