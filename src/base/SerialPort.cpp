@@ -26,6 +26,8 @@
 #include <termio.h>
 #include <fcntl.h>
 #include <assert.h>
+#include <unistd.h>
+#include <sys/stat.h>
 
 bool SerialPort::closeDev()
 {
@@ -220,10 +222,10 @@ static char theString[MAXTHESTRING];
 static char* convertToReadable(const QString& aString)
 {
 	unsigned int myDestPos   = 0;
-	unsigned int mySourcePos = 0;
+	int mySourcePos = 0;
 	for (; mySourcePos < aString.length();)
 	{
-		theString[myDestPos] = aString[mySourcePos];
+		theString[myDestPos] = aString[mySourcePos].toAscii();
 		if (theString[myDestPos] == '\r')
 		{
 			theString[myDestPos] = '\\';
@@ -315,7 +317,7 @@ int  SimulatedSerialPort::getOneByte(void)
 		theCurrentItem = theQueryList.end();
 		theItemIndex = -1;
 	}
-	return myByte;
+	return myByte.toAscii();
 }
 
 

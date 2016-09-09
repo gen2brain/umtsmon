@@ -68,7 +68,8 @@ SOURCES	+= main.cpp \
 	src/view/SetLanguageDialog.cpp \
 	src/view/UIState.cpp
 
-FORMS	= src/view/newprofiledialog.ui \
+#The following line was changed from FORMS to FORMS3 by qt3to4
+FORMS3	= src/view/newprofiledialog.ui \
 	src/view/enterpindialog.ui \
 	src/view/enterpukdialog.ui \
 	src/view/aboutdialog.ui \
@@ -139,8 +140,7 @@ TRANSLATIONS = \
    i18n/umtsmon_sv.ts
 
 # build translations
-translations_qm = $${TRANSLATIONS}
-translations_qm ~= s/\.ts/.qm/g
+translations_qm = $$replace($${TRANSLATIONS}, .ts, .qm)
 
 lupdate.target=$${TRANSLATIONS}
 lupdate.commands=lupdate -verbose umtsmon.pro
@@ -151,11 +151,11 @@ lrelease.commands=lrelease -verbose umtsmon.pro
 lrelease.depends=$${TRANSLATIONS}
 
 aboutdialog.target=src/view/aboutdialog.ui
-aboutdialog.commands=sed -e '/@AUTHORS@/rAUTHORS' -e '/@COPYING@/rCOPYING' src/view/aboutdialog.base.ui -e '/@COPYING@/d;/@AUTHORS@/d' > src/view/aboutdialog.ui
+aboutdialog.commands=sed -e '/@AUTHORS@/rAUTHORS' -e '/@COPYING@/rCOPYING' src/view/aboutdialog.base.ui > src/view/aboutdialog.ui && sed -e '/@COPYING@/d' -e '/@AUTHORS@/d' -i src/view/aboutdialog.ui
 aboutdialog.depends=AUTHORS COPYING src/view/aboutdialog.base.ui
 
-QMAKE_EXTRA_UNIX_TARGETS += lupdate lrelease 
-QMAKE_EXTRA_UNIX_TARGETS += aboutdialog
+QMAKE_EXTRA_TARGETS += lupdate lrelease 
+QMAKE_EXTRA_TARGETS += aboutdialog
 POST_TARGETDEPS = $${lupdate.target} $${lrelease.target}
 
 # make install rules
@@ -182,3 +182,8 @@ QMAKE_CLEAN += \
 	src/view/aboutdialog.ui \
 	$${translations_qm} \
 	umtsmon
+#The following line was inserted by qt3to4
+QT +=  qt3support 
+#The following line was inserted by qt3to4
+CONFIG += uic3
+

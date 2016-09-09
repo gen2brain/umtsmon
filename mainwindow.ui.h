@@ -36,9 +36,10 @@
 
 #include "qlabel.h"
 #include "qlineedit.h"
-#include "qtextedit.h"
+#include "q3textedit.h"
 
 #include <assert.h>
+#include <unistd.h>
 
 
 // it's actually defined in main.cpp

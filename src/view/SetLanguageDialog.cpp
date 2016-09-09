@@ -23,34 +23,37 @@
 
 #include <qpushbutton.h>
 #include <qlabel.h>
-#include <qbuttongroup.h>
+#include <q3buttongroup.h>
 #include <qradiobutton.h>
 #include <qlayout.h>
 #include <qtooltip.h>
-#include <qwhatsthis.h>
+#include <q3whatsthis.h>
 #include <qimage.h>
 #include <qpixmap.h>
 
 #include <qstringlist.h>
+//Added by qt3to4:
+#include <Q3HBoxLayout>
+#include <Q3VBoxLayout>
 
-SetLanguageDialog::SetLanguageDialog( QWidget* parent, const char* name, bool modal, WFlags fl )
+SetLanguageDialog::SetLanguageDialog( QWidget* parent, const char* name, bool modal, Qt::WFlags fl )
     : QDialog( parent, name, modal, fl )
 {
     setSizeGripEnabled(true);
-    theDialogLayout = new QVBoxLayout( this, 11, 6, "DialogLayout"); 
+    theDialogLayout = new Q3VBoxLayout( this, 11, 6, "DialogLayout"); 
 
     textLabel1 = new QLabel( this, "textLabel1" );
     theDialogLayout->addWidget( textLabel1 );
 
-    theRadioButtonGroup = new QButtonGroup( this, "RadioButtonGroup" );
+    theRadioButtonGroup = new Q3ButtonGroup( this, "RadioButtonGroup" );
     theRadioButtonGroup->setColumnLayout(0, Qt::Vertical );
     theRadioButtonGroup->layout()->setSpacing( 6 );
     theRadioButtonGroup->layout()->setMargin( 11 );
-    theRadioButtonGroupLayout = new QVBoxLayout( theRadioButtonGroup->layout() );
+    theRadioButtonGroupLayout = new Q3VBoxLayout( theRadioButtonGroup->layout() );
     theRadioButtonGroupLayout->setAlignment( Qt::AlignTop );
     theDialogLayout->addWidget( theRadioButtonGroup );
 
-    thePushButtonLayout = new QHBoxLayout( 0, 0, 6, "PushButtonLayout"); 
+    thePushButtonLayout = new Q3HBoxLayout( 0, 0, 6, "PushButtonLayout"); 
     Horizontal_Spacing2 = new QSpacerItem( 20, 20, QSizePolicy::Expanding, QSizePolicy::Minimum );
     thePushButtonLayout->addItem( Horizontal_Spacing2 );
 
@@ -66,7 +69,6 @@ SetLanguageDialog::SetLanguageDialog( QWidget* parent, const char* name, bool mo
     theDialogLayout->addLayout( thePushButtonLayout );
     languageChange();
     resize( QSize(100, 209).expandedTo(minimumSizeHint()) );
-    clearWState( WState_Polished );
 
     // signals and slots connections
     connect( buttonOk, SIGNAL( clicked() ), this, SLOT( buttonOk_clicked() ) );
@@ -121,7 +123,7 @@ void SetLanguageDialog::setI18nPtr(Internationalisation* aI18nPtr)
 	
 	// make a copy of the list and sort it
 	QStringList myLangList = aI18nPtr->getAllSupportedLocales();
-	qHeapSort(myLangList);
+	qSort(myLangList);
 	
 	QString myCurrentLang = aI18nPtr->getLocale();
 	DEBUG5("My current language = '%s'\n", myCurrentLang.ascii());

@@ -20,14 +20,16 @@
 #include <qdir.h>
 #include <qstring.h>
 #include <qregexp.h>
+//Added by qt3to4:
+#include <Q3TextStream>
 
 QString
 FileStuff::getFileFirstLine(const QString& aFileName)
 {
 	QFile myFile(aFileName);
-	if (myFile.open(IO_ReadOnly))
+	if (myFile.open(QIODevice::ReadOnly))
 	{
-	   	QTextStream in(&myFile);
+	   	Q3TextStream in(&myFile);
 		QString myLine = in.readLine().stripWhiteSpace();
 		myFile.close();
 		return myLine;
@@ -38,22 +40,22 @@ FileStuff::getFileFirstLine(const QString& aFileName)
 bool
 FileStuff::doesFileContainString(
 	const QString& aFileName, 
-	const QRegExp& aSubString)
+	const QString& aSubString)
 {
 	QFile myFile(aFileName);
-	if (myFile.open(IO_ReadOnly) != true)
+	if (myFile.open(QIODevice::ReadOnly) != true)
 	{
 		return false;
 	}
 
 	QString myLine;
 	bool myResult = false;
-   	QTextStream in(&myFile);
+   	Q3TextStream in(&myFile);
 	while(!in.atEnd())
 	{
 		myLine = in.readLine().stripWhiteSpace();
 		// perform substring searching
-		if (aSubString.search(myLine,0) != -1)
+		if (aSubString.indexOf(myLine,0) != -1)
 		{
 			myResult = true;
 			break;	// breaks while loop
@@ -73,17 +75,17 @@ FileStuff::ReadWrite
 FileStuff::isFileReadWrite(const QString& aFileName)
 {
 	QFile myFile(aFileName);
-	if (myFile.open(IO_ReadWrite))
+	if (myFile.open(QIODevice::ReadWrite))
 	{
 		myFile.close();
 		return READWRITE;
 	}
-	if (myFile.open(IO_ReadOnly))
+	if (myFile.open(QIODevice::ReadOnly))
 	{
 		myFile.close();
 		return READ;
 	}
-	if (myFile.open(IO_WriteOnly))
+	if (myFile.open(QIODevice::WriteOnly))
 	{
 		myFile.close();
 		return WRITE;
@@ -100,20 +102,19 @@ FileStuff::checkForRunningProcess(const QString& aProcessName)
 	QDir myProcDir(myBaseDirName);
 	myProcDir.setFilter( QDir::Dirs );
 	
-	const QFileInfoList* myList = myProcDir.entryInfoList();
-	QFileInfoListIterator myIterator( *myList );
-	QFileInfo* myFileInfo;
+	const QFileInfoList myList = myProcDir.entryInfoList();
+	QListIterator<QFileInfo> myIterator( myList );
 	
-	while ( (myFileInfo = myIterator.current()) != 0 ) 
+	while ( myIterator.hasNext() ) 
 	{
-		++myIterator;
+	    const QFileInfo myFileInfo = myIterator.next();
 
 		// if the dirname contains any non-number characters, including dots, skip it.
 		QRegExp myNonNumberRegExp("\\D");
-		if (myFileInfo->fileName().contains(myNonNumberRegExp))
+		if (myFileInfo.fileName().contains(myNonNumberRegExp))
 			continue;
 		// and check for the ProcessName on the command line			
-		QString myCmdName = myBaseDirName + myFileInfo->fileName() + "/cmdline";
+		QString myCmdName = myBaseDirName + myFileInfo.fileName() + "/cmdline";
 		if (FileStuff::doesFileContainString(myCmdName, aProcessName) == true)
 			return true;
 	}
@@ -133,21 +134,20 @@ FileStuff::FindInDir::FindInDir(
 	theDir.setFilter(aWhatEntriesToReturn);
 	
 	theFIListPtr = theDir.entryInfoList();
-	theFILIPtr = new QFileInfoListIterator(*theFIListPtr);
+    theFILIPtr = new QListIterator<QFileInfo>( theFIListPtr );
 }
 
 FileStuff::FindInDir::~FindInDir()
 {
-	delete theFILIPtr;
+    delete theFILIPtr;
 }
 
 QString 
 FileStuff::FindInDir::getNextEntry(void)
 {
-	QFileInfo* myEntryInfoPtr = theFILIPtr->current();
-	if (myEntryInfoPtr == NULL)
+	const QFileInfo myEntryInfo = theFILIPtr->next();
+	if (!myEntryInfo.exists())
 		return "";
-	QString myFileName = myEntryInfoPtr->absFilePath();
-	++(*theFILIPtr);
+	QString myFileName = myEntryInfo.absFilePath();
 	return myFileName;
 }

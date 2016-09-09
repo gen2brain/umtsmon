@@ -1,38 +1,3 @@
-# CVS global ignores
-RCS
-SCCS
-CVS
-CVS.adm
-RCSLOG
-cvslog.*
-tags
-TAGS
-.make.state
-.nse_depinfo
-*~
-#*
-.#*
-,*
-_$*
-*$
-*.old
-*.bak
-*.BAK
-*.orig
-*.rej
-.del-*
-*.a
-*.olb
-*.o
-*.obj
-*.so
-*.exe
-*.Z
-*.elc
-*.ln
-core
-
-# Project ignores (converted from .cvsignore files)
 /i18n/umtsmon_*.qm
 /src/view/aboutdialog.ui
 /src/view/.cvsignore
@@ -80,5 +45,4 @@ core
 /.project
 /.moc
 /.ui
-/umtsmon
 /.cproject

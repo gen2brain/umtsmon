@@ -41,12 +41,9 @@ TheSettingsSingleton::TheSettingsSingleton()
 {
 	DEBUG5("TheSettingsSingleton::TheSettingsSingleton()\n");
 	assert(theQSettingsInstancePtr == NULL);
-	theQSettingsInstancePtr = new QSettings();
+	theQSettingsInstancePtr = new QSettings(APPNAME, APPNAME);
 
-	// I want to store the settings on the usual place: $HOME/.umtsmon/umtsmonrc
-	QString mySettingsLocation = QDir::homeDirPath() + "/." + APPNAME;
-	DEBUG2("Settings will be saved in : '%s'\n", mySettingsLocation.ascii());
-	theQSettingsInstancePtr->insertSearchPath (QSettings::Unix, mySettingsLocation);
+	DEBUG2("Settings will be saved in : '%s'\n", theQSettingsInstancePtr->fileName().ascii());
 	theQSettingsInstancePtr->beginGroup(APPNAME);
 
 	// register the end member to destruct properly at 

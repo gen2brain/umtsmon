@@ -20,7 +20,7 @@
 #define PROGRESSDIALOG_H_
 
 
-#include <qprogressdialog.h>
+#include <q3progressdialog.h>
 #include <qapplication.h>
 
 //forward declaration of QString
@@ -36,7 +36,7 @@ class QString;
  *  * show delayed and don't show at all if it finishes before a certain time span
  * See the start(), setMaxTime() and finish() members for more explanation.
  */ 
-class ProgressDialog : protected QProgressDialog
+class ProgressDialog : protected Q3ProgressDialog
 { 
 
 public:

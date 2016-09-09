@@ -94,7 +94,7 @@ public:
 	virtual bool hasRadioPreferences(void) const  {return false;};
 	
 	/// returns a list of all Radio Preferences the card supports, default setting is first 
-	virtual const QStringList getRadioPreferences(void)    {return NULL;};
+	virtual const QStringList getRadioPreferences(void)    {return theRadioPreferences;};
 	
 	/// returns true if setting the Radio Preference was OK
 	virtual bool setRadioPreferences( __attribute__ ((unused)) int aPref)   {return false;}; 
@@ -124,6 +124,8 @@ protected:
 
 	QString		theATSerialPortName;
 	QString		thePPPSerialPortName;
+
+    QStringList theRadioPreferences;
 
 	ConnectionInfo* theConnectionInfoPtr;
 	SerialPort*	theATSerialPortPtr;

@@ -35,6 +35,7 @@
 #include "Query.h"
 #include "TheDeviceManagerSingleton.h"
 #include <qfile.h>
+#include <qtextstream.h>
 
 
 
@@ -82,7 +83,7 @@ void InfoDialogUmtsmon::init()
 **/
 void InfoDialogUmtsmon::sort_module_table(int section) {
 
-	if (module_table->horizontalHeader()->sortIndicatorOrder() == Qt::Ascending) {
+	if (module_table->horizontalHeader()->sortIndicatorOrder() == Qt::AscendingOrder) {
 		module_table->sortColumn(section,false,true);
 	} else {
 		module_table->sortColumn(section,true,true);
@@ -96,7 +97,7 @@ void InfoDialogUmtsmon::sort_module_table(int section) {
 **/
 void InfoDialogUmtsmon::sort_device_table(int section) {
 
-	if (device_table->horizontalHeader()->sortIndicatorOrder() == Qt::Ascending) {
+	if (device_table->horizontalHeader()->sortIndicatorOrder() == Qt::AscendingOrder) {
 		device_table->sortColumn(section,false,true);
 	} else {
 		device_table->sortColumn(section,true,true);
@@ -169,22 +170,26 @@ void InfoDialogUmtsmon::readSystemInformations()
 {
 	DEBUG5("InfoDialogUmtsmon::readSystemInformations()\n");
 // System modules
-	QString myLine;
+    QString line;
 	QFile f;
 
 	f.setName( "/proc/modules" );
-	f.open( IO_ReadOnly);
-	while(!f.atEnd ())
+	f.open(QIODevice::ReadOnly);
+    QTextStream in(&f);
+        
+    line = in.readLine();
+	while(!line.isNull())
 	{
-		f.readLine(myLine,900); // how long will an entry max be..?
-		myLine = myLine.stripWhiteSpace ();
+        line = line.stripWhiteSpace();
 		// insert into table..
 		/// new row at line 0
 		module_table->insertRows(0);
 		//insert into row,col,value 
-		module_table->setText(0,0, myLine.section(" ",0,0) );
-		module_table->setText(0,1, myLine.section(" ",1,1) );
-		module_table->setText(0,2, myLine.section(" ",2,2) );
+		module_table->setText(0,0, line.section(" ",0,0) );
+		module_table->setText(0,1, line.section(" ",1,1) );
+		module_table->setText(0,2, line.section(" ",2,2) );
+
+        line = in.readLine();
 	}
 	f.close();
 	module_table->horizontalHeader()->setStretchEnabled(-1, true);
@@ -196,22 +201,22 @@ void InfoDialogUmtsmon::readSystemInformations()
 	
 //System devices
 	f.setName( "/proc/devices" );
-	f.open( IO_ReadOnly);
+	f.open(QIODevice::ReadOnly);
+    QTextStream in2(&f);
 
-	f.readLine(myLine,50); // first line is just "Character devices:"
-	while(!f.atEnd ())
+    line = in.readLine();  // first line is just "Character devices:"
+	while(!line.isNull())
 	{
-		f.readLine(myLine,50); // how long will an entry max be..?
-		myLine = myLine.stripWhiteSpace ();
+        line = in.readLine();
 		// insert into table..
 		/// new row at line 0
-		if( ( myLine.left(3).isEmpty() ) ) // we have reached the last device.. :)
+		if( ( line.left(3).isEmpty() ) ) // we have reached the last device.. :)
 			break; 
 		
 		device_table->insertRows(0);
 		//insert into row,col,value 
-		device_table->setText(0,0, myLine.section(" ",0,0) ); // up to digit 3
-		device_table->setText(0,1, myLine.section(" ",1) ); //from digit 4 to end..
+		device_table->setText(0,0, line.section(" ",0,0) ); // up to digit 3
+		device_table->setText(0,1, line.section(" ",1) ); //from digit 4 to end..
 	}
 	f.close();
 	device_table->horizontalHeader()->setStretchEnabled(-1, true);

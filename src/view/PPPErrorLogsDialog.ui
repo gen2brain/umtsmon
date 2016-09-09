@@ -127,9 +127,6 @@ On the next two tabs,  you'll find the information PPP returned. Please check if
                         <property name="readOnly">
                             <bool>true</bool>
                         </property>
-                        <property name="TextFormat">
-                            <enum>PlainText</enum>
-                        </property>
                         <property name="undoRedoEnabled">
                             <bool>false</bool>
                         </property>
@@ -159,9 +156,6 @@ On the next two tabs,  you'll find the information PPP returned. Please check if
                         </property>
                         <property name="readOnly">
                             <bool>true</bool>
-                        </property>
-                        <property name="TextFormat">
-                            <enum>PlainText</enum>
                         </property>
                         <property name="undoRedoEnabled">
                             <bool>false</bool>

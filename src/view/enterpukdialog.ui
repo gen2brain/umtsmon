@@ -135,12 +135,8 @@
                             <verstretch>0</verstretch>
                         </sizepolicy>
                     </property>
-                    <property name="paletteForegroundColor">
-                        <color>
-                            <red>255</red>
-                            <green>0</green>
-                            <blue>0</blue>
-                        </color>
+                    <property name="styleSheet">
+                        <string>QLabel { color : red; }</string>
                     </property>
                     <property name="text">
                         <string>You have entered a wrong PIN  3 times

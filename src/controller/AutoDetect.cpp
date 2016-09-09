@@ -22,6 +22,8 @@
 #include "FileStuff.h"
 #include "SerialPort.h"
 #include "Query.h"
+//Added by qt3to4:
+#include <Q3ValueList>
 #include "Popup.h"
 #include "Runner.h"
 
@@ -446,7 +448,7 @@ bool AutoDetect_USB::findPortNames(void)
 
 			// a USB serial port was found!
 			thePortsList.push_back(myttyUSBx);
-			DEBUG4("  Found serial port number %zd with name '%s'\n", thePortsList.count(), myttyUSBx.ascii());
+			DEBUG4("  Found serial port number %d with name '%s'\n", thePortsList.count(), myttyUSBx.ascii());
 		}
 	}
 
@@ -474,7 +476,7 @@ bool AutoDetect_USB::suggestModprobe(void)
 	// darn - let's see if the usbserial driver is loaded and suggest
 	// to load it otherwise
 	DEBUG4("AutoDetect_USB::suggestModprobe(void)\n");
-	if (FileStuff::doesFileContainString("/proc/modules", QString("usbserial")))
+	if (FileStuff::doesFileContainString(QString("/proc/modules"), "usbserial"))
 	{
 		DEBUG1("no /dev/ttyUSB* entries, but the usbserial module is loaded???\n");
 		return false;
@@ -489,7 +491,7 @@ bool AutoDetect_USB::suggestModprobe(void)
 		char myCommandString[256];
 		snprintf(myCommandString, 255, "/sbin/modprobe usbserial vendor=0x%lx product=0x%lx", theUSBVendorID, theUSBDeviceID);
 		DEBUG1("%s\n", myCommandString);
-		myRunner.runCommand(Runner::SOMESU, myCommandString);
+		myRunner.runCommand(Runner::SOMESU, QString(myCommandString).split(" "));
 
 		// we now have to wait and see...
 		sleep(1);
@@ -624,7 +626,7 @@ bool AutoDetect_USB_ZeroCD::switchDevice(void)
 		if (Popup::YesNoQuestionWithMemory("SwitchDevice", QObject::tr("umtsmon detected that you need to switch your device.\n"
 				"Click Yes if you agree.\n Note: this does not work properly for all devices yet!")))
 		{
-			myRunner.runCommand(Runner::USBMODESWITCH, "");
+			myRunner.runCommand(Runner::USBMODESWITCH, QStringList());
 		}
 	}
 
@@ -805,12 +807,12 @@ bool AutoDetect_PCMCIA::findPortNames(void)
 bool AutoDetect_PCMCIA::findNozomiPortNames(void)
 {
 	DEBUG3(" AutoDetect_PCMCIA::findNozomiPortNames()\n");
-	if (!FileStuff::doesFileContainString("/proc/modules", QString("nozomi")))
+	if (!FileStuff::doesFileContainString("/proc/modules", "nozomi"))
 	{
 		sendLog(KILLING, "No kernel module for nozomi-based card loaded");
 		return false;
 	}
-	if (FileStuff::doesFileContainString("/proc/devices", QString("nozomi")))
+	if (FileStuff::doesFileContainString("/proc/devices", "nozomi"))
 	{
 		thePortsList.push_front("/dev/nozomi0"); // first entry = PPP
 		thePortsList.push_back("/dev/nozomi2"); // last  entry = AT
@@ -818,7 +820,7 @@ bool AutoDetect_PCMCIA::findNozomiPortNames(void)
 	}
 	else
 	{
-		if (FileStuff::doesFileContainString("/proc/devices", QString("noz")))
+		if (FileStuff::doesFileContainString("/proc/devices", "noz"))
 		{
 			thePortsList.push_front("/dev/noz0"); // first entry = PPP
 			thePortsList.push_back("/dev/noz2"); // last  entry = AT
@@ -870,7 +872,7 @@ bool
 AutoDetect_PCMCIA::isPCMCIABrowsingPossible(void)
 {
 	// check for pcmcia_core in /proc/modules (=lsmod)
-	if (FileStuff::doesFileContainString("/proc/modules", QString("pcmcia_core")))
+	if (FileStuff::doesFileContainString("/proc/modules", "pcmcia_core"))
 	{
 		sendLog(INFO, "pcmcia_core kernel support (yenta) found");
 	}
@@ -878,7 +880,7 @@ AutoDetect_PCMCIA::isPCMCIABrowsingPossible(void)
 	{
 		sendLog(BAD, "pcmcia_core kernel support (yenta) not found");
 	}
-	if (FileStuff::doesFileContainString("/proc/devices", QString("pcmcia")))
+	if (FileStuff::doesFileContainString("/proc/devices", "pcmcia"))
 	{
 		sendLog(INFO, "PCMCIA kernel module found - cardctl support possible");
 	}
@@ -945,7 +947,7 @@ AutoDetect_Rawport::traverseTrees(void)
 	{
 		// this is a little hopeful... we only know that
 		// such serial ports exists for now...
-		DEBUG3("There are %zd devices in my valid list\n",theValidSerialPortsList.count());
+		DEBUG3("There are %d devices in my valid list\n",theValidSerialPortsList.count());
 		return DEVICE_DETECTED;
 	}
 }
@@ -1003,7 +1005,7 @@ static struct s_args myBaudRates[] =
 
 
 //	list<s_my_pair>  myPortList;
-	QValueList<s_my_pair>  myPortList;
+	Q3ValueList<s_my_pair>  myPortList;
 
 	// we now have a list of valid serial devices in theValidSerialPortsList
 	// we need to iterate through that list to see if there's a response to AT
@@ -1026,6 +1028,7 @@ static struct s_args myBaudRates[] =
 	 			DEBUG3("probe successful for baud rate %ld\n", myBaudRates[i].aBaudRate);
 	 			myPortList.push_back(s_my_pair(*myIt,myBaudRates[i].aBaudRate));
 	 			aBaudCode = myBaudRates[i].aBaudCode;
+	 			DEBUG5("baud code %d\n", aBaudCode);
 	 			break;
 	 		}
 		}

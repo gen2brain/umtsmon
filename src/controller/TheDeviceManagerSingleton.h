@@ -22,7 +22,7 @@
 #include "AutoDetect.h"
 #include "DeviceCapabilities.h"
 
-#include <qvaluelist.h>
+#include <q3valuelist.h>
 
 //////////////////////////////////////////////////////////////////////////////
 
@@ -103,7 +103,7 @@ private:
 	void setupAutoDetectList(void);
 	
 	// typedef to simplify usage of the AutoDetect list
-	typedef QValueList<AutoDetectBase*> AutoDetectList;
+	typedef Q3ValueList<AutoDetectBase*> AutoDetectList;
 	
 	/// list of all various AutoDetect subclass instances
 	AutoDetectList theAutoDetectList;

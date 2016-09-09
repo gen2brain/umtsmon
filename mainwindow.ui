@@ -15,7 +15,7 @@
     <property name="caption">
         <string>umtsmon mainwindow</string>
     </property>
-    <property name="icon">
+    <property name="windowIcon">
         <pixmap>umtsmon-22x22.png</pixmap>
     </property>
     <grid>
@@ -247,9 +247,6 @@
         <property name="enabled">
             <bool>false</bool>
         </property>
-        <property name="iconSet">
-            <iconset></iconset>
-        </property>
         <property name="text">
             <string>Connect</string>
         </property>
@@ -272,9 +269,6 @@
         </property>
         <property name="enabled">
             <bool>false</bool>
-        </property>
-        <property name="iconSet">
-            <iconset></iconset>
         </property>
         <property name="text">
             <string>Disconnect</string>

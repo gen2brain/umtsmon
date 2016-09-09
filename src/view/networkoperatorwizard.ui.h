@@ -31,7 +31,12 @@
 #include "umtsmon_global.h"
 #include <assert.h>
 
-#include <qlistview.h>
+#include <q3listview.h>
+//Added by qt3to4:
+#include <q3mimefactory.h>
+#include <QPixmap>
+//Added by qt3to4:
+#include <q3mimefactory.h>
 
 enum NetwOpWizardPages
 {
@@ -395,8 +400,8 @@ void NetworkOperatorWizard::updateTable()
 	}
 
 	// create the pixmaps (will be copied upon entry in the table)
-	QPixmap myOK( QPixmap::fromMimeSource("ok.png") );
-	QPixmap myForbidden( QPixmap::fromMimeSource("process-stop-16x16.png") );
+	QPixmap myOK( qPixmapFromMimeSource("ok.png") );
+	QPixmap myForbidden( qPixmapFromMimeSource("process-stop-16x16.png") );
 
 	// fill the table
 	for (TheOperatorListIterator myI=myNetworkChanger.theOperatorList.begin();
@@ -432,7 +437,7 @@ void NetworkOperatorWizard::updateTable()
 void NetworkOperatorWizard::sort_table_operators(int aSection) 
 {
 
-	if (table_operators->horizontalHeader()->sortIndicatorOrder() == Qt::Ascending) 
+	if (table_operators->horizontalHeader()->sortIndicatorOrder() == Qt::AscendingOrder) 
 	{
 		table_operators->sortColumn(aSection,false,true);
 	} 

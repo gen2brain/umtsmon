@@ -21,6 +21,7 @@
 #include <qregexp.h>
 #include <qstring.h>
 #include <qdir.h>
+#include <QListIterator>
 
 class FileStuff
 {
@@ -28,7 +29,7 @@ public:
 	/** checks if a file contains a certain (sub)string.
 	 *  @returns  false if file does not exist or on other errors, true if the substring was found
 	 */ 
-	static bool doesFileContainString(const QString& aFileName, const QRegExp& aSubString);
+	static bool doesFileContainString(const QString& aFileName, const QString& aSubString);
 
 	/** checks if the file exists
 	 *  @returns  true if the file exists
@@ -68,7 +69,7 @@ public:
 		FindInDir(const QString& aDirName, const QString& aNameFilter, 
 		          QDir::FilterSpec aWhatEntriesToReturn = QDir::All);
 
-		virtual ~FindInDir();
+        virtual ~FindInDir();
 		
 		/** returns the (first or next) entry in the directory,
 		 *  returns an empty string if no (more) entries.
@@ -76,9 +77,9 @@ public:
 		QString getNextEntry(void);
 	
 	private:
-		QDir	               theDir;
-		const QFileInfoList*   theFIListPtr;
-		QFileInfoListIterator* theFILIPtr;
+		QDir	                  theDir;
+        QFileInfoList             theFIListPtr;
+        QListIterator<QFileInfo>* theFILIPtr;
 	}; // end-of-class FindInDir
 
 

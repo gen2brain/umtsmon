@@ -26,6 +26,10 @@
 
 #include <qfile.h>
 #include <qpixmap.h>
+//Added by qt3to4:
+#include <q3mimefactory.h>
+//Added by qt3to4:
+#include <q3mimefactory.h>
 
 #include <sys/types.h>
 #include <grp.h>
@@ -118,25 +122,25 @@ HelperApp::HelperApp(int aNumber, Runner::BinariesToRun aHelper,
 	} 
 }
 
-void HelperApp::add(QListView* aListViewPtr)
+void HelperApp::add(Q3ListView* aListViewPtr)
 {
 	DEBUG3("HelperApp::add\n");
-	QListViewItem* myQLVI = new QListViewItem (aListViewPtr, QString::number(theNumber,10), theName);
+	Q3ListViewItem* myQLVI = new Q3ListViewItem (aListViewPtr, QString::number(theNumber,10), theName);
 	myQLVI->setOpen(true);
 	
-	QListViewItem* mySubQLVI= new QListViewItem (myQLVI, "", 
+	Q3ListViewItem* mySubQLVI= new Q3ListViewItem (myQLVI, "", 
 				theFullPath, theVersion, "", theRemarks);
 	switch(isSUID)
 	{
 	case HelperData::YES:
 		{
-			QPixmap myPixmap( QPixmap::fromMimeSource("ok.png") );
+			QPixmap myPixmap( qPixmapFromMimeSource("ok.png") );
 			mySubQLVI->setPixmap(3, myPixmap);
 			break;
 		}
 	case HelperData::NO:
 		{
-			QPixmap myPixmap( QPixmap::fromMimeSource("process-stop-16x16.png") );
+			QPixmap myPixmap( qPixmapFromMimeSource("process-stop-16x16.png") );
 			mySubQLVI->setPixmap(3, myPixmap);
 			break;
 		}
@@ -148,7 +152,7 @@ void HelperApp::add(QListView* aListViewPtr)
 	// in case the binary is missing, let's put up a sign
 	if (isBinaryMissing)
 	{
-		QPixmap myPixmap( QPixmap::fromMimeSource("process-stop-16x16.png") );
+		QPixmap myPixmap( qPixmapFromMimeSource("process-stop-16x16.png") );
 		mySubQLVI->setPixmap(1, myPixmap);
 	}
 	
@@ -168,7 +172,7 @@ bool HelperApp::fixup(void)
 	QString myCommand = "chown root:root " + theFullPath + " && chmod u+s " + theFullPath;
 	DEBUG2("The fixup is: '%s'\n", myCommand.ascii());	
 	Runner myRunner;
-   	myRunner.runCommand(Runner::SOMESU,  myCommand);
+   	myRunner.runCommand(Runner::SOMESU,  myCommand.split(" "));
 	needsFix = myRunner.isSUID(theHelper)==false;
 	isSUID = (!needsFix)?(HelperData::YES):(HelperData::NO);
 
@@ -197,7 +201,7 @@ HelperDev::HelperDev(int aNumber, const QString& anATPort, const QString& aPPPPo
 }
 
 
-QListViewItem* HelperDev::newLVI(QListViewItem* aQLVI, 
+Q3ListViewItem* HelperDev::newLVI(Q3ListViewItem* aQLVI, 
 				const QString& aPortName)
 {
 	QString myRemarks;
@@ -232,31 +236,31 @@ QListViewItem* HelperDev::newLVI(QListViewItem* aQLVI,
 		myRemarks = QObject::tr("not found on file system");
 	}
 
-	QListViewItem* mySubQLVI  = new QListViewItem (aQLVI, "", 
+	Q3ListViewItem* mySubQLVI  = new Q3ListViewItem (aQLVI, "", 
 				aPortName, "n/a", "n/a", myRemarks);
 	if (isOK)
 	{
-		QPixmap myPixmap( QPixmap::fromMimeSource("ok.png") );
+		QPixmap myPixmap( qPixmapFromMimeSource("ok.png") );
 		mySubQLVI->setPixmap(4, myPixmap);
 	}
 	else
 	{
-		QPixmap myPixmap( QPixmap::fromMimeSource("process-stop-16x16.png") );
+		QPixmap myPixmap( qPixmapFromMimeSource("process-stop-16x16.png") );
 		mySubQLVI->setPixmap(4, myPixmap);
 	}
 	return mySubQLVI;
 }
 
-void HelperDev::add(QListView* aListViewPtr)
+void HelperDev::add(Q3ListView* aListViewPtr)
 {
-	QListViewItem* myQLVI = new QListViewItem (aListViewPtr, 
+	Q3ListViewItem* myQLVI = new Q3ListViewItem (aListViewPtr, 
 				QString::number(theNumber, 10), 
 				QObject::tr("Modem Communication Ports"));
 	myQLVI->setOpen(true);
 
 	//FIXME, here are probably two small, one-time-only memory leaks:
-	__attribute__ ((unused)) QListViewItem* mySubQLVI_AT  = newLVI(myQLVI, theATPort);
-	__attribute__ ((unused)) QListViewItem* mySubQLVI_PPP = newLVI(myQLVI, thePPPPort);
+	__attribute__ ((unused)) Q3ListViewItem* mySubQLVI_AT  = newLVI(myQLVI, theATPort);
+	__attribute__ ((unused)) Q3ListViewItem* mySubQLVI_PPP = newLVI(myQLVI, thePPPPort);
 }
 
 
@@ -268,7 +272,7 @@ bool HelperDev::fixDev(const QString& aPort)
 	if (FileStuff::isFileReadWrite(aPort)!=FileStuff::READWRITE)
 	{
 		QString myCommand = "chmod uog+rw " + aPort;
-    	myRunner.runCommand(Runner::SOMESU,  myCommand);
+    	myRunner.runCommand(Runner::SOMESU,  myCommand.split(" "));
 	}
     return FileStuff::isFileReadWrite(aPort)==FileStuff::READWRITE;
 }
@@ -321,7 +325,7 @@ void HelperGroup::createGroupList()
 	}
 }
 
-void HelperGroup::add(QListView* aListViewPtr)
+void HelperGroup::add(Q3ListView* aListViewPtr)
 {
 	bool isRoot = Runner::amIRoot();
 	QString myGroupText;
@@ -334,23 +338,23 @@ void HelperGroup::add(QListView* aListViewPtr)
 		myGroupHelp = QObject::tr("usually one needed to access the device");
 	}
 	
-	QListViewItem *myQLVI = new QListViewItem(aListViewPtr, QString::number(theNumber, 10), myGroupText, "", "", myGroupHelp);
+	Q3ListViewItem *myQLVI = new Q3ListViewItem(aListViewPtr, QString::number(theNumber, 10), myGroupText, "", "", myGroupHelp);
     myQLVI->setOpen(true);
 	bool isOK = isRoot;
     if (!isRoot)
 	{
-		QListViewItem* mySubQLVI_dialout  = newLVI(myQLVI, "dialout", &isOK);
-		QListViewItem* mySubQLVI_uucp = newLVI(myQLVI, "uucp", &isOK);
+		Q3ListViewItem* mySubQLVI_dialout  = newLVI(myQLVI, "dialout", &isOK);
+		Q3ListViewItem* mySubQLVI_uucp = newLVI(myQLVI, "uucp", &isOK);
 
 		if (isOK)
 		{
-			QPixmap myPixmap( QPixmap::fromMimeSource("ok.png") );
+			QPixmap myPixmap( qPixmapFromMimeSource("ok.png") );
 			mySubQLVI_dialout->setPixmap(4, myPixmap);
 			mySubQLVI_uucp->setPixmap(4, myPixmap);
 		}
 		else
 		{
-			QPixmap myPixmap( QPixmap::fromMimeSource("process-stop-16x16.png") );
+			QPixmap myPixmap( qPixmapFromMimeSource("process-stop-16x16.png") );
 			mySubQLVI_dialout->setPixmap(4, myPixmap);
 			mySubQLVI_uucp->setPixmap(4, myPixmap);
 		}
@@ -365,7 +369,7 @@ bool HelperGroup::fixup(void)
 	return false;
 }
 
-QListViewItem* HelperGroup::newLVI(QListViewItem* aQLVI, 
+Q3ListViewItem* HelperGroup::newLVI(Q3ListViewItem* aQLVI, 
 				const QString& aGroupName, bool* isOKPtr)
 {
 	QString myMessage;
@@ -377,7 +381,7 @@ QListViewItem* HelperGroup::newLVI(QListViewItem* aQLVI,
 	else
 		myMessage = QObject::tr("not a member - not fixable by umtsmon");
 
-	QListViewItem* mySubQLVI  = new QListViewItem (aQLVI, "", 
+	Q3ListViewItem* mySubQLVI  = new Q3ListViewItem (aQLVI, "", 
 				aGroupName, "n/a", "n/a", myMessage);
 	return mySubQLVI;
 }
@@ -459,7 +463,7 @@ void HelperList::createHelperList(void)
 	QString thePccardctlStdOut = "";
 	if (!theRunner.getPath(Runner::PCCARDCTL).isEmpty())
 	{
-		theRunner.runCommand(Runner::PCCARDCTL, "--version");
+		theRunner.runCommand(Runner::PCCARDCTL, QStringList("--version"));
 		thePccardctlStdOut = theRunner.getStdOutStringList()[0];
 	}
 	theHelperDataList.push_back(new HelperApp(2, Runner::PCCARDCTL, 

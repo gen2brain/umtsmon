@@ -41,7 +41,7 @@ public:
 		*/
 		QValidator::State myReturn = Acceptable;
 
-		unsigned int myPosition=0;
+		int myPosition=0;
 		int myPlusCount = 0;
 		int myNumberCount = 0;
 		WhereAreWe myState = COUNTINGPLUSES;
@@ -94,7 +94,7 @@ public:
 	{
 		QString myGoodString;
 		int myPlusCount=0;
-		for (unsigned int i=0; i<anInputString.length(); i++)
+		for (int i=0; i<anInputString.length(); i++)
 		{
 			QChar myChar = anInputString[i];
 			if (myChar.isSpace())

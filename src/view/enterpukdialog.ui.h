@@ -33,6 +33,8 @@
 
 #include <qstring.h>
 
+#include <unistd.h>
+
 void EnterPUK::init(void)
 {
     DEBUG5("Enter PUK & new PIN::init called\n");

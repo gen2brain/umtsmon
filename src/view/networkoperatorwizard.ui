@@ -17,7 +17,7 @@
     </property>
     <widget class="QWidget">
         <property name="name">
-            <cstring>WizardPage1</cstring>
+            <cstring>WizardPage</cstring>
         </property>
         <attribute name="title">
             <string>Page 1: Welcome</string>
@@ -58,14 +58,17 @@ Network Operator Wizard&lt;/p&gt;&lt;/b&gt;
 much more expensive.&lt;/P&gt;</string>
                 </property>
                 <property name="alignment">
-                    <set>WordBreak|AlignTop</set>
+                    <set>AlignTop</set>
+                </property>
+                <property name="wordWrap">
+                    <bool>true</bool>
                 </property>
             </widget>
         </grid>
     </widget>
     <widget class="QWidget">
         <property name="name">
-            <cstring>WizardPage</cstring>
+            <cstring>WizardPage0</cstring>
         </property>
         <attribute name="title">
             <string>Page 2: Who picks the operator?</string>
@@ -136,14 +139,17 @@ switch unless you tell it to - moving to another country
 requires running this wizard again.  &lt;/p&gt;</string>
                 </property>
                 <property name="alignment">
-                    <set>WordBreak|AlignTop</set>
+                    <set>AlignTop</set>
+                </property>
+                <property name="wordWrap">
+                    <bool>true</bool>
                 </property>
             </widget>
         </grid>
     </widget>
     <widget class="QWidget">
         <property name="name">
-            <cstring>WizardPage</cstring>
+            <cstring>WizardPage1</cstring>
         </property>
         <attribute name="title">
             <string>Page 3: Get network strengths?</string>
@@ -226,12 +232,8 @@ requires running this wizard again.  &lt;/p&gt;</string>
                 <property name="name">
                     <cstring>textLabel1_4</cstring>
                 </property>
-                <property name="paletteForegroundColor">
-                    <color>
-                        <red>255</red>
-                        <green>0</green>
-                        <blue>0</blue>
-                    </color>
+                <property name="styleSheet">
+                    <string>QLabel { color : red; }</string>
                 </property>
                 <property name="text">
                     <string>&lt;p align="center"&gt;retrieving signal strengths not implemented yet&lt;/p&gt;</string>
@@ -241,7 +243,7 @@ requires running this wizard again.  &lt;/p&gt;</string>
     </widget>
     <widget class="QWidget">
         <property name="name">
-            <cstring>WizardPage</cstring>
+            <cstring>WizardPage2</cstring>
         </property>
         <attribute name="title">
             <string>Page 4: Searching for networks...</string>
@@ -317,7 +319,7 @@ requires running this wizard again.  &lt;/p&gt;</string>
     </widget>
     <widget class="QWidget">
         <property name="name">
-            <cstring>WizardPage</cstring>
+            <cstring>WizardPage3</cstring>
         </property>
         <attribute name="title">
             <string>Page 5: Select a Network Operator</string>
@@ -444,7 +446,7 @@ requires running this wizard again.  &lt;/p&gt;</string>
     </widget>
     <widget class="QWidget">
         <property name="name">
-            <cstring>WizardPage</cstring>
+            <cstring>WizardPage4</cstring>
         </property>
         <attribute name="title">
             <string>Page 6: Connecting to operator...</string>
@@ -523,7 +525,7 @@ requires running this wizard again.  &lt;/p&gt;</string>
     </widget>
     <widget class="QWidget">
         <property name="name">
-            <cstring>WizardPage</cstring>
+            <cstring>WizardPage5</cstring>
         </property>
         <attribute name="title">
             <string>The End</string>

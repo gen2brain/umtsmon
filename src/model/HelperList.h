@@ -21,7 +21,7 @@
 
 #include "Runner.h"
 #include <qstring.h>
-#include <qlistview.h>
+#include <q3listview.h>
 
 // forward declarations
 class helperlistgui;
@@ -40,7 +40,7 @@ public:
 	/** adds QListViewItem(s) based on the data in the class to the widget
 	 *  @param aListViewPtr	pointer to the widget to add the items to
 	 */
-	virtual void add(QListView* aListViewPtr) = 0;
+	virtual void add(Q3ListView* aListViewPtr) = 0;
 	
 	/** the code to actually fix the problem, 
 	 *  @returns true if problem fixed
@@ -71,7 +71,7 @@ public:
 		
 	virtual ~HelperApp() {};
 	virtual bool fixup(void);
-	virtual void add(QListView* aListViewPtr);
+	virtual void add(Q3ListView* aListViewPtr);
 	
 private:
 	Runner::BinariesToRun theHelper;
@@ -86,11 +86,11 @@ public:
 		
 	virtual ~HelperDev() {};
 	virtual bool fixup(void);
-	virtual void add(QListView* aListViewPtr);
+	virtual void add(Q3ListView* aListViewPtr);
 	
 private:
 	/// (internal function) creates a new ListViewitem for port aPortName
-	QListViewItem* newLVI(QListViewItem* aQLVI, const QString& aPortName);
+	Q3ListViewItem* newLVI(Q3ListViewItem* aQLVI, const QString& aPortName);
 	bool fixDev(const QString& aPort);
 
 	QString theATPort;
@@ -105,7 +105,7 @@ public:
 		
 	virtual ~HelperGroup() {};
 
-	virtual void add(QListView* aListViewPtr);
+	virtual void add(Q3ListView* aListViewPtr);
 
 	virtual bool fixup(void);
 private:
@@ -115,7 +115,7 @@ private:
 	 * @param isOKPtr    (OUTPUT) becomes true if aGroupName found in theGroupList
 	 * @return a pointer to the newly created QLVI
 	 */
-    QListViewItem *newLVI(QListViewItem *aQLVI, 
+    Q3ListViewItem *newLVI(Q3ListViewItem *aQLVI, 
     		const QString & aGroupName,
     		bool* isOKPtr);
 

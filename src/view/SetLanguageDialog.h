@@ -20,12 +20,16 @@
 
 #include <qvariant.h>
 #include <qdialog.h>
+//Added by qt3to4:
+#include <Q3VBoxLayout>
+#include <Q3HBoxLayout>
+#include <QLabel>
 
-class QVBoxLayout;
-class QHBoxLayout;
+class Q3VBoxLayout;
+class Q3HBoxLayout;
 class QSpacerItem;
 class QLabel;
-class QButtonGroup;
+class Q3ButtonGroup;
 class QRadioButton;
 class QPushButton;
 class Internationalisation;
@@ -36,7 +40,7 @@ class SetLanguageDialog : public QDialog
 	Q_OBJECT
 
 public:
-	SetLanguageDialog( QWidget* parent = 0, const char* name = 0, bool modal = FALSE, WFlags fl = 0 );
+	SetLanguageDialog( QWidget* parent = 0, const char* name = 0, bool modal = FALSE, Qt::WFlags fl = 0 );
 
 	virtual ~SetLanguageDialog()
 	    {// no need to delete child widgets, Qt does it all for us
@@ -49,12 +53,12 @@ public:
 	
 private:
     QLabel* textLabel1;
-    QButtonGroup* theRadioButtonGroup;
+    Q3ButtonGroup* theRadioButtonGroup;
     QPushButton* buttonOk;
     QPushButton* buttonCancel;
-    QVBoxLayout* theDialogLayout;
-    QVBoxLayout* theRadioButtonGroupLayout;
-    QHBoxLayout* thePushButtonLayout;
+    Q3VBoxLayout* theDialogLayout;
+    Q3VBoxLayout* theRadioButtonGroupLayout;
+    Q3HBoxLayout* thePushButtonLayout;
     QSpacerItem* Horizontal_Spacing2;
     Internationalisation* theInternationalisationPtr;
 

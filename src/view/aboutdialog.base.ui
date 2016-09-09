@@ -80,7 +80,7 @@ Refer to the AUTHORS tab to find out what parts of this application were derived
             </widget>
             <widget class="QWidget">
                 <property name="name">
-                    <cstring>tab</cstring>
+                    <cstring>tab1</cstring>
                 </property>
                 <attribute name="title">
                     <string>COPYING</string>

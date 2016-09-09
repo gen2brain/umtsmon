@@ -20,33 +20,41 @@
 #include "LCDDisplay.h"
 
 #include <qpainter.h>
+//Added by qt3to4:
+#include <QPixmap>
+#include <q3mimefactory.h>
+#include <Q3PointArray>
+#include <QLabel>
+//Added by qt3to4:
+#include <q3mimefactory.h>
+#include <QPaintEvent>
 
 // unfortunately, there's quite a lot of initialising here :-(
 // we cache a lot to speed up drawing
 
-LCDDisplay::LCDDisplay( QWidget* aParent, const char* aName, WFlags aFlags) 
+LCDDisplay::LCDDisplay( QWidget* aParent, const char* aName, Qt::WFlags aFlags) 
 	: QLabel(aParent, aName, aFlags), theSignalWidth(0), isRoaming(false), 
 	theRadioType(tr("n/a")), theProfile(""),
 	the14Font("Helvetica", 14), the10Font("Helvetica", 10), the8Font("Helvetica", 8),
 	theBlack(20,20,20), theShadow(0x98, 0x9c, 0x62)
 {
 	// This creates a extra pixmap on the QWidget
-	//QLabel::setPixmap(QPixmap::fromMimeSource("LCDBackground.png"));
+    QLabel::setPixmap(qPixmapFromMimeSource("LCDBackground.png"));
 	
 	// This set the pixmap to the background of the image, unfortunatly it produce black border/corner 
-	//setPaletteBackgroundColor(parentWidget()->paletteBackgroundColor())
-	//setPaletteBackgroundPixmap(QPixmap::fromMimeSource("LCDBackground.png"));
+    //setPaletteBackgroundColor(parentWidget()->paletteBackgroundColor());
+    //setPaletteBackgroundPixmap(qPixmapFromMimeSource("LCDBackground.png"));
 	
 	// This read the background color of the parent widget, fill a QPixmap with it
 	// overlay the LCD background PNG and put it into the widget background
-	QPixmap bg = QPixmap (336, 88);
-	QPixmap pix = QPixmap::fromMimeSource("LCDBackground.png");
-	bg.fill (parentWidget()->paletteBackgroundColor());
-	QPainter p( &bg );
-	p.drawPixmap( pix.rect(), pix );
-	setPaletteBackgroundPixmap(bg);
+    //QPixmap bg = QPixmap (336, 88);
+    //QPixmap pix = qPixmapFromMimeSource("LCDBackground.png");
+    //bg.fill (parentWidget()->paletteBackgroundColor());
+    //QPainter p( &bg );
+    //p.drawPixmap( pix.rect(), pix );
+    //setPaletteBackgroundPixmap(bg);
 	
-	theGaugePixmap = QPixmap::fromMimeSource("LCDSignal.png");
+	theGaugePixmap = qPixmapFromMimeSource("LCDSignal.png");
 
 	the14Font.setPixelSize(15);
 	the10Font.setPixelSize(11);
@@ -111,12 +119,18 @@ void LCDDisplay::setUpload(
 		setStringAndUpdate(theUploadSpeed, "", needsUpdate);
 }
 
+void LCDDisplay::paintEvent( QPaintEvent* event )
+{
+
+QLabel::paintEvent( event );
+QPainter painter( this );
+
+drawContents( &painter );
+}
+
 
 void LCDDisplay::drawContents ( QPainter * p )
 {
-	// draws the background --> if you have the background in an extra QPixmap
-	//QLabel::drawContents(p);
-
 	// let's make sure the string fits in the screen,
 	// compensate font size for the string length
 	if (theOperatorName.length() > 12)
@@ -128,7 +142,7 @@ void LCDDisplay::drawContents ( QPainter * p )
 	if (isRoaming)
 	{
 		myOperatorNameX += 10;
-		QPointArray myPoints(4);
+		Q3PointArray myPoints(4);
 		p->setPen(theShadow);
 		myPoints.putPoints(0, 4, 171,27, 174,17, 178,27, 171,27);
 		p->drawPolygon(myPoints);

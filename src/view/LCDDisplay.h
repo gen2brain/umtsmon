@@ -26,6 +26,8 @@
 #include <qpixmap.h>
 #include <qfont.h>
 #include <qcolor.h>
+//Added by qt3to4:
+#include <QPaintEvent>
 
 /// This GUI class graphically displays various information for the user
 class LCDDisplay : public QLabel
@@ -33,7 +35,7 @@ class LCDDisplay : public QLabel
 	Q_OBJECT
 	
 public:
-	LCDDisplay( QWidget * aParent, const char * aName = 0, WFlags aFlags = 0 );
+	LCDDisplay( QWidget * aParent, const char * aName = 0, Qt::WFlags aFlags = 0 );
 
 	/// sets the operatorname and updates the GUI 
 	void setOperatorName(const QString& aName, bool needsUpdate=true) 
@@ -95,6 +97,7 @@ public:
 	
 protected:
 	virtual void drawContents ( QPainter * p ); 
+	virtual void paintEvent ( QPaintEvent * e ); 
 	
 private:
 	/** internal function that will set a string to a name and make the widget

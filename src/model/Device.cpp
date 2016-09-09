@@ -22,6 +22,8 @@
 #include "SerialPort.h"
 #include "Popup.h"
 
+#include <unistd.h>
+
 
 Device::~Device()
 {

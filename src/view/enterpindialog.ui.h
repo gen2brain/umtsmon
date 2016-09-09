@@ -34,6 +34,8 @@
 
 #include <qstring.h>
 
+#include <unistd.h>
+
 void EnterPIN::init(void)
 {
     DEBUG5("EnterPIN::init called\n");

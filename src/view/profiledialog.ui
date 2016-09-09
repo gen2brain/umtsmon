@@ -192,12 +192,6 @@
                             <property name="name">
                                 <cstring>connection_password</cstring>
                             </property>
-                            <property name="frameShape">
-                                <enum>LineEditPanel</enum>
-                            </property>
-                            <property name="frameShadow">
-                                <enum>Sunken</enum>
-                            </property>
                             <property name="echoMode">
                                 <enum>Password</enum>
                             </property>

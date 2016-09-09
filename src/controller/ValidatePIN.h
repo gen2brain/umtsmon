@@ -37,7 +37,7 @@ public:
 		* 4 to 8 digits....
 		*/
 
-		unsigned int myPosition=0;
+		int myPosition=0;
 
 		while(myPosition < anInputString.length())
 		{

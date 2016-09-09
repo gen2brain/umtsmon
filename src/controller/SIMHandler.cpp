@@ -29,6 +29,7 @@
 #include "Popup.h"
 
 #include <assert.h>
+#include <unistd.h>
 #include <qstring.h>
 #include <qtranslator.h>
 

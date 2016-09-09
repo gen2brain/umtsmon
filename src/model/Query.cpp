@@ -46,10 +46,10 @@ bool Query::hasSerial(void)
 QString escapeString(const QString& anIString)
 {
 	QString myOString;
-	for (unsigned int i=0; i< anIString.length();i++)
+	for (int i=0; i< anIString.length();i++)
 	{
 		QChar myChar = anIString[i];
-		if (isprint(myChar))
+		if (isprint(myChar.toAscii()))
 			myOString += myChar;
 		else
 			myOString += "\\x" + QString::number(myChar.upper().latin1(), 16);
@@ -311,7 +311,7 @@ QStringList& Query::getAnswer()
 	// OR
 	// the Query hasn't completed yet - you might need to run receiveMore() 
 	// a few times until the answer gets in...
-	DEBUG5("Query::getAnswer returns %zd answer(s)\n", theAnswer.count() ); 
+	DEBUG5("Query::getAnswer returns %d answer(s)\n", theAnswer.count() ); 
 	assert (!theAnswer.isEmpty());
 	return theAnswer; 
 }

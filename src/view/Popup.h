@@ -48,8 +48,8 @@ public:
 				APPNAME " critical error",
 				anErrorMessage,
 				QMessageBox::Abort |  QMessageBox::Default, 
-				QMessageBox::NoButton, 
-				QMessageBox::NoButton);
+				Qt::NoButton, 
+				Qt::NoButton);
 		// critical errors? we might want to explain the user on 
 		// how to help solve this!
 		printAbortMessage(0);
@@ -71,8 +71,8 @@ public:
 				APPNAME " informational message",
 				aMessage,
 				QMessageBox::Ok |  QMessageBox::Default, 
-				QMessageBox::NoButton, 
-				QMessageBox::NoButton);
+				Qt::NoButton, 
+				Qt::NoButton);
 	};
 	
 	/** pops up a message box with a warning message
@@ -87,8 +87,8 @@ public:
 				APPNAME " warning",
 				aMessage,
 				QMessageBox::Ok |  QMessageBox::Default, 
-				QMessageBox::NoButton, 
-				QMessageBox::NoButton);
+				Qt::NoButton, 
+				Qt::NoButton);
 	};
 
 	/** pops up a message box with a question message
@@ -105,7 +105,7 @@ public:
 				aMessage,
 				QMessageBox::Yes | QMessageBox::Default, 
 				QMessageBox::No, 
-				QMessageBox::NoButton) == QMessageBox::Yes)
+				Qt::NoButton) == QMessageBox::Yes)
 			return true;
 		else
 			return false;

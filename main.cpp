@@ -388,8 +388,8 @@ void popupAbortMessageBox(__attribute__ ((unused)) int aSignalNumber)
 				" information on how to help us solve it.\n"
 				"We thank you in advance for helping us improve " APPNAME "!",
 			QMessageBox::Ok |  QMessageBox::Default, 
-			QMessageBox::NoButton, 
-			QMessageBox::NoButton);
+			Qt::NoButton, 
+			Qt::NoButton);
 	// do not call exit here - or the signal will not be handled correctly
 }
 

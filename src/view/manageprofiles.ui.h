@@ -34,6 +34,8 @@
 #include "profiledialog.h"
 
 #include <qlineedit.h>
+//Added by qt3to4:
+#include <q3mimefactory.h>
 
 // load the Data into the Dialog:  
 void ManageProfiles::init()
@@ -53,7 +55,7 @@ void ManageProfiles::init()
 			{
 				listBox_profiles->setCurrentItem(i);
 				listBox_profiles->changeItem(
-					QPixmap::fromMimeSource("ok.png"), 
+					qPixmapFromMimeSource("ok.png"), 
 					listBox_profiles->text(i), i);
 			}
 			i++;

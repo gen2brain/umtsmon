@@ -157,7 +157,7 @@ bool profiledialog::checkForUnsavedData()
 				tr("There are unsaved changes to your profile!"),
 				QMessageBox::Ignore, 
 				QMessageBox::Cancel | QMessageBox::Default, 
-				QMessageBox::NoButton) == QMessageBox::Ignore)
+				Qt::NoButton) == QMessageBox::Ignore)
 		{
 			return true;
 		}

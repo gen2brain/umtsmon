@@ -20,11 +20,12 @@
 
 #include <qstring.h>
 #include <time.h>
+#include <unistd.h>
 
 
 
 ProgressDialog::ProgressDialog(QWidget* aParent, const QString& aTitle)
-	: QProgressDialog(aTitle, QObject::tr("Abort"), 1, aParent, "ProgressDialog-text2", TRUE)
+	: Q3ProgressDialog(aTitle, QObject::tr("Abort"), 1, aParent, "ProgressDialog-text2", TRUE)
 {
 	setProgress( 0 );
 	setCaption(aTitle);

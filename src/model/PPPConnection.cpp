@@ -33,6 +33,7 @@
 #include <sys/types.h>
 #include <signal.h>
 #include <cstdlib>
+#include <unistd.h>
 
 // the actual definition of thePPPDState
 static ConnectionObserverInterface::ConnectionState  thePPPDState = ConnectionObserverInterface::STOPPED;
@@ -238,7 +239,7 @@ PPPConnection::PPPConnection(const ConnectionBaseClass& aRef)
 {
 	// for some compatibility stuff, we need the exact version number of pppd
 	Runner myRunner;
-	myRunner.runCommand(Runner::PPPD, "--version");
+	myRunner.runCommand(Runner::PPPD, QStringList("--version"));
 	QString myTotalVersionNr = myRunner.getStdErrStringList()[0];
 	int myFirst = myTotalVersionNr.find(QRegExp("\\d"), 0);
 	int myLast  = myTotalVersionNr.find(QRegExp("\\d"), -1);
@@ -281,7 +282,7 @@ PPPConnection::isConnectionActive(void)
 	else
 	{
         // if there is a routing table set up for pppX, a pppd is running
-        if (FileStuff::doesFileContainString("/proc/net/route", QString("ppp"))
+        if (FileStuff::doesFileContainString("/proc/net/route", "ppp")
         		&& thePPPDState!=ConnectionObserverInterface::STOPPED)
         {
 			myPID = Runner::doesPPPDexist();
@@ -853,7 +854,7 @@ HSOConnection::startNetworking(const Profile& aProfile)
 
 printf("\n***********STRING*************\n%s\n***********STRING*************\n\n", myRootRun.ascii());
 	Runner myRunner;
-	myRunner.runCommand(Runner::SOMESU, myRootRun);
+	myRunner.runCommand(Runner::SOMESU, myRootRun.split(" "));
 	
 	setNewConnectionState(ConnectionObserverInterface::RUNNING);
 	return true;
@@ -897,7 +898,7 @@ HSOConnection::stopNetworking(void)
 	
 printf("\n***********STRING*************\n%s\n***********STRING*************\n\n", myRootRun.ascii());
 	Runner myRunner;
-	myRunner.runCommand(Runner::SOMESU, myRootRun);
+	myRunner.runCommand(Runner::SOMESU, myRootRun.split(" "));
 
 	setNewConnectionState(ConnectionObserverInterface::STOPPED);
 }

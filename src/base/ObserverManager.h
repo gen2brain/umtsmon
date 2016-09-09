@@ -21,6 +21,8 @@
 
 #include <list>
 
+#include "umtsmon_global.h"
+
 /** The ObserverManager is a class that - once inherited from - 
  *  will take care of the administration associated to observers
  *  to your state.

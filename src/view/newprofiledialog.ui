@@ -74,12 +74,8 @@
             <property name="name">
                 <cstring>labelMessages</cstring>
             </property>
-            <property name="paletteForegroundColor">
-                <color>
-                    <red>255</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
+            <property name="styleSheet">
+                <string>QLabel { color : red; }</string>
             </property>
             <property name="text">
                 <string>please enter a new profile name</string>

@@ -308,12 +308,12 @@ void ConnectionInfo::refreshTrafficStats(void)
 	// update the rx and tx byte values
 	bool myIsProcNetDevStatPresent = false;
 	QFile myFile("/proc/net/dev");
-	if (myFile.open(IO_ReadOnly) == true)
+	if (myFile.open(QIODevice::ReadOnly) == true)
 	{
-		QString myLine;
+	    char myLine[255];
 		// FIXME: This is hardcoded for ppp0!!!
 		QRegExp myPPP("ppp0");
-		while(myFile.readLine(myLine, 255)> 0)
+		while(myFile.readLine(myLine, sizeof(myLine))> 0)
 		{
 			// perform substring searching
 			if (myPPP.search(myLine,0) != -1)
@@ -431,12 +431,12 @@ ConnectionInfo_HSO::refreshTrafficStats(void)
 	// update the rx and tx byte values
 	bool myIsProcNetDevPresent = false;
 	QFile myFile("/proc/net/dev");
-	if (myFile.open(IO_ReadOnly) == true)
+	if (myFile.open(QIODevice::ReadOnly) == true)
 	{
-		QString myLine;
+	    char myLine[255];
 		// FIXME: This is hardcoded for hso0!!!
 		QRegExp myHSORegExp("hso0");
-		while(myFile.readLine(myLine, 255)> 0)
+		while(myFile.readLine(myLine, sizeof(myLine))> 0)
 		{
 			// perform substring searching
 			if (myHSORegExp.search(myLine,0) != -1)

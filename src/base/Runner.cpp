@@ -23,6 +23,7 @@
 #include <qstringlist.h>
 #include <qfile.h>
 #include <qfileinfo.h>
+#include <q3textstream.h>
 #include <qdir.h>
 
 #include <assert.h>
@@ -218,13 +219,13 @@ int Runner::doesPPPDexist(void)
 	myProc.setFilter( QDir::Dirs );
 	myProc.setNameFilter ( "[0-9]*" );
 	
-	const QFileInfoList* myList = myProc.entryInfoList();
-	QFileInfoListIterator myIterator( *myList );
+	const QFileInfoList myList = myProc.entryInfoList();
+	QListIterator<QFileInfo> myIterator( myList );
 	
-	QFileInfo* myFileInfo =myIterator.current();
-	for (;(myFileInfo=myIterator.current()) != 0; ++myIterator)
+	while ( myIterator.hasNext() ) 
 	{
-		QString myDirName = myFileInfo->fileName();
+	    const QFileInfo myFileInfo = myIterator.next();
+		QString myDirName = myFileInfo.fileName();
 	
 		// be warned: if you don't use the .ascii()
 		// myCmdLine will contain all arguments as well, separated by \0...
@@ -268,7 +269,7 @@ int  Runner::runCommand(BinariesToRun aProgram,
 		{
 			// FIXME: I'd prefer to keep the QStringList as it is!  	
 			QString myNewArgumentString = getPath(aProgram)+" "+ anArgumentStringList.join(" "); 
-			return runCommand(SOMESU, myNewArgumentString);
+			return runCommand(SOMESU, myNewArgumentString.split(" "));
 		}
 	}
 
@@ -276,7 +277,7 @@ int  Runner::runCommand(BinariesToRun aProgram,
 	// argument contains the command to execute
 	if (aProgram == SOMESU)
 	{
-		if (! theSU.endsWith("gksu"))
+		if (! theSU.endsWith("gksu") )
 		{
 			anArgumentStringList.push_front("-c");
 		}
@@ -381,22 +382,29 @@ int  Runner::runCommand(BinariesToRun aProgram,
 bool Runner::readPipe(QStringList& aStringList, int anFD)
 {
 	QFile myFile;
-	myFile.open(IO_ReadOnly, anFD);
-	QString myString;
-	myFile.readLine(myString, 1024);
-	if (myString.length() == 0)
-	{
-		myFile.close();
-		return false;
-	}
-	while (myString.length() != 0)
-	{
-		myString = myString.stripWhiteSpace();
-		aStringList.push_back(myString);
-		myFile.readLine(myString, 1024);
-	}	
-	myFile.close();
-	return true;
+    QString line;
+	myFile.open(QIODevice::ReadOnly, anFD);
+    Q3TextStream in(&myFile);
+        
+    line = in.readLine();
+    if (line.length() == 0 )
+    {
+        myFile.close();
+        return false;
+    }
+
+    line = line.stripWhiteSpace();
+    aStringList.push_back(line);
+
+    while (!in.atEnd())
+    {
+        line = in.readLine();
+        line = line.stripWhiteSpace();
+        aStringList.push_back(line);
+    }
+
+    myFile.close();
+    return true;
 }	
 
 ////////////////////////////////////////////////////////////////////////////
@@ -446,6 +454,8 @@ void Runner::execChild(BinariesToRun aProgram,
 	// but to prevent static code checkers from complaining, 
 	// let's just be correct
 	delete myArgv;
+		
+    DEBUG5("INSIDE CHILD,  myDummy:: '%d'\n", myDummy);
 	
 	// don't use exit() here, right after a fork() one uses _exit().
 	_exit(127);

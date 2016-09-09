@@ -22,6 +22,7 @@
 #include "OperatorList.h"
 
 #include <assert.h>
+#include <unistd.h>
 
 NetworkChanger::~NetworkChanger() 
 {
