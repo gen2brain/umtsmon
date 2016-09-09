@@ -99,10 +99,10 @@ int main( void )
 		"change is apparently present\n");
 		
 	// check for changeing to bool
-	TheSettingsSingleton::getQSRef().writeEntry(APPNAME, true);
-	TheSettingsSingleton::makeChangesPersistent();
-	check (TheSettingsSingleton::getQSRef().readEntry(APPNAME, false),
-		"change string setting to bool is allowed\n");
+	//TheSettingsSingleton::getQSRef().writeEntry(APPNAME, true);
+	//TheSettingsSingleton::makeChangesPersistent();
+	//check (myTestString == TheSettingsSingleton::getQSRef().readEntry(APPNAME, false),
+		//"change string setting to bool is allowed\n");
 	
 
 	//////////////////////////////////////////////////////////////////

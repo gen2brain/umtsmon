@@ -20,3 +20,5 @@ SOURCES	+= NetworkChangerTester_main.cpp \
 	../../src/base/TheSettingsSingleton.cpp \
 	../../src/base/SerialPort.cpp \
 	../../src/model/ConnectionInfo.cpp
+#The following line was inserted by qt3to4
+QT +=  qt3support 

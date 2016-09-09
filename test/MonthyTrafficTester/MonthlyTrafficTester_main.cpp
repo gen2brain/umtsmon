@@ -178,7 +178,7 @@ chapter("thresholds and limits");
 	myProfile.save();
     MonthlyTraffic myMT(false);
     MonthlyTrafficTester myMTT(myMT);
-    check( myMT.getThresholdStatus()==MonthlyTraffic::OVER_LIMIT, "over limit is correctly detected\n");
+    check( myMT.getTrafficThresholdStatus()==MonthlyTraffic::OVER_LIMIT, "over limit is correctly detected\n");
 	}	
 	{
 	Profile myProfile;
@@ -187,7 +187,7 @@ chapter("thresholds and limits");
 	myProfile.save();
 	MonthlyTraffic myMT(false);
 	MonthlyTrafficTester myMTT(myMT);
-	check( myMT.getThresholdStatus()==MonthlyTraffic::BETWEEN, 
+	check( myMT.getTrafficThresholdStatus()==MonthlyTraffic::BETWEEN, 
 	       "inbetween threshold and limit is correctly detected\n");
 	}	
 	{
@@ -197,7 +197,7 @@ chapter("thresholds and limits");
 	myProfile.save();
 	MonthlyTraffic myMT(false);
 	MonthlyTrafficTester myMTT(myMT);
-	check( myMT.getThresholdStatus()==MonthlyTraffic::BELOW, 
+	check( myMT.getTrafficThresholdStatus()==MonthlyTraffic::BELOW, 
 	       "below threshold is correctly detected\n");
 	}	
 	{
@@ -207,7 +207,7 @@ chapter("thresholds and limits");
 	myProfile.save();
 	MonthlyTraffic myMT(false);
 	MonthlyTrafficTester myMTT(myMT);
-	check( myMT.getThresholdStatus()==MonthlyTraffic::BELOW, 
+	check( myMT.getTrafficThresholdStatus()==MonthlyTraffic::BELOW, 
 	       "no limit set, should result in BELOW\n");
 	}	
 	// and do two tests for Roaming to cover all lines there
@@ -218,7 +218,7 @@ chapter("thresholds and limits");
 	myProfile.save();
 	MonthlyTraffic myMT(true);
 	MonthlyTrafficTester myMTT(myMT);
-	check( myMT.getThresholdStatus()==MonthlyTraffic::BELOW, 
+	check( myMT.getTrafficThresholdStatus()==MonthlyTraffic::BELOW, 
 	       "below threshold for roaming is correctly detected\n");
 	}	
 	{
@@ -228,7 +228,7 @@ chapter("thresholds and limits");
 	myProfile.save();
 	MonthlyTraffic myMT(true);
 	MonthlyTrafficTester myMTT(myMT);
-	check( myMT.getThresholdStatus()==MonthlyTraffic::BELOW, 
+	check( myMT.getTrafficThresholdStatus()==MonthlyTraffic::BELOW, 
 	       "no limit set for roaming, should result in BELOW\n");
 	}	
 	
@@ -258,7 +258,7 @@ chapter("more complex cases part 1: restart of ppp\n");
 chapter("more complex cases part 2: rollover of date\n\n");
 	{
 	QDate myPreviousMonth = theCurrentDate.addMonths(-1);
-	MonthlyTraffic myMT(true, myPreviousMonth.year(), myPreviousMonth.month());
+	MonthlyTraffic myMT(myPreviousMonth.year(), myPreviousMonth.month());
     MonthlyTrafficTester myMTT(myMT);
     // setup the old month 
     myMTT.setHome   (3456789);
@@ -275,7 +275,7 @@ chapter("more complex cases part 2: rollover of date\n\n");
 	// and check that a previous month does
 	{
 	QDate myPreviousMonth = theCurrentDate.addMonths(-1);
-	MonthlyTraffic myMT(true, myPreviousMonth.year(), myPreviousMonth.month());
+	MonthlyTraffic myMT(myPreviousMonth.year(), myPreviousMonth.month());
     MonthlyTrafficTester myMTT(myMT);
     check(myMTT.getRoamingTraffic()==2345678, "roaming traffic for last month is correct\n");
     check(myMTT.getHomeTraffic()==3456789, "home traffic for last month is correct\n");

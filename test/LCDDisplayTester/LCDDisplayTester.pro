@@ -7,7 +7,8 @@ HEADERS	+= LCDDisplay.h \
 SOURCES	+= main.cpp \
 	LCDDisplay.cpp
 
-FORMS	= LCDDisplayTest.ui
+#The following line was changed from FORMS to FORMS3 by qt3to4
+FORMS3	= LCDDisplayTest.ui
 
 IMAGES	= LCDBackground.png \
 	LCDSignal.png
@@ -19,3 +20,8 @@ IMAGES	= LCDBackground.png \
 	system(ln -s ../../src/view/LCDDisplay.cpp .) {}
 	system(ln -s ../../i18n .) {}
 }
+#The following line was inserted by qt3to4
+QT +=  qt3support 
+#The following line was inserted by qt3to4
+CONFIG += uic3
+

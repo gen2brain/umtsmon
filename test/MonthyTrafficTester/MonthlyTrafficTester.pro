@@ -12,3 +12,5 @@ SOURCES	+= \
 	../../src/model/Profile.cpp \
 	MonthlyTrafficTester_main.cpp 
 # note that MonthlyTraffic.cpp is actually missing because it's #included by MonthlyTrafficTester_main.cpp	
+#The following line was inserted by qt3to4
+QT +=  qt3support 

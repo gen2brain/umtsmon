@@ -12,3 +12,5 @@ HEADERS	+= TheSettingsSingleton.h \
 
 SOURCES	+= TheSettingsSingleton.cpp \
 	SettingsTester_main.cpp
+#The following line was inserted by qt3to4
+QT +=  qt3support 

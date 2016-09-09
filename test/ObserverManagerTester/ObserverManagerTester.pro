@@ -6,3 +6,5 @@ HEADERS	+= ../../src/base/ObserverManager.h \
 
 SOURCES	+= ObserverManagerTester_main.cpp
 
+#The following line was inserted by qt3to4
+QT +=  qt3support 

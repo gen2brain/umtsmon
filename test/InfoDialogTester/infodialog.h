@@ -20,16 +20,21 @@
 
 #include <qvariant.h>
 #include <qdialog.h>
-#include <qtable.h>
+#include <q3table.h>
+//Added by qt3to4:
+#include <Q3VBoxLayout>
+#include <Q3GridLayout>
+#include <Q3HBoxLayout>
+#include <QLabel>
 
-class QVBoxLayout;
-class QHBoxLayout;
-class QGridLayout;
+class Q3VBoxLayout;
+class Q3HBoxLayout;
+class Q3GridLayout;
 class QSpacerItem;
 class QTabWidget;
 class QWidget;
 class QLabel;
-class QGroupBox;
+class Q3GroupBox;
 
 
 
@@ -57,7 +62,7 @@ public:
 	void setText(__attribute__ ((unused)) int a1, 
 	             __attribute__ ((unused)) int a2, 
 	             __attribute__ ((unused)) QString aString)	{;};
-	QHeader * horizontalHeader () const {static QHeader myHeader; return &myHeader;};
+	Q3Header * horizontalHeader () const {static Q3Header myHeader; return &myHeader;};
 };
 
 
@@ -83,6 +88,9 @@ public:
     TestTable module_table;
 	TestLabel lbl_pppd_version;
 	TestLabel lbl_distro_release;
+	TestLabel lbl_AT_Port;
+	TestLabel lbl_PPP_Port;
+	TestLabel lbl_Driver_Name;
 
 public slots:
 	void sort_module_table(int section);

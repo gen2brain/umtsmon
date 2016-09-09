@@ -9,3 +9,5 @@ HEADERS	+= \
 SOURCES	+= QueryTester_main.cpp \
 	../../src/model/Query.cpp \
 	../../src/base/SerialPort.cpp
+#The following line was inserted by qt3to4
+QT +=  qt3support 

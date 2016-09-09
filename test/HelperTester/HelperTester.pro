@@ -17,12 +17,11 @@ HEADERS	+= \
 	../../src/model/HelperList.h \
 	../../src/model/MonthlyTraffic.h \
 	../../src/model/OperatorList.h \
-	../../src/view/Popup.h \
 	../../src/model/Profile.h \
 	../../src/model/Query.h \
+	../../src/view/Popup.h \
 	../../src/base/Runner.h \
 	../../src/base/SerialPort.h \
-	../../src/controller/TheDeviceManagerSingleton.h \
 	../../src/base/TheSettingsSingleton.h
 
 SOURCES	+= \
@@ -36,14 +35,23 @@ SOURCES	+= \
 	../../src/model/OperatorList.cpp \
 	../../src/model/Query.cpp \
 	../../src/model/Profile.cpp \
+	../../src/view/Popup.cpp \
+	../../src/controller/TheDeviceManagerSingleton.cpp \
 	../../src/base/Runner.cpp \
 	../../src/base/SerialPort.cpp \
-	../../src/controller/TheDeviceManagerSingleton.cpp \
 	../../src/base/TheSettingsSingleton.cpp
 
-FORMS   = \
-        ./helperlistgui.ui
+#The following line was changed from FORMS to FORMS3 by qt3to4
+FORMS3   = \
+        ./helperlistgui.ui \
+        ../../src/view/popupwithmemory.ui \
+	    ../../src/view/yesnowithmemory.ui
 
 IMAGES = ../../images/Wizard/NetworkOperatorWizard.png \
 	../../images/ok.png \
 	../../images/16/process-stop-16x16.png
+#The following line was inserted by qt3to4
+QT +=  qt3support 
+#The following line was inserted by qt3to4
+CONFIG += uic3
+

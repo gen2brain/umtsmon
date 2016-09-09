@@ -30,7 +30,7 @@
 
 // conveniently set theVerbosity to a number of your liking
 int  theVerbosity = 5;
-const char* theWasRoamingSettingName         = "/General/WasRoaming";
+//const char* theWasRoamingSettingName         = "/General/WasRoaming";
 
 
 

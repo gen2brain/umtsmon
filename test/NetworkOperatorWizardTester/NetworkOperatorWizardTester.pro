@@ -29,9 +29,15 @@ SOURCES	+= \
 	../../src/base/SerialPort.cpp \
 	../../src/base/TheSettingsSingleton.cpp
 
-FORMS   = \
+#The following line was changed from FORMS to FORMS3 by qt3to4
+FORMS3   = \
         ./networkoperatorwizard.ui
 
 IMAGES = ../../images/Wizard/NetworkOperatorWizard.png \
 	../../images/ok.png \
 	../../images/16/process-stop-16x16.png
+#The following line was inserted by qt3to4
+QT +=  qt3support 
+#The following line was inserted by qt3to4
+CONFIG += uic3
+

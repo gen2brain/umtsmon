@@ -68,12 +68,12 @@ int main(int argc, __attribute__ ((unused)) char* argv[])
 	check(myRunner.amIRoot()==false, "This app is not run as root - good\n", true);
 
 	printf("*** warning: the next test takes approx 6 seconds to complete\n");
-	check(myRunner.runCommand(Runner::RUNNERTESTER,"child") == 0, "the stdout/stderr test returned ok\n");
+	check(myRunner.runCommand(Runner::RUNNERTESTER, QStringList("child")) == 0, "the stdout/stderr test returned ok\n");
 	check(myRunner.getStdOutStringList().size()==2, "two strings on stdout\n");
 	check(myRunner.getStdErrStringList().size()==2, "two strings on stderr\n");
 
 	// let's try to create a file "hello" in /
-	check(myRunner.runCommand(Runner::SOMESU,"/usr/bin/touch /hello") == 0,
+	check(myRunner.runCommand(Runner::SOMESU, QStringList("/usr/bin/touch /hello")) == 0,
 		"(kde|gnome)su returned success\n", true);
 	check(QFile::exists("/hello"), "/hello indeed exists\n");
 	QFileInfo myFI("/hello");
@@ -82,7 +82,7 @@ int main(int argc, __attribute__ ((unused)) char* argv[])
 
 	//try to execute some commands in an shell 
 	//first attempt - all commands in one string
-	check(myRunner.runCommand(Runner::SOMESU,"/bin/sh -c \"echo hello >> /hello; wc -l /hello >/hello2;\"") == 0,
+	check(myRunner.runCommand(Runner::SOMESU, QStringList("/bin/sh -c \"echo hello >> /hello; wc -l /hello >/hello2;\"")) == 0,
 		"(kde|gnome)su returned success for shell exec, first attempt\n");
 	check(QFile::exists("/hello2"), "/hello2 exists\n");
 	QFileInfo myFI2("/hello2");
@@ -90,10 +90,10 @@ int main(int argc, __attribute__ ((unused)) char* argv[])
 		"/hello2 was created/modified during the last 5 seconds\n        This is known to work with \"kdesudo\"\n");
 
 	//second attempt
-	QStringList myCommands = "/bin/sh";
+	QString myCommands = "/bin/sh";
 	myCommands += "-c";
 	myCommands += "echo hello >> /hello; wc -l /hello >/hello3";
-	check(myRunner.runCommand(Runner::SOMESU,myCommands)==0,
+	check(myRunner.runCommand(Runner::SOMESU, QStringList(myCommands))==0,
 		"(kde|gnome)su returned success for shell exec, second attempt\n");
 	check(QFile::exists("/hello3"), "/hello3 exists\n");
 	QFileInfo myFI3("/hello3");
@@ -106,15 +106,15 @@ int main(int argc, __attribute__ ((unused)) char* argv[])
 	{
 		// uh-oh, we need to suid it...
 		check(myRunner.runCommand(Runner::SOMESU,
-			"/bin/chmod +s "+myRunner.getPath(Runner::PCCARDCTL) ) == 0,
+			QStringList("/bin/chmod +s "+myRunner.getPath(Runner::PCCARDCTL)) ) == 0,
 			"setting suid of pccardctl succeeded\n");
 	}
 
 	// let's try to eject a PCMCIA card
-	check (myRunner.runCommand(Runner::PCCARDCTL, "eject") == 0,
+	check (myRunner.runCommand(Runner::PCCARDCTL, QStringList("eject")) == 0,
 			"pccardctl succeeded in eject\n");
 
-	myRunner.runCommand(Runner::PPPD, "--help");
+	myRunner.runCommand(Runner::PPPD, QStringList("--help"));
 	printf(" --- first line output of `pppd --help`: '%s'\n", 
 				myRunner.getStdErrStringList()[0].ascii());
 	check(myRunner.getStdErrStringList()[0].contains("version"), "pppd shows version\n");

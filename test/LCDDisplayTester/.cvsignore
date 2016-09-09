@@ -1,9 +1,0 @@
-.ui
-LCDDisplay.cpp
-LCDDisplay.h
-LCDDisplayTester
-Makefile
-LCDSignal.png
-LCDBackground.png
-i18n
-.moc
