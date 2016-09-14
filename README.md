@@ -13,7 +13,7 @@ Prerequisites
 
 You need to have Qt version 4 installed, including the development libs and tools. Usually these are packages called qt-devel and such.
 
-You need to have the header files for libusb installed.  Some systems such as OpenSUSE have this in a package called libusb-devel.
+You need to have the header files for libusb installed.  Some systems have this in a package called libusb-devel.
 
 Make sure that you also have the related development tools installed: you should have a directory with 'uic', 'qmake' and 'moc' in your search path.
 Alternatively, you might want to call qmake with the full path and it will adjust the Makefile to list full paths to the other binaries.
